@@ -1,0 +1,18 @@
+murano-staging-api-external
+----------------------------------
+file:exosite/solution-{solutionId}-logs.robot
+test case: solution-{solutionId}-logs - get - check log which type is event
+error: robot裡抓的timestamp比 solution-log endpoint 執行的timestamp 多3秒
+
+
+
+murano-staging-business
+----------------------------------
+file:adcWeb/test_check_business_area.robot
+test case:Check business welcome page should not show after logs into by reset password
+error:should waiting page navigate to element page
+
+
+file:adcWeb/test_check_welcome_area.robot
+test case:Check welcome page layout via signup
+error:should waiting page navigate to welcome page

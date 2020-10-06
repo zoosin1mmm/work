@@ -1,0 +1,21 @@
+1.socket id get 
+2. disconnect websocket
+3.send message
+{"socket_id":"ababciadfaag-o1se23hmy3mrk0000-9ho8hUqEeRgp","message":"s"}
+4.
+{
+  "error": "{\"statusCode\":500,\"message\":\"Connection ababciadfaag-o1se23hmy3mrk0000-9ho8hUqEeRgp not found: Server inaccessible.\",\"code\":\"InternalServerErrorError\"}",
+  "status": 500,
+  "type": "ServerError"
+}
+
+
+
+
+1.send message with not existing
+{
+  "error": "{\"statusCode\":404,\"message\":\"Connection ababciafdaaf-vw0c7pqgvg1iqkt9-75usitV6m0AQ not found: Server gone.\",\"code\":\"NotFoundError\"}",
+  "status": 404,
+  "type": "QueryError"
+}
+

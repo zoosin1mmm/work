@@ -1,0 +1,59 @@
+#Problem
+murano-staging-service-solution
+-------------------------------------------
+FILE:test_config.robot
+test case:Config usage should list all service usage
+Error: usage not found
+"tsdb": {
+        "quota": {
+            "calls_daily": 1000000.0
+        },
+        "service": "tsdb"
+    }
+
+
+Device2.getGatewaySettings   MUR-3429   add tag?
+
+murano-staging-api-internal
+-------------------------------------------
+File:Solution-{Solution Id}-Serviceconfig-Test
+Error: service config parameter change
+"quota": {
+"daily": 1000000
+}
+change to
+"quota": {
+"calls_daily": 1000000
+}
+
+#Log fail
+-------------------------------------------
+FILE:test_timer.robot
+test case:Timer can cancel all active timers /Timer can cancel all active timer
+
+File:test_timeseries_event.robot
+
+File:test_user_event.robot
+
+FILE:test_scripts.robot
+test case: 
+Scripts trigger should trigger event with default mode when using error mode name
+Scripts trigger should get expected response with service event
+Scripts trigger can trigger self event
+Scripts trigger can trigger event with sync mode
+Scripts trigger can trigger event with async mode
+Scripts trigger can trigger customer event
+Scripts trigger can post data to event
+
+murano-staging-deploy-tool
+-------------------------------------------
+FILE:test_exosite_CLI.robot
+test case: Exosite CLI can show logs
+
+murano-staging-api-internal
+-------------------------------------------
+File:Solution-{Solution Id}-Logs-Test
+
+adc_staging_project
+-------------------------------------------
+File:test_device2_event.robot

@@ -1,0 +1,41 @@
+murano-staging-business MUR-5355
+-----------------------------
+file:test_verify_short_murano_link.robot
+test case:Verify short URL directed to memberships page with no business account
+error: ANOTHER_USER business is not empty
+
+
+
+murano-staging-link
+---------------------------
+file:test_onep_logging_events
+test case:OneP Log-{projectId}-events - websocket should connect fail without authorization header
+test case:OneP Log-{projectId}-events - websocket should connect fail without authorization path
+error:
+expected=>Bad status code: 401
+but now:Status code not 101: 401
+
+
+murano-staging-service-solution
+------------------------------------
+file:test_relational_db.robot
+test case:Relational database can not work when reach limit
+error change: 
+預期 =>Client Error: *statement error* value too long for type character varying(4)
+結果 =>Client Error: *statement error* value too long for type character(4)
+
+
+adc-staging-api-external
+------------------------------------
+error:No module named paho.mqtt
+error: template need more time to run test case
+
+
+murano-staging-api-internal
+------------------------------
+file:solution-{solution_id}-logs-test
+test case:
+solution-{solution_id}-logs-test - get - should respond 2 logs after user reuqest to the custom API for 3 times and limit 2 logs
+solution-{solution_id}-logs-test - get - should respond 2 logs after user reuqest to the custom API for 3 times and offset 1 logs
+solution-{solution_id}-logs-test - get - should respond 2 logs after user reuqest to the custom API for 3 times limit 2 and offset 1 logs
+error:total 會return目前log的總數 而不會return filter後的總數

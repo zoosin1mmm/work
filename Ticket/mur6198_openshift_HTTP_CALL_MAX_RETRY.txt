@@ -1,0 +1,56 @@
+hi [~renaudsauvain]
+I can get any retry log at kibana.(*Scenario3*)
+Do I make a mistake about the steps?
+ *Setup*
+ * create endpoint
+{code:java}
+-- POST /keystore
+return Keystore.set(request.body)
+{code}
+
+{panel:title=Scenario1: HTTP_CALL_MAX_RETRY is 0}
+ * set env
+{code:java}
+HTTP_CALL_MAX_RETRY =  0
+keystroe service pod = 0 
+{code}
+
+ * run endpoint with body
+{code:java}
+{"key":"test2","value":"test2"}{code}
+
+ * keystore service pod = 1
+ * after 5 - 15 sec ,I do not get any retry log at kibana
+ !kv_retry0.png|thumbnail!{panel}
+{panel:title=Scenario2: HTTP_CALL_MAX_RETRY is 1}
+ * set env
+{code:java}
+HTTP_CALL_MAX_RETRY =  1
+keystroe service pod = 0
+{code}
+
+ * run endpoint with body
+{code:java}
+{"key":"test2","value":"test2"}{code}
+
+ * keystore service pod = 1
+ * after 5 - 15 sec ,I do not get any retry log at kibana
+ !kv_retry1.png|thumbnail!{panel}
+{panel:title=Scenario3: HTTP_CALL_MAX_RETRY is 3}
+ * setup
+{code:java}
+HTTP_CALL_MAX_RETRY >=  3
+keystroe service pod = 0
+{code}
+
+ * run endpoint with body
+{code:java}
+{"key":"test2","value":"test2"}{code}
+
+ * keystore service pod = 1
+ * after 5 - 15 sec ,I do not get any retry log at kibana
+ !kv_retry3.png|thumbnail!
+
+*Expected:* after 5 - 15 sec should succeed
+{panel}
+CC [~ninazhang]

@@ -1,0 +1,26 @@
+murano-staging-service-migration
+-----------------------------------
+file:test_analytics.robot / test_config / test_portals.robot /test_salesforceiot.robot
+fix: MUR-6304
+
+file:test_auth0.robot /test_user_social.robot
+error: can not open browser
+
+
+file:test_lua_library.robot
+test case: Lua library CPU run time more than 10 second will return 504 timeout
+error:{"error":"\"exceeded allotted cpu time!\""}' != '504 Gateway Time-out'
+
+
+murano-staging-service-solution
+-------------------------------------
+file:test_lua_library.robot
+test case: Lua library CPU run time more than 10 second will return 504 timeout
+error:{"error":"\"exceeded allotted cpu time!\""}' != '504 Gateway Time-out'
+
+
+
+murano-staging-api-external
+-------------------------------------
+test case:solution-{solutionId}-library - post - create over module limit should respond with 403
+error: 41 min 無法建完1001個model

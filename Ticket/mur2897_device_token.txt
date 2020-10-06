@@ -1,0 +1,29 @@
+1.
+curl \
+  -X POST 'https://h4ffr1tctzoo4ss40.m2.exosite-staging.io/provision/activate' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' \
+  -d 'sn=tes5t2'
+
+response
+  S7PWGRtNJeVBKWL8e5BuG97i5xv2ncxzLBxVtMhk
+  2.
+  curl -i \
+  -X POST 'https://h4ffr1tctzoo4ss40.m2.exosite-staging.io/onep:v1/stack/alias' \
+  -H 'X-Exosite-CIK: S7PWGRtNJeVBKWL8e5BuG97i5xv2ncxzLBxVtMhk' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' \
+  -d 'temp=50'
+---------------------------------------------------------------------------------------------------------------------
+1.
+UI Set authentication key
+2.
+  curl -i \
+  -X POST 'https://h4ffr1tctzoo4ss40.m2.exosite-staging.io/onep:v1/stack/alias' \
+  -H 'X-Exosite-CIK: 5fb39e913b0bcd128a2014ce844e22ef52e9458e' \
+  -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' \
+  -d 'tt=50'
+response
+HTTP/1.1 204 No Content
+content-length: 0
+date: Fri, 07 Jul 2017 04:24:58 GMT
+server: Murano
+

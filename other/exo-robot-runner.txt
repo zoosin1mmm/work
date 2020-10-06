@@ -1,0 +1,13 @@
+exo --host=m2-dev.exosite.com write f100c3f28da119ef6b450960aa79f18cd28c75b6 raw_pressure_data --value="{\"signal_strength\":\"2\",\"temperature\":\"50\",\"timestamp\":$(date +%s),\"vbatt\":\"4.0\",\"absolute_pressure\":\"21000\"}"
+
+exo --host=m2-dev.exosite.com write 75890a37516904644dfd5334fa2eba514b19ef51 raw_pressure_data --value="{\"signal_strength\":\"2\",\"temperature\":\"50\",\"timestamp\":$(date +%s),\"vbatt\":\"4.0\",\"absolute_pressure\":\"21000\"}"
+
+exo write 75890a37516904644dfd5334fa2eba514b19ef51 raw_pressure_data --value="{\"signal_strength\":\"55\",\"temperature\":\"60\",\"timestamp\":$(date +%s),\"vbatt\":\"2.4\",\"absolute_pressure\":\"51000\"}" 											
+for((i=1;i<=13;i+=1)); do python dqa-env/exo-robot-runner run -O --suite=reset -I dqa-semi-vert -i api; done
+
+for((i=1;i<=10;i+=1)); do python dqa-env/exo-robot-runner run -O --suite=test_solution_application -I dqa-murano -i web; done
+for((i=1;i<=10;i+=1)); do python dqa-env/exo-robot-runner run -O--suite=test_websocket_phone_login -O--suite=test_websocket_phone_delete_group -O--suite=user-{email} -O--suite=verify-{code} -I dqa-semi-vert -i api; done
+
+
+python dqa-env/exo-robot-runner run -O --suite=test_websocket_device_provision -O --suite=test_websocket_device_status_change -O --suite=test_websocket_phone_add_user  -O --suite=test_websocket_phone_calendar  -O --suite=test_websocket_phone_config  -O --suite=test_websocket_phone_delete_group  -O --suite=test_websocket_phone_delete_properties  -O --suite=test_websocket_device_provisiontest_websocket_phone_get  -O --suite=test_websocket_phone_list_device  -O --suite=test_websocket_phone_list_group  -O --suite=test_websocket_phone_list_user  -O --suite=test_websocket_phone_login  -O --suite=test_websocket_phone_ota  -O --suite=test_websocket_phone_rem_user  -O --suite=test_websocket_phone_set  -O --suite=test_websocket_phone_set_group  -O --suite=test_websocket_phone_set_properties   -I dqa-semi-vert -i api
+

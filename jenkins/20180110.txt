@@ -1,0 +1,10 @@
+murano-staging-api-external
+----------------------------
+File:exchange-{businessid}-element-reservation.robot
+keyword:Create Reservation Exchange Element
+
+File:exchange-{businessid}-element-{elementid}.robot
+File:exchange-{businessid}-element.robot
+File:exchange-{businessid}-purchase-{purchaseid}.robot
+File:exchange-{businessid}-purchase.robot
+keyword:Create All Types Element

@@ -1,0 +1,23 @@
+murano-staging-service-solution
+---------------------------------
+file: test_auth0
+test case:Auth0 service can get login URL
+error: Auth0 service can get login URL
+jenkins:No browser is open
+local: ok
+
+file:test_email.robot
+MUR-5175
+
+file:
+MQTT Provisioning - reprovisioning device via certificate
++disconnect when reprovsion
+
+
+MQTT Provisioning - reprovisioning device via password
++disconnect when reprovsion
+
+
+MQTT Provisioning - provisioning device with invalid password
+少了指定password
+=>${failClient} =    Provisioning Device    ${host}    ${SN}    password=${password}

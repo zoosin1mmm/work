@@ -1,0 +1,56 @@
+ab -c 95 -n 475 -k -T 'application/json' -p mur4963_content http://pegasus-cass-service-murano-staging-preview.hosted.exosite.io/api/v1/timeseries/q2c2eeradintw0000/multi_data
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking pegasus-cass-service-murano-staging-preview.hosted.exosite.io (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Finished 475 requests
+
+
+Server Software:        
+Server Hostname:        pegasus-cass-service-murano-staging-preview.hosted.exosite.io
+Server Port:            80
+
+Document Path:          /api/v1/timeseries/q2c2eeradintw0000/multi_data
+Document Length:        0 bytes
+
+Concurrency Level:      95
+Time taken for tests:   146.050 seconds
+Complete requests:      475
+Failed requests:        79
+   (Connect: 0, Receive: 0, Length: 79, Exceptions: 0)
+Non-2xx responses:      79
+Keep-Alive requests:    269
+Total transferred:      105748 bytes
+Total body sent:        14736875
+HTML transferred:       7268 bytes
+Requests per second:    3.25 [#/sec] (mean)
+Time per request:       29209.972 [ms] (mean)
+Time per request:       307.473 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.71 [Kbytes/sec] received
+                        98.54 kb/s sent
+                        99.25 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.9      0       3
+Processing:  5600 28211 3334.5  29642   31010
+Waiting:        0 20947 12269.9  27722   31010
+Total:       5600 28212 3334.6  29644   31014
+WARNING: The median and mean for the initial connection time are not within a normal deviation
+        These results are probably not that reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%  29639
+  66%  30003
+  75%  30003
+  80%  30003
+  90%  30004
+  95%  30006
+  98%  30052
+  99%  30972
+ 100%  31014 (longest request)

@@ -1,0 +1,47 @@
+murano-staging-product
+------------------------------------------------
+FILES: test_update_device_resources
+Testcase:Update device resource value between murano and one platform
+Error:Compare_tool error
+Cause:Andy modify
+
+FILES: test_product_simulator.robot
+Testcase:The simulator can updated device resource data
+Error: Device CIK may be expired or not available (not added to product) - trying to activate
+attempt to activate on Murano
+exeception: [Errno -5] No address associated with hostname
+Cause: 手動OK,m2-stg.exosite.com pass but http://m2-stg.exosite.com false
+
+murano-staging-api
+------------------------------------------------
+FILES: solution-{solution_id}-logs-test.robot
+Testcase:solution-{solution_id}-logs-test - get - should respond 2 logs after user reuqest to the custom API for 3 times limit 2 and offset 1 logs
+Error:
+Cause: 
+
+murano-staging-docs
+------------------------------------------------
+FILES: test_check_adc_application_area.robot
+Testcase:Check services timer configuration checkbox can be cancel
+Check services timer configuration checkbox is checked after reload page
+Check services timer configuration checkbox is unchecked after reload page
+Error:Element '//span[contains(.,"Service config updated successfully.")]' was not visible in 30 seconds
+Cause: popup message show but robot can not determine 
+
+
+/code
+#murano-staging-api
+#murano-staging-product 跟前一個deploy 狀態一樣
+#murano_staging_openshift 跟前一個deploy 狀態一樣
+#murano_staging_business 跟前一個deploy 狀態一樣
+#murano_staging_product 跟前一個deploy 狀態一樣
+#murano_staging_solution run again pass
+
+/code
+murano-staging-docs
+------------------------------------------------
+FILES: test_check_adc_application_area.robot
+Testcase:Check services timer configuration checkbox 
+Cause: popup message show but robot can not determine 
+
+

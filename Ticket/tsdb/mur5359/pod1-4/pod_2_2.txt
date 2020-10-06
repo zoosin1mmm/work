@@ -1,0 +1,54 @@
+ ab -c 85 -n 400 -k -T 'application/json' -p mur4963_content http://localhost:4000/api/v1/timeseries/u58cvblvsrmk00000/multi_data 
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Finished 400 requests
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            4000
+
+Document Path:          /api/v1/timeseries/u58cvblvsrmk00000/multi_data
+Document Length:        0 bytes
+
+Concurrency Level:      85
+Time taken for tests:   41.799 seconds
+Complete requests:      400
+Failed requests:        2
+   (Connect: 0, Receive: 0, Length: 2, Exceptions: 0)
+Non-2xx responses:      10
+Keep-Alive requests:    400
+Total transferred:      77256 bytes
+Total body sent:        12027600
+HTML transferred:       90 bytes
+Requests per second:    9.57 [#/sec] (mean)
+Time per request:       8882.235 [ms] (mean)
+Time per request:       104.497 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.80 [Kbytes/sec] received
+                        281.01 kb/s sent
+                        282.81 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   1.1      0       3
+Processing:   627 7861 2306.0   7875   13383
+Waiting:      627 7861 2306.0   7875   13383
+Total:        630 7862 2305.4   7875   13386
+
+Percentage of the requests served within a certain time (ms)
+  50%   7875
+  66%   9499
+  75%   9863
+  80%   9933
+  90%  10029
+  95%  10097
+  98%  10171
+  99%  11094
+ 100%  13386 (longest request)

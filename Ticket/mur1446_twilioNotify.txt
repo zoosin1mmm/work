@@ -1,0 +1,80 @@
+solution:stacychen-qa-test.apps.exosite-staging.io
+url:https://www.exosite-staging.com/business/applications/v28qvpzmdmhlrf6
+
+1.connect product and solution
+
+2.add twilio notify service
+curl -X POST \
+  https://bizapi-staging.hosted.exosite.io/api:1/solution/v28qvpzmdmhlrf6r/serviceconfig/ \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{"solution_id":"v28qvpzmdmhlrf6r","service":"twilionotify"}'
+
+3.activate device
+curl -ik 'm2-stg.exosite.com/provision/activate' -H "Content-Type: application/x-www-form-urlencoded; charset=utf-8" -d "vendor=0bkwqm6ji1u7hkt9&model=0bkwqm6ji1u7hkt9&sn=dev00001"
+return
+0a6a00284a1e7e8d73e089991937967eef8d2b36
+
+4.login https://www.twilio.com/
+
+5.go to https://www.twilio.com/console/ to get Credentials
+ACCOUNT SID
+AC2ba19cb1284a8ca5b9bbeb966512d5bd
+AUTH TOKEN
+de3b55e6c0d1c8e6e8d67098c4182984
+
+6.go to solution service page to set twilioNotify ACCOUNT SID and AUTH TOKEN
+
+7.go to https://www.twilio.com/console/notify/services and create a service
+
+8.get creating service SID
+IS2c153564dd528d84553adca2ac616e23
+
+9.create endpoint #GET /createBind
+response.message =  Twilionotify.createBinding({
+  ServiceSid = "IS2c153564dd528d84553adca2ac616e23",
+  Identity = "dev00001",
+  Endpoint = "dev_test_device",
+  BindingType = "apn",
+  Address = "0a6a00284a1e7e8d73e089991937967eef8d2b36"
+})
+return
+{
+  "account_sid": "AC2ba19cb1284a8ca5b9bbeb966512d5bd",
+  "address": "0a6a00284a1e7e8d73e089991937967eef8d2b36",
+  "binding_type": "apn",
+  "date_created": "2017-08-04T01:45:54Z",
+  "date_updated": "2017-08-04T01:45:54Z",
+  "endpoint": "dev_test_device",
+  "identity": "dev00001",
+  "links": {
+    "user": "https://notify.twilio.com/v1/Services/IS2c153564dd528d84553adca2ac616e23/Users/dev00001"
+  },
+  "notification_protocol_version": "default",
+  "service_sid": "IS2c153564dd528d84553adca2ac616e23",
+  "sid": "BSbcf2056db7d349baa98ecaf69c751955",
+  "tags": [],
+  "url": "https://notify.twilio.com/v1/Services/IS2c153564dd528d84553adca2ac616e23/Bindings/BSbcf2056db7d349baa98ecaf69c751955"
+}
+
+10.create endpoint #GET send
+return Twilionotify.send({
+  ServiceSid = "IS2c153564dd528d84553adca2ac616e23",
+  Identity = "dev00001",
+  Body = "Hi! This is the mobile push message from Twilio service!"
+})
+return
+{
+  "account_sid": "AC2ba19cb1284a8ca5b9bbeb966512d5bd",
+  "body": "Hi! This is the mobile push message from Twilio service!",
+  "date_created": "2017-08-04T01:41:47Z",
+  "identities": [
+    "dev00001"
+  ],
+  "priority": "high",
+  "segments": [],
+  "service_sid": "IS2c153564dd528d84553adca2ac616e23",
+  "sid": "NTf5e250211a19b3f2667cc7aab6955cdc",
+  "tags": [],
+  "ttl": 2419200
+}

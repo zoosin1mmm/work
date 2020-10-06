@@ -1,0 +1,5 @@
+murano-staging-business
+-------------------------------------
+file:test_delete_business_member.robot
+keyword:Create Admin Member
+error:keyword not found =>> be changed to "Invite Admin Member Via API"

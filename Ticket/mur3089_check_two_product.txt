@@ -1,0 +1,14 @@
+Application Name:test-edward.apps.exosite-staging.io
+ID:pykokv8pm0tchaor
+
+Application Name:ff.apps.exosite-staging.io
+ID:sttq74htfbznnrk9
+
+Application Name:project-1491906514.apps.exosite-staging.io
+ID:v8e2givx9gpkfbt9
+
+Application Name:project-20170411-nina.apps.exosite-staging.io
+ID:wumjzfl5yo6layvi
+
+Application Name:test201704111111.apps.exosite-staging.io
+ID:m9tbh7b528n6ogvi

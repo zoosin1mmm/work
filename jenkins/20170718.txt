@@ -1,0 +1,10 @@
+solution-{solution_id}-endpoint-test.js
+should respond with 200 OK for create with valid path, path value: ${validPath}
+should respond with 409 Conflict for create same endpoint twice in same solution
+--------------------------------------------------------------------------
+double endpont path
+
+Solution-{Solution Id}-Update-Test
+solution-{solution_id}-update-test - post - should respond with 200 OK
+--------------------------------------------------------------------------
+double endpont path about home-automation-example

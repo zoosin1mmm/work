@@ -1,0 +1,52 @@
+murano-staging-api-external
+----------------------------
+file:business-{businessId}-member-{email}
+test case:business-{businessId}-member-{email} - put - invite member to business should have received invitation email
+error:new user 不能被邀請進 business return 502
+
+test case:business-{businessId}-member-{email} - put - add admin member to child business should return 205
+fix:建立 child business 時 所給的email 會變成member 因此不可重複再加入一次
+
+file:business-{businessId}-network-business-{childBusinessId}.robot 
+business-{businessId}-network-business.robot
+error:{"statusCode":400,"error":"Bad Request","message":"Members must be admin or owner of parent"}
+fix: member 需要加到parent busienss MUR-5762
+
+murano-staging-service-migration
+------------------------------------
+file: test_websocket.robot
+test case:Websocket closeAll can close all existing websocket
+error:無法關閉現有全部websocket
+Server Error: [string "-- Murano Solution Scripting..."]:160: attempt to index local 'result' (a number value)
+
+file: test_http
+error: 錯誤的conn_timeout or recv_timeout or body return 500
+
+
+murano-staging-business
+------------------------------------
+file:adcWeb/test_transfer_owner.robot
+error: UI change transfer_owner need to input "TRANSFER"
+
+
+murano-staging-docs
+-----------------------------------
+file:test_verify_product_navigation_link_in_new_window.robot
+test case:The device dashboard tab should redirected to dashboard page in new window
+error: data-qa error //a[@data-qa="Content-DASHBOARD-Tab"]=>//button[@data-qa="Content-DASHBOARD-Tab"]
+
+
+Bug
+	Websocket closeAll return 500
+	new user 不能被邀請進 business return 502 MUR-6118 
+	HTTP 錯誤的conn_timeout or recv_timeout or body return 500
+    delete Application dialog title h3->h1 MUR-6115
+Fix
+   //a[@data-qa="Content-DASHBOARD-Tab"]=>//button[@data-qa="Content-DASHBOARD-Tab"]
+   delete Application dialog applicationName 不在dialog裡 MUR-6116
+   product setting-> mqtt -> port //div[3]->//div[4] MUR-6116
+   建立 child business 時 所給的email 會變成member 因此不可重複再加入一次 MUR-6144
+   member 需要加到parent busienss    change from:MUR-5762 fix:MUR-6144
+Other
+   UI change transfer owner need to input "TRANSFER" word
+   spms performace'0.92056756466 <= 0.315'

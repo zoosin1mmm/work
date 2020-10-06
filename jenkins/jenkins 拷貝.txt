@@ -1,0 +1,55 @@
++tag 
+adc-staging-application bug:MUR-3476 QA-task:
+----------------------------
+FILE: test_add_adc_application.robot add_adc_application_A
+    Add application with customer template
+    Add application with vaild name and vaild template
+    Add application with murano getting start application template
+error: template disable不給輸入
+
+FILE: test_check_adc_solution.robot
+    Check ADC solutions cannot be added with capital letter name
+error: template disable不給輸入
+
+
+murano-staging-docs(Stacy) /murano-staging-business(Stacy) / murano-staging-product(Stacy)
+Failed to add product (TypeError: (0 , l.productCreated) is not a function) RETRY
+bug:MUR-4876
+
+
+
++ticket
+file:device2
+test case:Device2 can use setIdentityState to trigger long polling
+error: json format integer value 不能是0開頭
+
+file:business-{bizid}-member bug:MUR-4797
+testcase:business-{bizid}-member - get - cannot get information from the business which the user never being at
+error：error message change Forbidden-> Insufficient scope
+
+
++revert
+twilio 已經購買的service 不能update
+migration application 已經有twilio service但卻回傳service沒有被購買
+migration http 500
+
+Bulknotify send can use TSDB service
+solution tsdb 500
+沒有tag會500 
+MUR-4877
+
+
+
++tag
+MUR-4797
+=========================
+file:business-{bizid}-member 
+testcase:business-{bizid}-member - get - cannot get information from the business which the user never being at
+=========================
+
+
++QA-Task
+file:device2
+test case:Device2 can use setIdentityState to trigger long polling
+error: json format integer value 不能是0開頭
+

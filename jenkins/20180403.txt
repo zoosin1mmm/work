@@ -1,0 +1,39 @@
+murano-staging-murano-cli-tool
+-------------------------------
+file:test_murano_CLI3_business.robot
+test case:Murano CLI can find admin business
+error:keyword 搬位置 solution/init 沒有引入 keywords_business_businessId_member
+fix:MUR-6393
+
+murano-staging-service-solution
+---------------------------------
+file:test_lua_library.robot
+test case:Lua library CPU run time more than 10 second will return 504 timeout
+error: IN-549 錯誤不存在 結果變成 MUR-6337
+
+file:test_user_oauth.robot
+test case:Oauth can use refresh token to get new token
+error: token can be used again until live time out
+fix:MUR-6347 bug is not existing
+
+
+file:test_timeseries_event.robot
+change: export 後需要等待更多時間才可以拿到預期的log
+
+
+murano-staging-service-application
+-----------------------------------
+file:test_config.robot
+test case: Config listservice can use type data to search service
+ticket:MUR-6362
+
+murano-staging-business
+------------------------------
+file:adcWeb/test_check_business_area.robot
+test case:Check business click purchases item in billing page can navigate to item detail page
+error: data-qa change
+//*[@id="app"]//h1[@class="text--thin"]
+=>
+@class=exchangeDetailsHeading text--thin
+
+fix://*[@id="app"]//h1[contains(@class,"text--thin")]

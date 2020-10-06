@@ -1,0 +1,33 @@
+murano-staging-api-internal  add tag https://jira.exosite.com/browse/MUR-5374
+------------------------------
+https://jira.exosite.com/browse/MUR-5356
+file:Context-{Solutionid}-Logs 
+error:  curl -X GET 'http://localhost:8081/api/v1/context/l1i5n9rb9stuo0000/logs' -H 'Content-type:application/json' -ik
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json
+Content-Length: 55
+Date: Tue, 02 Jan 2018 03:22:43 GMT
+Connection: keep-alive
+{"message":"Cannot read property 'value' of undefined"}
+
+
+file:execute-post.robot
+test case: Execute - post - should return 485 with exceeded allotted cpu time
+error:https://jira.exosite.com/browse/MUR-5357
+
+
+murano-staging-service-solution
+-------------------------------
+https://jira.exosite.com/browse/MUR-5373
+file:test_device_event.robot
+file:test_timer_event.robot
+file:test_timeseries_event.robot
+file:test_user_event.robot
+file:Test_Scripts.robot
+test case:Scripts trigger can trigger customer event
+test case:Scripts trigger can trigger event with async mode
+test case:Scripts trigger can trigger event with sync mode
+test case: Scripts trigger can trigger self event
+test case:Scripts trigger should get expected response with service event
+test case:Scripts trigger should get expected response with service event
+error:trigger event

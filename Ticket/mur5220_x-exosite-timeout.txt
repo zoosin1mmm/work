@@ -1,0 +1,76 @@
+{
+    "alias": "qa2018011502",
+    "name": "qa2018011502",
+    "status": "available",
+    "whitelist": [],
+    "schema": {
+        "swagger": "2.0",
+        "info": {
+            "version": "v1",
+            "title": "Testing",
+            "description": "Testing",
+            "contact": {
+                "name": "Testing",
+                "email": "testing@exosite.com"
+            }
+        },
+        "schemes": [
+            "https"
+        ],
+        "host": "mur4449.apps.exosite-staging.io",
+        "x-exosite-health-path": "/",
+        "basePath": "/",
+        "x-exosite-config-parameters": [
+            {
+                "name": "private",
+                "description": "A private parameter",
+                "x-exosite-internal-use": true,
+                "type": "string"
+            }
+        ],
+        "paths": {
+            "/qa3": {
+                "get": {
+                    "description": "A testing operation",
+                    "operationId": "QA",
+                    "parameters": [],
+                    "x-exosite-timeout": 1000,
+                    "responses": {
+                        "204": {
+                            "description": "Return the operation result"
+                        }
+                    }
+                }
+            },
+            "/qa2": {
+                "get": {
+                    "description": "A testing operation",
+                    "operationId": "QA2",
+                    "parameters": [],
+                    "responses": {
+                        "204": {
+                            "description": "Return the operation result"
+                        }
+                    }
+                }
+            }
+        },
+        "x-exosite-events": {
+            "event": {
+                "type": "SQS",
+                "summary": "Test service",
+                "description": "Test service",
+                "parameters": [
+                    {
+                        "name": "qa",
+                        "in": "body",
+                        "schema": {
+                            "type": "string",
+                            "description": "Return eventhandler event value"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

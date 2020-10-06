@@ -1,0 +1,42 @@
+{
+    "markdown": "Element markdown of mur5296",
+    "description": "Element description of mur5296",
+    "tags": [
+        "mur5296"
+    ],
+    "image": {
+        "detail": {
+            "color": "#FFFFFF",
+            "url": "https://www.exosite-staging.com/20171208183959",
+            "size": 111453,
+            "type": "image/png",
+            "filename": "qa-20171208183959.png"
+        },
+        "thumbnail": {
+            "color": "#FFFFFF",
+            "url": "https://www.exosite-staging.com/20171208183959",
+            "size": 111453,
+            "type": "image/png",
+            "filename": "qa-20171208183959.png"
+        }
+    },
+    "specs": "test",
+    "name": "mur5296",
+    "bizid": "loz8gtd7hcmims4i",
+    "access": "private",
+    "source": {
+        "url": "https://mur5296-01.apps.exosite-staging.io/swagger.json",
+        "from": "url",
+        "name": "mur5296"
+    },
+    "contact": "QA",
+    "attachment": {
+        "download": {
+            "url": "https://github.com/exosite/getting-started-solution-template",
+            "size": 1234,
+            "type": "product/pdf",
+            "filename": "download.pdf"
+        }
+    },
+    "type": "service"
+}

@@ -1,0 +1,86 @@
+#Problem
+adc_staging_project
+-----------------------------------------
+FILE:test_device2.robot
+test case:Device2 can use getGatewaySettings to get the current settings for product
+Error :schema error  (u'port' was unexpected)
+{
+  "fqdn": "u1rnqm3kgg2u80000.m2.exosite-staging.io",
+  "identity_format": {
+    "options": {
+      "casing": "mixed",
+      "length": 0
+    },
+    "prefix": "",
+    "type": "opaque"
+  },
+  "protocol": {
+    "devmode": false,
+    "name": "onep"
+  },
+  "provisioning": {
+    "auth_type": "token",
+    "enabled": true,
+    "generate_identity": false,
+    "ip_whitelisting": {
+      "allowed": [],
+      "enabled": false
+    },
+    "presenter_identity": true
+  },
+  "resources": {}
+}
+change to 
+{
+    "fqdn": "y6bxhvp8mid40000.m2.exosite-staging.io",
+    "identity_format": {
+        "options": {
+            "casing": "mixed",
+            "length": 0
+        },
+        "prefix": "",
+        "type": "opaque"
+    },
+    "protocol": {
+        "devmode": false,
+        "name": "onep",
+        "port": 443
+    },
+    "provisioning": {
+        "auth_type": "token",
+        "enabled": true,
+        "generate_identity": false,
+        "ip_whitelisting": {
+            "allowed": [],
+            "enabled": false
+        },
+        "presenter_identity": true
+    },
+    "resources": {}
+}
+Additional properties are not allowed (u'port' was unexpected)
+
+FILE:test_bulknotify.robot
+test case :Bulknotify listResults response empty with not correct content of parameters
+Error : no change business ,so can not find solution
+
+adc-staging-product
+------------------------------------
+File:test_check_adc_settings.robot
+Error: UI change
+
+
+給sheryl
+----------------------------------------------------------------------
+adc_staging_project
+-----------------------------------------
+FILE:test_device2.robot
+Error:Device2.getGatewaySettings()  回傳的內容多了個 port 所以schema error
+
+FILE:test_bulknotify.robot
+Error : 刪除solution沒有改businessID 所以teardown的時候 刪不到solution
+
+adc-staging-application
+-----------------------------------------
+FILE: test_check_adc_services.robot
+Error: service Product 需要先 APPLY 才可以 click EDIT SCRIPT

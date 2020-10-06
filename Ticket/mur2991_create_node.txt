@@ -1,0 +1,84 @@
+2.add service
+curl -X POST \
+  http://localhost:8081/api/v1/serviceconfig \
+  -H 'content-type: application/json' \
+  -d '{"solution_id":"q2ctxznivgscg0000","service":"spms"}'
+
+
+3.get parent_node_id of root
+return Spms.getRootNode()
+
+Return
+{
+  "result": {
+    "description": "Root node of the solution",
+    "id": "4d050ef7-bba1-496b-860e-dbf078b33704",
+    "name": "root",
+    "node_type_id": "a1407460-56f1-43a4-a882-27f9cc5941d1"
+  },
+  "status": 200
+}
+
+
+4.create node
+return Spms.createNode({
+		description= "The distribution company for the midwest area",
+		name= "Midwest Distribution Company",
+		parent_id= "d200446f-d5e6-48d0-bf40-7dd2f4abd96g",
+		parent_node_id= "d200446f-d5e6-48d0-bf40-7dd2f4abd96g"
+	})
+return
+{
+  "result": {
+    "description": "The distribution company for the midwest area",
+    "id": "d4d83726-62aa-4200-a47a-fed572ae85d3",
+    "name": "Midwest Distribution Company",
+    "parent_node_id": "4d050ef7-bba1-496b-860e-dbf078b33704"
+  },
+  "status": 200
+}
+
+
+
+5.get tree
+Endpoint /tree
+return Spms.tree({node_id="4d050ef7-bba1-496b-860e-dbf078b33704"})
+
+Return
+{
+  "result": {
+    "children": [
+      {
+        "children": [],
+        "description": "The distribution company for the midwest area",
+        "devices": [],
+        "id": "d4d83726-62aa-4200-a47a-fed572ae85d3",
+        "name": "Midwest Distribution Company",
+        "parent_id": "4d050ef7-bba1-496b-860e-dbf078b33704",
+        "roles": [],
+        "rules": [],
+        "users": []
+      },
+      {
+        "children": [],
+        "description": "The distribution company for the midwest area",
+        "devices": [],
+        "id": "acad6849-c522-40d8-962c-fac417f928dc",
+        "name": "Midwest Distribution Company",
+        "parent_id": "4d050ef7-bba1-496b-860e-dbf078b33704",
+        "roles": [],
+        "rules": [],
+        "users": []
+      }
+    ],
+    "description": "Root node of the solution",
+    "devices": [],
+    "id": "4d050ef7-bba1-496b-860e-dbf078b33704",
+    "name": "root",
+    "node_type_id": "a1407460-56f1-43a4-a882-27f9cc5941d1",
+    "roles": [],
+    "rules": [],
+    "users": []
+  },
+  "status": 200
+}

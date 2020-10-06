@@ -1,0 +1,18 @@
+curl -X GET https://usage3.apps.exosite-staging.io/keystore
+curl -X GET https://usage3.apps.exosite-staging.io/tsdb
+
+
+
+curl -X PUT http://localhost:8081/api/v1/serviceconfig/h2u47qrmwoz400000_tsdb \
+-H 'Content-type':'application/json' \
+ -d '{"quota":{"calls_daily":10}}'
+
+
+curl -ik -X GET http://localhost:8081/api/v1/serviceconfig/h2u47qrmwoz400000_tsdb
+
+
+ninazhang+preview@exosite.com
+ninazhang+preview
+
+git config --global user.name  'StacyChen'
+git config --global user.email 'stacychen@exosite.com'

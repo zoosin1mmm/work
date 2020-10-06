@@ -1,0 +1,27 @@
+#run again pass
+adc-staging-docs
+murano-staging-micro-vert
+adc-staging-project
+murano-staging-service-migration
+
+#Problem
+murano-staging-service-solution
+---------------------------------------------
+FILE:Test Spms Performance
+=>0.42529616844 <= 0.315
+
+adc-staging-api-external
+--------------------------------------
+FILE:service-{solutionid}-device2-identity-{deviceid}
+Testcase:service-{solutionid}-device2-identity-deviceid - patch - the updated expire time does not trigger when the set time is not reached
+=>executed time so long that expired time be trigger and status can not match expected
+
+murano-staging-solution/murano-staging-docs/adc-staging-product
+------------------------------------
+=>get pop message handly
+
+adc-staging-project
+------------------------------------
+FILE:test_websocket_connect.robot
+=>Websocket connect can change websocketInfo type to close
+==>sometime will not be close

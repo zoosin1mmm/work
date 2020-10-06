@@ -1,0 +1,39 @@
+#murano-staging-product bug  (請Xavier開ticket了)
+--------------------------------
+FILE:test_check_adc_resources
+TestCase:Check ADC resources edit format after reproduce resources
+Error:No keyword with name 'Edit Format After Reproduce Resources' found.
+Case:No keyword with name 'Edit Format After Reproduce Resources' found.
+
+#murano-staging-solution
+--------------------------------
+FILE:test_verify_application_navigation_link_in_new_window
+#Do not need to modify error?
+
+#murano-staging-service-solution
+--------------------------------
+FILE:test_device
+Case: device can not create meet to expected count
+
+FILE:test_scripts
+Error: need to check
+
+#adc_staging_project
+--------------------------------
+FILE:test_spms_rule
+Error:can not get solution
+Cause: get solution id do not give it business id
+
+/code
+Run Again Pass
+#adc-staging-application 
+#adc_staging_api 
+#murano-staging-api
+#murano-staging-service-migration
+#murano-staging-docs
+
+
+-------------------------------------------------------------------------
+#deploy-tool
+discard xpath change to module-btn
+#adc-staging-application

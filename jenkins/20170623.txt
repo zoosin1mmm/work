@@ -1,0 +1,22 @@
+murano-staging-ui
+------------------------------------------------
+FILES:test_check_adc_navigation_bar.robot
+Testcase:Check ADC navigation bar link text the product page
+Error: testing20170623094028qa != r3ufh69ydrh44wckg.m2.exosite-staging.io
+Cause: navbar text change productID to product Name
+
+/code
+#murano-staging-product same as yesterday
+#murano-staging-docs log page MUR-3131
+#murano-staging-link   ADC_COMPANY_ID MUR-3174, log page MUR-3131
+#murano-staging-service-migration run again pass
+#murano-staging-api  init not import exoMail MUR-3174
+#murano-staging-project run again pass
+#murano-staging-ui has error
+
+/code
+murano-staging-ui
+------------------------------------------------
+FILES:test_check_adc_navigation_bar.robot
+Cause: navbar text change productID to product Name
+

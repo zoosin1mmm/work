@@ -1,0 +1,36 @@
+Here is the test case should been tested.
+{panel:title=BaseLine}
+Setup
+* pegasus-cass-service 1 pods
+Testing:
+* 10 Metrics with 5 tags (10, 1000, 2000)
+Report:
+* pegasus-cass-service metric picture
+* average response time
+| datapoints | response time (ms) |
+| 10 | |
+| 1000 | |
+| 2000 | |
+{panel}
+{panel:title=Metrics and Tags}
+Setup
+* pegasus-cass-service 1 pods
+Testing:
+* 50 Metrics with 0 tags (2000)
+* 1 Metrics with 20 tags (2000)
+Report:
+* pegasus-cass-service metric picture
+* average response time
+| item |response time (ms)| 
+| 50 Metrics with 0 tags | |
+| 1 Metrics with 20 tags | |
+{panel}
+{panel:title=Concurrency and Limit}
+Testing:
+* 10 Metrics with 5 tags (2000)
+Report:
+* pegasus-cass-service metric picture
+* concurrency
+|pods|concurrency|response time (ms)|
+| 1 | 1 | |
+{panel}

@@ -1,0 +1,60 @@
+create group
+ curl 'https://portals.exosite.com/api/portals/v1/users/1561807313/groups' \
+     -X POST \
+     -d '{"name":"testingqa"}' \
+     -u 'testing@exosite.com:1234eszxcv++' \
+     -i
+ {
+    "id": "1991877764",
+    "userId": "1561807313",
+    "members": [
+        {
+            "access": "___admin",
+            "oid": {
+                "type": "User",
+                "id": "1561807313"
+            }
+        }
+    ],
+    "meta": null,
+    "name": "testingqa",
+    "permissions": []
+}
+
+create portals
+curl 'https://portals.exosite.com/api/portals/v1/users/1991877764/portals' \
+     -X POST \
+     -d '{"planId":"2692704445"}' \
+     -u 'testing@exosite.com:1234eszxcv++' \
+     -i
+
+get group permissions
+curl 'https://portals.exosite.com/api/portals/v1/groups/1991877764/permissions' \
+     -X GET \
+     -u 'testing@exosite.com:1234eszxcv++' \
+     -i
+
+create group permissions
+curl 'https://portals.exosite.com/api/portals/v1/groups/1991877764/permissions' \
+     -X POST \
+     -d '[{"access":"d_u_list","oid":{"id":"5885006e6bf8f3e47ef55e2a571facb4b2e2b1c4","type":"Device"}}]' \
+     -u 'testing@exosite.com:1234eszxcv++' \
+     -i
+
+activate device
+7f4300891965452fd923540b3151df6ee1ea706a
+curl 'https://m2.exosite.com/provision/activate' \
+       -d 'vendor=exosite&model=ard-generic&sn=00251C74DA
+
+add user permissions
+curl 'https://mydomain.exosite.com/api/portals/v1/users/3167859736/permissions' \
+     -X POST \
+     -d '[{"access":"d_u_list","oid":{"id":"1576946496","type":"Domain"}}]' \
+     -u 'useremail@gmail.com:userP4ssword' \
+     -i
+
+
+{
+  "portalId":"1784600965",
+  "token":"SecxYkxozbX-TB2_FADuam-ZSaRbsNju1CbSNrjmNqqsoL9Jag3SvG_MDpHAM_4kINDdjLqreYxwiAdKIQagstW0z73c"
+}

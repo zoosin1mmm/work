@@ -1,0 +1,171 @@
+murano-staging-service-migration
+--------------------------
+file:test_analytics.robot
+test case:Analytics can not get GEO location with empty IP
+ticket: SVH-2013
+
+file:test_config.robot
+test case:Config listservice can use type data to search service
+error: can not add application type service
+
+
+
+file:/test_device.robot
+test case:Device can not get product information without object
+error: '{"error":"Parameter pid is required.","status":400,"type":"QueryError"}' does not contain '{"error":"Parameter error: [\"Parameter pid is required.\"]","status":400,"type":"QueryError"}'
+
+test case:Device can not get product information with non-exsiting productID
+error:'{"error":"Only products associated with the solution can be accessed","status":400,"type":"QueryError"}' does not contain '{"error":"Only products associated with the solution can be accessed","status":403,"type":"QueryError"}'	
+
+test case:Device can not get list of devices without object
+error:'{"error":"Parameter pid is required.","status":400,"type":"QueryError"}' does not contain '{"error":"Parameter error: [\"Parameter pid is required.\"]","status":400,"type":"QueryError"}'
+
+test case:Device can not get list of devices with non-exsiting productID
+error:	'{"error":"Only products associated with the solution can be accessed","status":400,"type":"QueryError"}' does not contain '{"error":"Only products associated with the solution can be accessed","status":403,"type":"QueryError"}'
+
+file:test_email
+error: email 被migration type=C 不是null 驗證schema 錯誤
+
+
+file:test_portals
+fix:MUR-6636
+
+
+murano-staging-api-internal
+--------------------------
+https://github.com/exosite/pegasus_api/blob/master/api/swagger/paths/serviceconfig.yaml#L182
+file:serviceconfig-{serviceconfig_id}-call-{operation_id}-test.robot
+test case:get - should respond with 200 OK
+error:"Ok" => "OK"
+
+test case:post - should respond with 200 OK
+error: 無法call 到endpoint
+
+
+file:solution-test.robot
+test case:solution-test - post - should respond 400 Bad Request for create with invalid domain, domain
+errro:domain name不是亂數 可能被使用創建 導致測試get error
+
+
+file:solution-{solution_id}-serviceconfig-test.robot
+test case: should respond with 200 OK
+ticket:MUR-6214
+change: only quota of cors service is not empty
+
+file:solution-\{solution_id\}-swagger.json-test.js
+test case:should respond with 400 Bad Request without solution id
+error: 400=>404
+Wrong solution Id format=>
+No data returned from the query.
+
+file:solution-{solution_id}-test.robot
+test case: should respond with 400 Bad Request for get with invalid solution id, solutionId: ${invalidSolutionId}.
+error: 400=>404
+Wrong solution Id format=>
+No data returned from the query.
+
+test case:should respond with 400 Bad Request for update with invalid domain, domain: ${invalidDomain}
+error:
+Domain is invalid=>Domain XXX is invalid
+
+domain put with "." and "001." and "AAA." return 400=>204
+
+test case:put- should respond with 400 Bad Request for update with bad domain value, Body: ${badDomain}
+Bug:更改domain "string" and null 原本 400 變成204 MUR-6753
+Fix:錯誤的domain 不應該全部都是string
+
+test case:should respond with 400 Bad Request for update with bad body value, Body: ${badBody}.
+Bug:put error body 原本 400 變成204 MUR-6753
+
+
+
+murano-staging-service-application
+------------------------------------
+file:test_analytics.robot
+test case:Analytics can not get GEO location with empty IP
+ticket: SVH-2013
+
+file:test_config.robot
+test case:Config listservice can use type data to search service
+error: can not add application type service
+
+test case:Config usage should show all services along with their quotas
+ticket:MUR-6747
+
+file:test_content.robot
+test case:
+Content delete with empty post data should return 400
+Content delete without post data should return 400
+Content download with empty post data should return 400
+Content download without post data should return 400
+Content info with empty post data should return 400
+Content info without post data should return 400
+Content upload with empty post data should return 400
+Content upload without post data should return 400
+error: error message change
+ticket: MUR-5314
+
+file:test_bulknotify.robot
+test case:
+Bulknotify send can reject wrong format and would not save into results log
+Bulknotify sendEmail can reject wrong format and would not save into results log
+Bulknotify sendSms can reject wrong format and would not save into results log
+error: error message change
+ticket: MUR-5314
+
+
+file:test_device2.robot
+test case:
+Device2 can not use getGatewayResource with invalid alias
+Device2 can not use getIdentity with invalid alias
+Device2 can not use getIdentityState with invalid alias
+Device2 can not use removeGatewayResource with invalid alias
+Device2 can not use removeIdentity with invalid alias
+Device2 can not use setIdentityState with invalid deviceID or alias when resource format is string
+Device2 can not use setIdentityState with invalid deviceID or alias when resource format is number
+error: error message change
+ticket: MUR-5314
+
+file:test_email
+error: email 被migration type=C 不是null 驗證schema 錯誤
+ticket:MUR-6214
+
+file:test_endpoint_script.robot
+test case:
+Endpoint can accept request from itself when cors is true
+Endpoint can accept request from itself when cors is localhost
+error: return header does not include access-control-allow-origin
+
+
+file:test_portals
+fix:MUR-6636
+
+file:test_scripts.robot
+test case:Scripts trigger cannot trigger event with not exist service
+error:
+{"error":{"error":"Service qa044219861238 Not Found"},"status":404,"type":"QueryError"}
+=>
+{"error":"Service qa044219861238 Not Found","status":404,"type":"QueryError"}
+
+test case:Scripts trigger should trigger event with default mode when using error mode name
+error:原本可以使用不存在的mode
+	{u'status': 400, u'type': u'QueryError', u'error': u'["Parameter mode validation failed: expected one of: sync, async."]'}
+
+
+file:test_timeseries.robot
+ticket:MUR-5363
+
+
+File:test_user
+ticket: MUR-5314
+
+
+murano-staging-service-solution-coreService
+-------------------------------------------------
+file:test_device
+test case:
+Device can not get product information without object
+Device can not get product information with non-exsiting productID
+Device can not get list of devices without object
+Device can not get list of devices with non-exsiting productID
+Ticket:MUR-5314

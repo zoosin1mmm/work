@@ -1,0 +1,33 @@
+murano-staging-solution
+------------------------------------------------
+FILES:Test Application Domain
+Cause:MUR-3398
+
+FILES: test_add_application 
+Cause:MUR-2952
+
+FILES: test_verify_application_navigation_link_in_new_window
+Cause:MUR-2735
+/code
+#adc-staging-project run again PASS
+#murano-staging-product run again PASS
+#murano-staging-docs  run again PASS
+#murano-staging-service-solution run again PASS
+#murano-staging-service-migration run again PASS
+#murano-staging-deploy-tool run again PASS
+
+/code
+murano-staging-business
+---------------------------------------
+FILES: Test Add Credicard / Test Upgrade Business Tier
+Cause:credit card show be changed
+
+murano-staging-solution 
+---------------------------------------
+FILES:Test Application Domain
+Cause:MUR-3482
+##bug ticket link not update
+FILES: test_add_application
+##Do we need to modify?
+FILES: test_verify_application_navigation_link_in_new_window
+Cause:MUR-2735

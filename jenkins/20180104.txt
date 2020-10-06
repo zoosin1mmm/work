@@ -1,0 +1,7 @@
+murano-staging-business
+-------------------------------
+FILE:test_add_business_payments.robot
+FILE:test_add_credicard.robot
+FILE:test_update_creditcard.robot
+FILE:test_upgrade_business_tier.robot
+error:create credit card 時過期時間可選擇範圍應該在2018-2028 year 但現在是2017-2027 所以再下拉時點不到2028而錯誤

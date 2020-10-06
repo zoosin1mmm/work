@@ -1,0 +1,87 @@
+curl -X PUT \
+  http://localhost:8081/api/v1/solution/w534f82j3ub400000/serviceconfig/w534f82j3ub400000_mbed \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{
+  "parameters": {
+    "product_id": "f47tg1clzyw800000",
+    "api_key": "zKodSx6Z0xg1V7zUiyLzHu9kX9sPiDFNxWF6P0KbGG6VKigLGMEXGWTSORJof72Y1MqQ1qSVNo7Hw19PFCCKgZsgsRqYrfbxzGGi",
+    "endpoint_type": "test"
+  }
+}'
+
+
+curl -X PUT \
+  http://localhost:8081/api/v1/solution/w1aufw93drf9c0000/serviceconfig/w1aufw93drf9c0000_mbed \
+  -H 'content-type: application/json' \
+  -d '{
+  "parameters": {
+    "product_id": "a4tl0gpxvcbu00000",
+    "api_key": "zKodSx6Z0xg1V7zUiyLzHu9kX9sPiDFNxWF6P0KbGG6VKigLGMEXGWTSORJof72Y1MqQ1qSVNo7Hw19PFCCKgZsgsRqYrfbxzGGi",
+    "endpoint_type": "test"
+  }
+}'
+
+
+curl -X GET \
+  https://bizapi-staging.hosted.exosite.io/api:1/service/f47tg1clzyw800000/device2/identity/85d74763-f27b-481f-b201-b50c53352cba \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' 
+
+curl -X PUT \
+  http://localhost:8081/api/v1/solution/f47tg1clzyw800000/serviceconfig/f47tg1clzyw800000_mbed \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 52b9973e-f581-6be3-307b-cbd50750b8d4' \
+  -d '{
+  "parameters": {
+    "product_id": "",
+    "api_key": "",
+    "endpoint_type": ""
+  }
+}'
+
+curl -X GET \
+  https://api.connector.mbed.com/v2/notification/callback \
+  -H 'authorization: Bearer zKodSx6Z0xg1V7zUiyLzHu9kX9sPiDFNxWF6P0KbGG6VKigLGMEXGWTSORJof72Y1MqQ1qSVNo7Hw19PFCCKgZsgsRqYrfbxzGGi' \
+  -H 'content-type: application/json' 
+
+
+https://connector.mbed.com/#endpoints
+
+
+
+curl -X PUT \
+  https://mbed-staging.hosted.exosite.io/callback/f47tg1clzyw800000 \
+  -H 'authorization: Bearer zKodSx6Z0xg1V7zUiyLzHu9kX9sPiDFNxWF6P0KbGG6VKigLGMEXGWTSORJof72Y1MqQ1qSVNo7Hw19PFCCKgZsgsRqYrfbxzGGi' \
+  -H "X-Exosite-Token:88d55674-e7e8-4e0e-92a1-f68270ebb1aa" \
+  -H 'content-type: application/json' \
+  -d '{"de-registrations": ["305adf26-7a96-449e-aa6f-ef17914aea4f"]}'
+
+
+curl -X GET \
+  https://mbed-staging.hosted.exosite.io/endpoint \
+  -H 'authorization: Bearer zKodSx6Z0xg1V7zUiyLzHu9kX9sPiDFNxWF6P0KbGG6VKigLGMEXGWTSORJof72Y1MqQ1qSVNo7Hw19PFCCKgZsgsRqYrfbxzGGi' \
+  -H 'content-type: application/json' 
+
+
+
+
+sudo docker build -t=device ./
+sudo docker images 
+sudo docker run -it <images> /bin/bash
+sudo docker ps -a -q
+
+
+
+
+curl -X PUT \
+  http://localhost:8081/api/v1/solution/w534f82j3ub400000/serviceconfig/w534f82j3ub400000_mbed \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{
+  "parameters": {
+    "product_id": "f47tg1clzyw800000",
+    "api_key": "zKodSx6Z0xg1V7zUiyLzHu9kX9sPiDFNxWF6P0KbGG6VKigLGMEXGWTSORJof72Y1MqQ1qSVNo7Hw19PFCCKgZsgsRqYrfbxzGGi",
+    "endpoint_type": "test"
+  }
+}'

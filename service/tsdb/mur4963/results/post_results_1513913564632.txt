@@ -1,0 +1,14 @@
+Avg Spend time: 0.0 
+
+--------------------------------------------------
+solutionID: xrv6xq7vzgz40000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 100 
+Tags Size: 0 
+Datapoint length: 1000 
+export post Data to data/post_body_1513913564628.txt 
+Get Response: Bad Request 
+spend times : Bad Request 
+
+--------------------------------------------------

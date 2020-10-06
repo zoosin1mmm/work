@@ -1,0 +1,21 @@
+create a solution
+
+curl -X PUT \
+  http://localhost:8081/api/v1/solution/o7ssdpju4y9wl8fr \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{
+    "notifications": {
+        "quota_reached": true
+    }
+}'
+
+update quota=5
+
+call tsdb over 5
+
+{
+  "error": "Service call \"daily quota exceeded 252030/5\"",
+  "status": 403,
+  "type": "QueryError"
+}

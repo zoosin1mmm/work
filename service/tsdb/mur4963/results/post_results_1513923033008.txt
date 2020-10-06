@@ -1,0 +1,1301 @@
+Avg Spend time: 0.0 
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923033006.txt 
+Get Response: 3.619815817s 
+spend times : 3.619815817s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923028599.txt 
+Get Response: 3.556577401s 
+spend times : 3.556577401s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923024303.txt 
+Get Response: 3.594921689s 
+spend times : 3.594921689s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923019554.txt 
+Get Response: 4.102619313s 
+spend times : 4.102619313s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923013623.txt 
+Get Response: 4.530966719s 
+spend times : 4.530966719s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923008267.txt 
+Get Response: 4.153878667s 
+spend times : 4.153878667s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513923003338.txt 
+Get Response: 4.505442646s 
+spend times : 4.505442646s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922998046.txt 
+Get Response: 3.83137102s 
+spend times : 3.83137102s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922993311.txt 
+Get Response: 3.809802593s 
+spend times : 3.809802593s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922988735.txt 
+Get Response: 3.955116207s 
+spend times : 3.955116207s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922984044.txt 
+Get Response: 3.876467065s 
+spend times : 3.876467065s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922979383.txt 
+Get Response: 4.165353305s 
+spend times : 4.165353305s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922974511.txt 
+Get Response: 3.453024275s 
+spend times : 3.453024275s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922969607.txt 
+Get Response: 3.803973427s 
+spend times : 3.803973427s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922964997.txt 
+Get Response: 3.887497826s 
+spend times : 3.887497826s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922960254.txt 
+Get Response: 3.610108008s 
+spend times : 3.610108008s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922955960.txt 
+Get Response: 4.319826002s 
+spend times : 4.319826002s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922950807.txt 
+Get Response: 4.317231138s 
+spend times : 4.317231138s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922945424.txt 
+Get Response: 4.501763218s 
+spend times : 4.501763218s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922939925.txt 
+Get Response: 4.081149316s 
+spend times : 4.081149316s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922935038.txt 
+Get Response: 3.959505461s 
+spend times : 3.959505461s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922930301.txt 
+Get Response: 3.713373003s 
+spend times : 3.713373003s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922925858.txt 
+Get Response: 3.875896529s 
+spend times : 3.875896529s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922921226.txt 
+Get Response: 3.915937675s 
+spend times : 3.915937675s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922916332.txt 
+Get Response: 3.803824475s 
+spend times : 3.803824475s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922911815.txt 
+Get Response: 3.848806765s 
+spend times : 3.848806765s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922907211.txt 
+Get Response: 3.945682176s 
+spend times : 3.945682176s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922902488.txt 
+Get Response: 3.925148931s 
+spend times : 3.925148931s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922897795.txt 
+Get Response: 4.438022667s 
+spend times : 4.438022667s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922892577.txt 
+Get Response: 4.584537811s 
+spend times : 4.584537811s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922886602.txt 
+Get Response: 4.8041028s 
+spend times : 4.8041028s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922880926.txt 
+Get Response: 4.232740586s 
+spend times : 4.232740586s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922875828.txt 
+Get Response: 3.800678991s 
+spend times : 3.800678991s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922871127.txt 
+Get Response: 3.699602325s 
+spend times : 3.699602325s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922866610.txt 
+Get Response: 4.121838222s 
+spend times : 4.121838222s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922861748.txt 
+Get Response: 4.0036174s 
+spend times : 4.0036174s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922856905.txt 
+Get Response: 4.05998225s 
+spend times : 4.05998225s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922851859.txt 
+Get Response: 3.856613684s 
+spend times : 3.856613684s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922847161.txt 
+Get Response: 3.817245084s 
+spend times : 3.817245084s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922842540.txt 
+Get Response: 3.700525966s 
+spend times : 3.700525966s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922837988.txt 
+Get Response: 3.992599869s 
+spend times : 3.992599869s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922833217.txt 
+Get Response: 4.026671582s 
+spend times : 4.026671582s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922828361.txt 
+Get Response: 4.381451414s 
+spend times : 4.381451414s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922823104.txt 
+Get Response: 4.671205561s 
+spend times : 4.671205561s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922817535.txt 
+Get Response: 3.697082533s 
+spend times : 3.697082533s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922812972.txt 
+Get Response: 3.902173634s 
+spend times : 3.902173634s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922808208.txt 
+Get Response: 3.746105435s 
+spend times : 3.746105435s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922803690.txt 
+Get Response: 3.976512188s 
+spend times : 3.976512188s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922798893.txt 
+Get Response: 4.034609792s 
+spend times : 4.034609792s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922794040.txt 
+Get Response: 3.916855372s 
+spend times : 3.916855372s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922789291.txt 
+Get Response: 3.626029891s 
+spend times : 3.626029891s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922784870.txt 
+Get Response: 3.607528643s 
+spend times : 3.607528643s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922780440.txt 
+Get Response: 3.600827326s 
+spend times : 3.600827326s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922776026.txt 
+Get Response: 3.654997792s 
+spend times : 3.654997792s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922771639.txt 
+Get Response: 3.582250561s 
+spend times : 3.582250561s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922767225.txt 
+Get Response: 3.707790106s 
+spend times : 3.707790106s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922762751.txt 
+Get Response: 3.856332831s 
+spend times : 3.856332831s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922758043.txt 
+Get Response: 3.206194289s 
+spend times : 3.206194289s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922754033.txt 
+Get Response: 3.152675789s 
+spend times : 3.152675789s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922749912.txt 
+Get Response: 3.337870471s 
+spend times : 3.337870471s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922745631.txt 
+Get Response: 3.115138821s 
+spend times : 3.115138821s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922741825.txt 
+Get Response: 3.412559385s 
+spend times : 3.412559385s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922737512.txt 
+Get Response: 3.200379808s 
+spend times : 3.200379808s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922733581.txt 
+Get Response: 3.198943257s 
+spend times : 3.198943257s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922729597.txt 
+Get Response: 3.154119663s 
+spend times : 3.154119663s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922725610.txt 
+Get Response: 3.105482298s 
+spend times : 3.105482298s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922721678.txt 
+Get Response: 3.124235112s 
+spend times : 3.124235112s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922717755.txt 
+Get Response: 3.535512071s 
+spend times : 3.535512071s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922713425.txt 
+Get Response: 3.959647866s 
+spend times : 3.959647866s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922708624.txt 
+Get Response: 4.127604289s 
+spend times : 4.127604289s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922703525.txt 
+Get Response: 4.185740881s 
+spend times : 4.185740881s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922698225.txt 
+Get Response: 4.009567095s 
+spend times : 4.009567095s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922693330.txt 
+Get Response: 3.62010028s 
+spend times : 3.62010028s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922688950.txt 
+Get Response: 3.894684949s 
+spend times : 3.894684949s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922684327.txt 
+Get Response: 3.991721127s 
+spend times : 3.991721127s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922679537.txt 
+Get Response: 3.914886109s 
+spend times : 3.914886109s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922674798.txt 
+Get Response: 3.605483981s 
+spend times : 3.605483981s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922670318.txt 
+Get Response: 3.588161224s 
+spend times : 3.588161224s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922666009.txt 
+Get Response: 3.658617312s 
+spend times : 3.658617312s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922660920.txt 
+Get Response: 3.718495638s 
+spend times : 3.718495638s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922656358.txt 
+Get Response: 4.328918709s 
+spend times : 4.328918709s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922651212.txt 
+Get Response: 4.475360287s 
+spend times : 4.475360287s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922645766.txt 
+Get Response: 4.08286018s 
+spend times : 4.08286018s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922640952.txt 
+Get Response: 4.951162642s 
+spend times : 4.951162642s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922635261.txt 
+Get Response: 3.723159073s 
+spend times : 3.723159073s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922630788.txt 
+Get Response: 4.039174757s 
+spend times : 4.039174757s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922625693.txt 
+Get Response: 4.074174267s 
+spend times : 4.074174267s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922620842.txt 
+Get Response: 3.965532281s 
+spend times : 3.965532281s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922616159.txt 
+Get Response: 3.546645379s 
+spend times : 3.546645379s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922611723.txt 
+Get Response: 3.648223759s 
+spend times : 3.648223759s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922607188.txt 
+Get Response: 3.79780313s 
+spend times : 3.79780313s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922602658.txt 
+Get Response: 3.661684215s 
+spend times : 3.661684215s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922598182.txt 
+Get Response: 4.210240207s 
+spend times : 4.210240207s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922593153.txt 
+Get Response: 4.392990912s 
+spend times : 4.392990912s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922587895.txt 
+Get Response: 4.47521681s 
+spend times : 4.47521681s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922582668.txt 
+Get Response: 4.502302555s 
+spend times : 4.502302555s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922577439.txt 
+Get Response: 4.015409176s 
+spend times : 4.015409176s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922572693.txt 
+Get Response: 3.60776737s 
+spend times : 3.60776737s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922568246.txt 
+Get Response: 3.897853381s 
+spend times : 3.897853381s 
+
+--------------------------------------------------
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1513922563567.txt 
+Get Response: 3.805634501s 
+spend times : 3.805634501s 
+
+--------------------------------------------------

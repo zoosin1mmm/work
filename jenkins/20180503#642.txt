@@ -1,0 +1,20 @@
+murano-staging-service-application
+------------------------------------------------
+file:test_lua_library.robot
+test case:Lua library CPU run time more than 10 second will return error message
+error:'{"error":"\"Exceeded allotted cpu time!\""}' does not contain '{"error":"\"exceeded allotted cpu time!\""}'
+
+file:test_spms_performance.robot
+error:3.98570692004 <= 0.315
+
+murano-staging-api-internal
+------------------------------------------------
+file:execute-post.robot
+test case:Execute - post - should return 485 with exceeded allotted cpu time
+error:'{"error":"\"Exceeded allotted cpu time!\""}' does not contain '{"error":"\"exceeded allotted cpu time!\""}'
+
+murano-staging-service-solution-luaLibrary
+------------------------------------------------
+file:test_lua_library.robot
+test case:Lua library CPU run time more than 10 second will return error message
+error:'{"error":"\"Exceeded allotted cpu time!\""}' does not contain '{"error":"\"exceeded allotted cpu time!\""}'

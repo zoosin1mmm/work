@@ -1,0 +1,70 @@
+group 下 limit people. can not include group
+datapot: resource against one deivce
+
+testing domain:https://apitesting-1406259377.exosite.com/login
+testing user: testing@exosite.com
+
+Hitach account:testing+pennyfeng@exosite.com
+Hitach password:Hitach123
+
+
+curl 'https://apitesting-501536633.exosite.com/api/portals/v1/users/4145747708/permissions' \
+     -X POST \
+     -d '[{"access":"___admin","oid":{"id":"4145747708","type":"User"}}]' \
+     -u 'qa+thread1+199@example.com:1234eszxcv++' \
+     -i
+
+{
+	"portalId":"1784600965",
+	"token": "xp8deL5e3r5_YCXVBlsqoP5e8zgZo-NTbrbs5OQr1PRdQDEAP1De5kzJVdsFAt67Ro9RPTCzxkPlbvUy_rCK4bNL6q2R"
+}
+
+{
+  "activated": true,
+  "email": "testing@exosite.com",
+  "fullName": "exosite testing",
+  "groups": [],
+  "id": "3040576331",
+  "permissions": [
+    {
+      "access": "___admin",
+      "oid": {
+        "id": "1784600965",
+        "type": "Portal"
+      }
+    }
+  ],
+  "phoneNumber": "",
+  "rid": "e31c08d5eef60b5d8051def28912316db4bf4e58",
+  "userName": "testing@exosite.com"
+}
+
+{
+  "token": "xp8deL5e3r5_YCXVBlsqoP5e8zgZo-NTbrbs5OQr1PRdQDEAP1De5kzJVdsFAt67Ro9RPTCzxkPlbvUy_rCK4bNL6q2R"
+}
+
+{
+  "dataSourceRids": "[]",
+  "token": "xp8deL5e3r5_YCXVBlsqoP5e8zgZo-NTbrbs5OQr1PRdQDEAP1De5kzJVdsFAt67Ro9RPTCzxkPlbvUy_rCK4bNL6q2R"
+}
+
+
+
+
+
+
+curl 'https://apitesting-1406259377.exosite.com/api/portals/v1/users/3411634735/groups' \
+     -X POST \
+     -d '{"name":"testingqa"}' \
+     -u 'evelynhuang@exosite.com:1234eszxcv++' \
+     -i
+
+{"email":"evelynhuang@exosite.com","password":"1234eszxcv++"}
+
+7uolnMXpgadkgb9Q7gqgX87q9RvS0hzaLhEEtrnb-7HybCP9O3Gkdih7AFTVLfW4LDSj1-8V5af5VyXa7e_iIAAzm2ai
+
+curl -X POST 'https://stacy.apps.exosite-dev.io/portals/hitachi' -d '{"email":"testing+pennyfeng@exosite.com","password":"Hitach123"}' -H 'Content-Type:application/json' | jq .
+
+curl -X POST 'https://stacy.apps.exosite-dev.io/portals/getUserToken' -d '{"email":"evelynhuang@exosite.com","password":"1234eszxcv++"}' -H 'Content-Type:application/json'
+
+curl -X POST 'https://stacy.apps.exosite-dev.io/portals/getUserToken' -d '{"email":"testing+pennyfeng@exosite.com","password":"Hitach123"}' -H 'Content-Type:application/json'

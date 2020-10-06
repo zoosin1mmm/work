@@ -1,0 +1,200 @@
+{code:gherkin}
+Scenario: User can use 'createOauthClient' function to create a new client 
+Given user have a endpoint 
+And new a user in users page of solution
+And endpoint content follow:
+local data = {
+    ["id"] = 1,
+    ["name"] =  "alexa test",
+    ["redirect"] = "https://testing-mur768.apps.exosite-staging.io"
+}
+response.message = User.createOauthClient(data)
+When go to 'AUTO-GENERATED DOCS' at https://testing-mur768.apps.exosite-staging.io/docs
+And click try button
+Then return response
+{
+  "oauth_client": {
+    "created_at": "2016-12-21 05:42:38",
+    "id": 17,
+    "name": "alexa test",
+    "password_client": false,
+    "personal_access_client": false,
+    "redirect": "https://testing-mur768.apps.exosite-staging.io",
+    "revoked": false,
+    "secret": "4Ft3UYsyNSN2EWxY5dTQ2AAzU2rGaopeNOEBYBsh",
+    "updated_at": "2016-12-21 05:42:38",
+    "user_id": 1
+  }
+}
+{code}
+
+{code:gherkin}
+Scenario: User can use 'getOauthClientRedirectPath' function
+Given user have a endpoint 
+And new a user in users page of solution
+And endpoint content follow:
+response.message = User.getOauthClientRedirectPath({client_id =request.parameters.clientid})
+And go to 'AUTO-GENERATED DOCS' at https://testing-mur768.apps.exosite-staging.io/docs
+When input 'clientid' = 17
+And click try button
+Then return response
+/authorize_approved?client_id=17&redirect_uri=https%3A%2F%2Ftesting-mur768.apps.exosite-staging.io&response_type=code&scope=
+And 'redirect_uri' equal value which user set it when creating Client
+{code}
+
+{code:gherkin}
+Scenario: User can use 'getOauthAuthorizeApproved' function to get approved
+Given user have a endpoint 
+And new a user in users page of solution
+And endpoint content follow:
+function encodeURI(str)
+    if (str) then
+        str = string.gsub (str, "\n", "\r\n")
+        str = string.gsub (str, "([^%w ])",
+            function (c) return string.format ("%%%02X", string.byte(c)) end)
+        str = string.gsub (str, " ", "+")
+     end
+     return str
+end
+local sid = tostring(request.parameters.sid)
+local data = {
+  ["token"]= sid,
+  ["client_id"] = request.parameters.clientid,
+  ["redirect_uri"] = request.parameters.redirecturi,
+  ["response_type"] = request.parameters.responsetype,
+  ["scope"] = "profile"
+}
+
+local code = encodeURI(tostring(User.getOauthAuthorizeApproved(data)))
+local location = request.parameters.redirecturi .. "?code=" .. code
+response.headers["location"] = location
+And go to 'AUTO-GENERATED DOCS' at https://testing-mur768.apps.exosite-staging.io/docs
+When input parameter 
+sid= <user token>
+client_id=17
+redirect_uri=https://testing-mur768.apps.exosite-staging.io
+response_type=code
+And Click try button
+Then return response 
+https://testing-mur768.apps.exosite-staging.io?code=o9Gn8497AOsMhkMnO%252F9T3CDFTYr0nkrcYItjXrkyDBYHQvkOdKxo2svsKrkaD9iwKBg6WB3KT%252BNnX3HO8vnKvVyBCeaB6os6w0A7Qv9OnC9ELnGIxRzdg89b8J5rJR7Z9xe0FWTT5Oef0E4vhkAVTAtn9nHlEdR2rFqsTbGtSJMBiOYRRidYoZ2FjqQLnuJMh3Ty%252FrnC%252Bw3Ucu7IMcscWGUp6hSW6eE4cKsMYbuWBSk6fw7LO4SXeDk2UOO1TltsLkebqsF5twfGIfb28hjKHPlhEvBQrP5Vh84Ib340uNhjP2gmCVar7s2amsqK3bPq4LtyRzJxvgkGLPqCZZMd22mHKRssCsuDM5%252Bjf5XS%252FJTW8Ynl6qFHh466f%252F110yXGFrAbtFaAr5JkQdr47r2mUZGhIgBz0%252F9s1v%252B5QhfbFLF1tdCld3xJNLWtPW6oCU48Goz5V63ns508CdGXHhc59MUA88pOk7dRoCUqX%252FSI3QnWgv8GgTbOJAkwPP7Td4g8icXd7lZImDvjvVs3K6D6icMTMyQjaacY25Ondj8Y6PBboT3Dhbue2WfcMVlreRToM0Osj7z3z6a6T%252FsY2LdHDMcTQW3H6mTXoh8i4PZ8vu5NTuCdfFhrEf5B98u2FaHlyoafPBe%252F84d1vUHYW8LI2OWOzuYtl4jRu%252Fi0bUu8toE%253D
+{code}
+
+{code:gherkin}
+Scenario: User can use 'getOauthToken' function to get authorized token
+Given user have a endpoint 
+And new a user in users page of solution
+And use 'createOauthClient' to get 'client_secret'
+And use 'getOauthAuthorizeApproved' to get 'code'
+And urldecode 'code'
+And endpoint content follow:
+local code = request.body.code
+local data = {
+  ["client_id"] = request.body.client_id,
+  ["client_secret"] = request.body.client_secret,
+  ["code"] = code,
+  ["grant_type"] = request.body.grant_type,
+  ["redirect_uri"] = request.body.redirect_uri
+}
+res =  User.getOauthToken(data)
+response.message = res
+When user command on the terminal
+curl "https://testing-mur768.apps.exosite-staging.io/gettoken" -X POST -ik -H "Content-Type: application/x-www-form-urlencoded" -d 'grant_type=authorization_code&client_id=17&client_secret=4Ft3UYsyNSN2EWxY5dTQ2AAzU2rGaopeNOEBYBsh&redirect_uri=https://testing-mur768.apps.exosite-staging.io&code=o9Gn8497AOsMhkMnO%2F9T3CDFTYr0nkrcYItjXrkyDBYHQvkOdKxo2svsKrkaD9iwKBg6WB3KT%2BNnX3HO8vnKvVyBCeaB6os6w0A7Qv9OnC9ELnGIxRzdg89b8J5rJR7Z9xe0FWTT5Oef0E4vhkAVTAtn9nHlEdR2rFqsTbGtSJMBiOYRRidYoZ2FjqQLnuJMh3Ty%2FrnC%2Bw3Ucu7IMcscWGUp6hSW6eE4cKsMYbuWBSk6fw7LO4SXeDk2UOO1TltsLkebqsF5twfGIfb28hjKHPlhEvBQrP5Vh84Ib340uNhjP2gmCVar7s2amsqK3bPq4LtyRzJxvgkGLPqCZZMd22mHKRssCsuDM5%2Bjf5XS%2FJTW8Ynl6qFHh466f%2F110yXGFrAbtFaAr5JkQdr47r2mUZGhIgBz0%2F9s1v%2B5QhfbFLF1tdCld3xJNLWtPW6oCU48Goz5V63ns508CdGXHhc59MUA88pOk7dRoCUqX%2FSI3QnWgv8GgTbOJAkwPP7Td4g8icXd7lZImDvjvVs3K6D6icMTMyQjaacY25Ondj8Y6PBboT3Dhbue2WfcMVlreRToM0Osj7z3z6a6T%2FsY2LdHDMcTQW3H6mTXoh8i4PZ8vu5NTuCdfFhrEf5B98u2FaHlyoafPBe%2F84d1vUHYW8LI2OWOzuYtl4jRu%2Fi0bUu8toE%3D'
+Then return response 
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=31536000
+X-Request-ID: ababciaihabc-QB6vfhYnxO-268a560a
+Content-Type: application/json; charset=utf-8
+Content-Length: 1851
+ETag: W/"73b-bzokBRgsNP8Iv2tcT4L3fA"
+Date: Wed, 21 Dec 2016 05:50:43 GMT
+Set-Cookie: OPENSHIFT_EDGE_murano-staging_sphinx-api-wildcard_SERVERID=10.128.87.12:3000; path=/; HttpOnly; Secure
+{"access_token":"<access_token>","expires_in":1.296e+06,"refresh_token":"<refresh_token>","token_type":"Bearer"}
+{code}
+
+{code:gherkin}
+Scenario: Using 'getCurrentUser' function to verify authorized token which use 'getOauthToken' to get is correct
+Given user have a endpoint 
+And endpoint content follow:
+response.message = User.getCurrentUser({token = tostring(request.parameters.token)})
+And go to 'AUTO-GENERATED DOCS' at https://testing-mur768.apps.exosite-staging.io/docs
+When input parameter 
+token=<use 'getOauthToken' to get 'access_token'>
+And Click try button
+Then return response is current user
+{
+  "creation_date": 1481788234,
+  "email": "testing@exosite.com",
+  "id": 1,
+  "name": "test",
+  "status": 1
+}
+{code}
+
+following the scenario is completed on staging environment with Firefox(44.0.02)
+(/) Scenario:User can use 'createOauthClient' function to create a new client 
+(/) Scenario:User can use 'getOauthClientRedirectPath' function
+(/) Scenario:User can use 'getOauthAuthorizeApproved' function to get approved
+(/) Scenario:User can use 'getOauthToken' function to get authorized token
+(/) Scenario:Using 'getCurrentUser' function to verify authorized token which use 'getOauthToken' to get is correct
+
+{
+  "oauth_client": {
+    "created_at": "2017-01-09 10:16:27",
+    "id": 1,
+    "name": "alexa test",
+    "password_client": false,
+    "personal_access_client": false,
+    "redirect": "https://mur925.apps.exosite.io",
+    "revoked": false,
+    "secret": "Jx55IbpfSwdRfyNtbLK0XnGZSRBDzkeO7v2rc9AT",
+    "updated_at": "2017-01-09 10:16:27",
+    "user_id": 1
+  }
+}
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL3NwaGlueC11c206MzAwMFwvYXBpXC92MVwvdXNlclwvbG9naW4iLCJpYXQiOjE0ODIyOTg5NzksImV4cCI6MTQ4MjMwNjE3OSwibmJmIjoxNDgyMjk4OTc5LCJqdGkiOiIyMjk2MzVhNDQ1YWNkZmExZWI5MjU3NWY0YmYyNzhlZCJ9.gM3a-BwXDbkdYpxnL9PT9ZBSM5QKAxEEUb5UcUr4-0Q
+
+/authorize_approved?client_id=1&redirect_uri=https%3A%2F%2Fmur925.apps.exosite.io&response_type=code&scope=
+
+https://mur925.apps.exosite.io/authorize_approved/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL3NwaGlueC11c206MzAwMFwvYXBpXC92MVwvdXNlclwvbG9naW4iLCJpYXQiOjE0ODM5NTcyNTMsImV4cCI6MTQ4Mzk2NDQ1MywibmJmIjoxNDgzOTU3MjUzLCJqdGkiOiIyYWRkOTk2MDliZTIzZTU2OGFlMjAzYmEwNjE3ZmQ5ZSJ9.Gu_7IG6vxhONj9_uHyoLGKq6-ORsXQVUhIPZgvjq49k/1/https%3A%2F%2Fmur925.apps.exosite.io/code
+
+https://testing-mur768.apps.exosite-staging.io/authorize_approved/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL3NwaGlueC11c206MzAwMFwvYXBpXC92MVwvdXNlclwvbG9naW4iLCJpYXQiOjE0ODIyOTg5NzksImV4cCI6MTQ4MjMwNjE3OSwibmJmIjoxNDgyMjk4OTc5LCJqdGkiOiIyMjk2MzVhNDQ1YWNkZmExZWI5MjU3NWY0YmYyNzhlZCJ9.gM3a-BwXDbkdYpxnL9PT9ZBSM5QKAxEEUb5UcUr4-0Q/17/https%3A%2F%2Ftesting-mur768.apps.exosite-staging.io/code
+
+https://mur925.apps.exosite.io?code=gs3crxfKWq2yxtf4h7EU6%252Fptv97Mby5%252FFKBOgLskIBKppg8kA8OqEB3CGV801ONqOd3Hq4d%252BkXlsdUALnSCxRA1oMQR4ZF4M%252F7RLb3bZToyuBfoV6K%252BlbL6wgyZzWW6pJj7Ym%252BGnulfMmZN9lyIWqXB5yocT13Ea64Om6A7qbWetu1YYZlZ8BA9ZNGcP9nNtvbUCieqBl0NCx0dqF92Rej0FmSQSJ%252FL7Auu6pwKZjUVEYuF71G1JAckCPBnAzcGD%252FZK0fDiUXkI1vGxH%252F74cZG3oEltVkB5zFh%252FUK%252F8Z3AQafrl1TcUR%252BTylHugFflTgqw7esLqoD%252FjwnFywpUBUx3UFr2SDoT%252BzrxNsB0zEJ0YJUVtisW2SG8gudOmTnJDWF0guSIFY7JuomF9b1frasi4wmts%252B8ogLx1kV9IQrvat7Y0HFwSlQZJ%252B72qQcgVA63eGC5Ub8aIQVtjwdtWWOWo8hw5wZWm3w70SWhTvfGKfqM8Xn7UDbMoYNTICMj0XFpjnk7M2kOqaQAAMOfgKHruAUQqxsxouFBqBPMgIwFnBvjUfx5PWRU4S5d7VboEbaUBm%252Fv0P4%252BYtMrB4HEU5AkLobeKESDsyvWvhnpppCEVXLIRGFNAe%252FR3tvy2rTANzvz89kQmmkY03sMP4agWDYBjqibUVq9D3LDzalhs4JuMM%253D
+
+https://testing-mur768.apps.exosite-staging.io?code=o9Gn8497AOsMhkMnO%252F9T3CDFTYr0nkrcYItjXrkyDBYHQvkOdKxo2svsKrkaD9iwKBg6WB3KT%252BNnX3HO8vnKvVyBCeaB6os6w0A7Qv9OnC9ELnGIxRzdg89b8J5rJR7Z9xe0FWTT5Oef0E4vhkAVTAtn9nHlEdR2rFqsTbGtSJMBiOYRRidYoZ2FjqQLnuJMh3Ty%252FrnC%252Bw3Ucu7IMcscWGUp6hSW6eE4cKsMYbuWBSk6fw7LO4SXeDk2UOO1TltsLkebqsF5twfGIfb28hjKHPlhEvBQrP5Vh84Ib340uNhjP2gmCVar7s2amsqK3bPq4LtyRzJxvgkGLPqCZZMd22mHKRssCsuDM5%252Bjf5XS%252FJTW8Ynl6qFHh466f%252F110yXGFrAbtFaAr5JkQdr47r2mUZGhIgBz0%252F9s1v%252B5QhfbFLF1tdCld3xJNLWtPW6oCU48Goz5V63ns508CdGXHhc59MUA88pOk7dRoCUqX%252FSI3QnWgv8GgTbOJAkwPP7Td4g8icXd7lZImDvjvVs3K6D6icMTMyQjaacY25Ondj8Y6PBboT3Dhbue2WfcMVlreRToM0Osj7z3z6a6T%252FsY2LdHDMcTQW3H6mTXoh8i4PZ8vu5NTuCdfFhrEf5B98u2FaHlyoafPBe%252F84d1vUHYW8LI2OWOzuYtl4jRu%252Fi0bUu8toE%253D
+
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL3NwaGlueC11c206MzAwMFwvYXBpXC92MVwvdXNlclwvbG9naW4iLCJpYXQiOjE0ODIxMTM4NTYsImV4cCI6MTQ4MjEyMTA1NiwibmJmIjoxNDgyMTEzODU2LCJqdGkiOiI4MDk1M2FlNjBlNzExM2FiMDY1ZDEyNDYzZDk3NGRmOSJ9.l05rXhe9p_W_3kcVf3ZYP7R8r1_s4KF9J-TQUuKD_b8
+
+
+
+{
+  "client_id": "15","client_secret": "w5KQSKO50hao3LQRFEgkZ2VKnEM8KmQlee2A3rmM","code":"IEGztXmpoSsP7s66%252FqLktZ8kmDMhuPp3%252FcIf7hGEdSvHGy6BplRow5CHW8ulXpvCXlsXSVW3wex0Cc384PDLkD01khyA23UP0N7oHbfxE2q9Y6HMtPTtGNl82nj2TZwWMaMHKl8deFXBsSdrVnc8Infyd8O20RN3le0zfnRljuXtn98yO0bXCSIS8sKU816AhGu1WzQW23ocmEBmkgDVHUmInOD5ZUyxCl7kvZLYtux2f08HcbAQsYhbPT%252BdbGOzSw7ExhlxN3P3Y60xGl6MP1pQ3w876o9q48hDE1frMkQDVwiey4XRVd6AwUtEGR%252FJ6t9oo%252B8HhHRsbWDZ5A7ioMUcUeym1IJA8EKTRMIMD%252BGkeR1q9m7%252BnaviC9cJkciYbngq1xIbrq%252FAYFhzpyJRpxC1ilTo4DgJKKf%252BG6G4iAXtFFk7dCxIqQhZAp%252Fs2S8STzGc4lGzA8TIjLd43S%252F0XQnP3zjBKfucM4pti1AIaTQ8p%252FhN9dDE%252FNoTwp7LezV6LHfaxv1U%252BMTJXm%252BtuQqaLVGZqwfNBswtqV7RrGcTyp%252Blcs6HUSTIb7uIYV6vm8cgRyYpHWp2zj0j%252FNHbINbEkxI4OXzwC4n4ngJqI9%252FG%252FFdKfD3eAVMNvvEGxOfCTU%252FHTJi3cIWMNlXUpIr08hhj4TFc0TjBD2sH4%252Bgch062m1c%253D","grant_type": "authorization_code","redirect_uri": "https%3A%2F%2Flayla.amazon.com%2Fapi%2Fskill%2Flink%2FM1Z58VCR370GPA"
+}
+
+urldecode
+
+curl "https://testing-mur768.apps.exosite-staging.io/gettoken" -X POST -ik -H "Content-Type: application/x-www-form-urlencoded" -d 'grant_type=authorization_code&client_id=17&client_secret=4Ft3UYsyNSN2EWxY5dTQ2AAzU2rGaopeNOEBYBsh&redirect_uri=https://testing-mur768.apps.exosite-staging.io&code=o9Gn8497AOsMhkMnO%2F9T3CDFTYr0nkrcYItjXrkyDBYHQvkOdKxo2svsKrkaD9iwKBg6WB3KT%2BNnX3HO8vnKvVyBCeaB6os6w0A7Qv9OnC9ELnGIxRzdg89b8J5rJR7Z9xe0FWTT5Oef0E4vhkAVTAtn9nHlEdR2rFqsTbGtSJMBiOYRRidYoZ2FjqQLnuJMh3Ty%2FrnC%2Bw3Ucu7IMcscWGUp6hSW6eE4cKsMYbuWBSk6fw7LO4SXeDk2UOO1TltsLkebqsF5twfGIfb28hjKHPlhEvBQrP5Vh84Ib340uNhjP2gmCVar7s2amsqK3bPq4LtyRzJxvgkGLPqCZZMd22mHKRssCsuDM5%2Bjf5XS%2FJTW8Ynl6qFHh466f%2F110yXGFrAbtFaAr5JkQdr47r2mUZGhIgBz0%2F9s1v%2B5QhfbFLF1tdCld3xJNLWtPW6oCU48Goz5V63ns508CdGXHhc59MUA88pOk7dRoCUqX%2FSI3QnWgv8GgTbOJAkwPP7Td4g8icXd7lZImDvjvVs3K6D6icMTMyQjaacY25Ondj8Y6PBboT3Dhbue2WfcMVlreRToM0Osj7z3z6a6T%2FsY2LdHDMcTQW3H6mTXoh8i4PZ8vu5NTuCdfFhrEf5B98u2FaHlyoafPBe%2F84d1vUHYW8LI2OWOzuYtl4jRu%2Fi0bUu8toE%3D'
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=31536000
+X-Request-ID: ababciaihabc-QB6vfhYnxO-268a560a
+Content-Type: application/json; charset=utf-8
+Content-Length: 1851
+ETag: W/"73b-bzokBRgsNP8Iv2tcT4L3fA"
+Date: Wed, 21 Dec 2016 05:50:43 GMT
+Set-Cookie: OPENSHIFT_EDGE_murano-staging_sphinx-api-wildcard_SERVERID=10.128.87.12:3000; path=/; HttpOnly; Secure
+
+{"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdkMjc0YmY2N2JlZTM4YjRkYThkZDQ5YTdlMTYzZDZjMWUyMWIyYmQxNGM4MTRmODczNTIzMzAyYmIyNjEzMDA2MGI5YTc4MmEwNjVhYzViIn0.eyJhdWQiOiIxNyIsImp0aSI6IjdkMjc0YmY2N2JlZTM4YjRkYThkZDQ5YTdlMTYzZDZjMWUyMWIyYmQxNGM4MTRmODczNTIzMzAyYmIyNjEzMDA2MGI5YTc4MmEwNjVhYzViIiwiaWF0IjoxNDgyMjk5NDQzLCJuYmYiOjE0ODIyOTk0NDMsImV4cCI6MTQ4MzU5NTQ0Mywic3ViIjoiMSIsInNjb3BlcyI6WyJwcm9maWxlIl19.O5-g-7JghKJfwvD4uZLHcGs-2soqfac8HrKhB47SE_u3hh0EZhZzLx983utJzGtNAolGyfQ4F1UpHuWYENgt1V5kX_U9h0aOEaIcGSddHBeUed41nOHLHmaQJn-cFvPVhbPXhsteyYpikPvv7W05t3fPjMlavjKMjC0iMwrSfhnymHbTx5vz4DwWDXkV6C73YmRk18WuBPiWa_qFS3UFFFaaxuAjKZe-t2GpRoCBb_V9wNdzd0fJKmXvejQ99nSovvvWJ-dQorknNqoF8ASTLhxo4FDa8MeqjgmfNyGQhC0h2tCQbTxa6ZSgEhAw0RyUXqwO7PRUYraZdywlid-_QOLPkGn2PxvXUGTbPmx-IJX0YPVTMB59Q32BIEx0zKAzJCB29fqPYyuZEibOVZOggUbLoDJ57MIo8Txds4ef4t6PaMxiptUsFVTM98Uurh3x2z9sSRYL71knYkQ1xz3KLXjKZxkJGOY_x0ZQ0--ZOHxl2XFGJySO9eSeP4CYlMkiVawv9qHplSvjB3yYyqoxO_LKaFRfe3C1fisvxPYy5N74Ps7CDDP7ZRCqWzO0itzOdhjdBaFwRN8pTw_RrUpwQCYeT7OZpcS0m5ZMhTUTwL4sVL252dtsLcaePX1pe1ud7kWd_P5lxhSkVwoAL8lkjcfE76MDT90qpUhwb7W3G2I","expires_in":1.296e+06,"refresh_token":"am9aovOzNFKN7bJwxCA+6lnWm5yMELpe2oeIGjP0qLkmP/hyqEYLXMYfwqRjiCDZoyuqe0KRzZginC8PoyGQMOLgBpcusIBr8oNYcJj0hJODQ6qYyvMXyJWdRgFSXC3zNC0Y3hAZ8akAq8KCNgUSxDiFMYkM31Bk+zCYz2ejgK5BAYaQFdHZgagU98ugz3LD3UPkc/G0yaWK2H+2w6AJavbKYcBOHqrGZKQXbVNMSWd5k17yy+fKMWGubSfBLELPEq3skWp9S6r7nKYg4bgM033ZxA3u2pXBE2z45z+lfoVLkU3dNSi4X60w0pIICedI3v69/mKkQYg8SG/C4FWf5Tq11u1msu8vO2jtj794DRfcCU5OeQ8ulmumvnYNUiJf+GFj7HKW2qo+FJrcR+AZNGchaCH7GbpzQgqV23kwE7wHTxQ5Pua2jpn7oi8LCDQ6vCYmaU2gnRHB3bAQ61hNCKWAFHXebnhzGSvJvWyzO7gtmbtboaYzpMKJQHzOdn5eChxSai+oTzbG6+kjsGlO+NtOHUe7sITRtuak5NB694NfXvqTv9ikYaVQUXTYTpUQzljjnAoKIUEO7ZL1GgWTWj2FoA3I1sdO35eocPSdjFa8ZD9+8NTC/5HVmbzRYJbSDNlAYJSCFsAocz3AZ1lB7joljNAO79MWQCbPC82+LjU=","token_type":"Bearer"}
+
+
+
+response.message = User.getCurrentUser({token = tostring(request.parameters.token)})
+
+{
+  "creation_date": 1481788234,
+  "email": "testing@exosite.com",
+  "id": 1,
+  "name": "test",
+  "status": 1
+}

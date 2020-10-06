@@ -1,0 +1,15 @@
+dqa_http_okami
+-----------------------------------------
+test case:OneP Log-{projectId}-events - websocket should get response when activate expired device
+error:
+{"connection_id":"jZAVJLYoATWI6vulF4xL","identity":"test","ip":"220.133.218.2","protocol":"onep","timestamp":1522374816293109,"type":"provisioned"}
+type change
+
+murano-staging-docs
+----------------------------------------
+file:test_check_application_docs_area.robot
+test case:Check application docs page when application has get endpoint
+error:api explorer UI data-qa change
+//li[@id="default_getQa20180329175726"]//h2[@class="operation-title"]
+=>
+//li[@id="default_getQa"]//h2[@class="operation-title"]

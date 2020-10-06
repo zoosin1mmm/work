@@ -1,0 +1,1 @@
+for i in {1..150}; do curl --request GET --url 'http://murano-analytics-staging.hosted.exosite.io/api/v1/analytics/y1735nivwhi1s0000/gps_to_address?lat=37.3388&lon='$(($i -121))'.1' -i; echo -ne "  count:"$i '\n' ;done

@@ -1,0 +1,68 @@
+write data
+{
+    "metrics": {
+        "qa_string": "qa",
+        "qa_integer": 2222
+    },
+    "tags": {
+        "qa": "1"
+    },
+    "ts":"1515748793s"
+}
+
+{
+    "metrics": [
+        "qa_string",
+        "qa_integer"
+    ],
+    "tags": {
+        "qa": "1"
+    }
+}
+
+export data
+{
+    "query": {
+        "metrics": [
+            "qa_string",
+            "qa_integer"
+        ],
+        "tags": {
+            "qa": "1"
+        }
+    },
+    "format": {
+        "qa_string": [
+            {
+                "label": "HAHA_"
+            },
+            {
+                "rename": "is_new_metrics_replace"
+            },
+            {
+                "replace": {
+                    "match": "test",
+                    "to": "replace2"
+                }
+            }
+        ],
+        "qa_integer": [
+            {
+                "round": 3
+            }
+        ],
+        "timestamp": [
+            {
+                "datetime": 0
+            }
+        ],
+        "tags": [
+            {
+                "normalize": [
+                    "qa"
+                ]
+            }
+        ]
+    },
+    "filename": "test"
+}

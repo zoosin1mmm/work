@@ -1,0 +1,91 @@
+{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": "function handle_user (hi) \n  \n return \"asfd\" \n end"
+}
+// not return any thing 204
+curl -X POST \
+  http://localhost:5100/execute \
+  -H 'accept: application/json' \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": "function handle_user (hi)   \n end"
+}'
+//  return json object { "hi": 2 } 200
+curl -X POST \
+  http://localhost:5100/execute \
+  -H 'accept: application/json' \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": "function handle_user (hi) \n  \n return hi \n end"
+}'
+//  return string hi 200
+{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": "function handle_user (hi) \n  \n return \"hi\" \n end"
+}
+// return {} 200
+{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+    },
+    "script": "function handle_user (hi) \n  \n return hi \n end"
+}
+// return Script error: [string "function handle_user (hi) ..."]:4: 'end' expected (to close 'function' at line 1) near '<eof>'
+// 480
+{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": "function handle_user (hi) \n  \n return hi \n "
+}
+// return handle_user function must be defined
+// 484
+{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": ""
+}
+// return exceeded allotted cpu time!
+// 485
+{
+    "tracking_id": "o7ssdpju4y9wl8fr_user_account",
+    "request_id": "o7ssdpju4y9wl8fr",
+    "event_type": "user",
+    "script_parameters": {
+        "hi": 2
+    },
+    "script": "function handle_user (hi) \n  \n for i = 1,1000000 do  print('hi')  end \n end"
+}

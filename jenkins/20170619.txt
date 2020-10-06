@@ -1,0 +1,48 @@
+murano-staging-service-solution
+------------------------------------------------
+FILES: test_murano_CLI
+Testcase:SuiteTeardown -Remove Directory
+Error: Permission denied: '/mnt_jenkins/workspace/murano-staging-deploy-tool/dqa-murano/solution/integration/file-20170613045343-qa/.murano'
+Cause:no Permission and need to use 'sudo rm -rf'
+
+FILES: test_spms_tag
+Testcase:Verify Spms Response Value In Array As Expected
+Error: cdzwq != cdzwq-2
+Cause:'Remove From List' of keyword is not remove target
+
+adc_staging_project
+------------------------------------------------
+FILES: test_timeseries_event
+Testcase:Timeseries of cassandra export can trigger event when task completed
+Error: {u'status': 500, u'type': u'ServerError', u'error': u'{"result":null,"error":"Server Error: Failed to start an export job: %UndefinedFunctionError{arity: 0, function: :solution_id, module: nil, reason: nil}"}'}
+Cause:NONE
+
+FILES: test_murano_CLI3
+Error:  ('', 'ERROR:  While executing gem ... (Gem::DependencyError)\n    Unable to resolve dependencies: MuranoCLI requires vine (~> 0.4)\n') start an export job: %UndefinedFunctionError{arity: 0, function: :solution_id, module: nil, reason: nil}"}'}
+Cause:library intall sudo gem install vine
+
+/code
+#murano-staging-deploy-tool    Test Exosite Cli Tool MUR-2944
+#murano-staging-api    run again pass
+#murano-staging-service-solution run again pass
+#murano-staging-service-migration run again pass
+
+/code
+murano-staging-service-solution
+------------------------------------------------
+FILES: test_murano_CLI
+Cause:no Permission to Remove Directory and need to use 'sudo rm -rf'
+
+FILES: test_spms_tag
+Cause:'Remove From List' of keyword is not remove target
+
+FILES: Test Spms Performance
+Cause:執行速度不夠快 無法達到預期秒數
+
+adc_staging_project
+------------------------------------------------
+FILES: test_timeseries_event
+Cause:500ServerError ,原因不明 mark 在查
+
+FILES: test_murano_CLI3
+Cause:library intall sudo gem install vine

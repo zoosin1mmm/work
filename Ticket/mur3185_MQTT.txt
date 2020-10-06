@@ -1,0 +1,9 @@
+Before
+sudo apt-get install mosquitto mosquitto-clients
+
+Start
+1.connect
+mosquitto_sub -h https://q13tqslpduof4g8k8.m2.exosite-staging.io/ -t $resource/tt
+2.switch to other terminal
+3.publish
+mosquitto_pub -h q13tqslpduof4g8k8.m2.exosite-staging.io -t $resource/tt -m "hello world"

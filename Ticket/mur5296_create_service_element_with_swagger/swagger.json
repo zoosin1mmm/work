@@ -1,0 +1,185 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Solution API: mur5296-01.apps.exosite-staging.io",
+        "description": "This is your solutions own custom API. You best get started with one of our many example APIs that are Turn-Key-Solutions for most common IoT problems. From there this solution interface allows you to fine tune what is there to your needs or add new functions that are specific to the business you're building.\n\nBuild something great!\n\nIn this example customers interfaces such as websites and mobile devices can directly interact with `mur5296-01.apps.exosite-staging.io` to access the APIs defined here.\n\nUser registration is the first step and happens in this example via `POST /user/{email}` documented below. From there devices can be added and roles assigned.\n\n#### Documentation\nIn future versions it will be also possible for you to change this documentation itself and publish it to your customers via http://mur5296-01.apps.exosite-staging.io/docs`\n",
+        "version": "v1",
+        "contact": {
+            "name": "XX XX",
+            "email": "xxxx@xxxx.xxx"
+        }
+    },
+    "basePath": "/",
+    "host": "mur5296-01.apps.exosite-staging.io",
+    "paths": {
+        "/test/{test}": {
+            "get": {
+                "operationId": "getTestTest",
+                "summary": "get TestTest",
+                "description": "get TestTest",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/jsonContent"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected execution result"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "test",
+                        "in": "path",
+                        "required": true,
+                        "description": "test path parameter",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/test": {
+            "post": {
+                "operationId": "postTest",
+                "summary": "post Test",
+                "description": "post Test",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/jsonContent"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected execution result"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/json"
+                    }
+                ]
+            },
+            "put": {
+                "operationId": "putTest",
+                "summary": "put Test",
+                "description": "put Test",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/jsonContent"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected execution result"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/json"
+                    }
+                ]
+            },
+            "patch": {
+                "operationId": "patchTest",
+                "summary": "patch Test",
+                "description": "patch Test",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/jsonContent"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected execution result"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/json"
+                    }
+                ]
+            }
+        },
+        "/empty": {
+            "delete": {
+                "operationId": "deleteEmpty",
+                "summary": "delete Empty",
+                "description": "delete Empty",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/jsonContent"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected execution result"
+                    }
+                },
+                "parameters": []
+            }
+        },
+        "/test2": {
+            "post": {
+                "operationId": "postTest2",
+                "summary": "post Test2",
+                "description": "post Test2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/jsonContent"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected execution result"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/json"
+                    }
+                ]
+            }
+        }
+    },
+    "parameters": {
+        "json": {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "description": "Body content",
+            "schema": {
+                "$ref": "#/definitions/jsonContent"
+            }
+        }
+    },
+    "securityDefinitions": {},
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "schemes": [
+        "https"
+    ],
+    "definitions": {
+        "jsonContent": {
+            "type": [
+                "object",
+                "null",
+                "array",
+                "string",
+                "number",
+                "boolean"
+            ],
+            "additionalProperties": true,
+            "description": "JSON content"
+        }
+    }
+}

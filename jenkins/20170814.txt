@@ -1,0 +1,6 @@
+#Problem
+murano-staging-service-solution
+-------------------------------------------
+FILE:test_bulknotify.robot
+Test case:Bulknotify send can reject wrong format and would not save into results log
+Error:error test fail ,some will success and some response change

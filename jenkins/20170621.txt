@@ -1,0 +1,93 @@
+murano-staging-product
+------------------------------------------------
+FILES: test_update_device_resources
+Testcase:Update device resource value between murano and one platform
+Error: File "/home/stacy/dqa/dqa-murano/web/integration/../../bin/ftp-simulators/compare/Compare_tool.py", line 4, in <module>from exoline import exo
+ImportError: No module named exoline
+Cause: ImportError: No module named exoline
+
+
+FILES: test_product_simulator.robot
+Testcase:The simulator can updated device resource data
+Error: Device CIK may be expired or not available (not added to product) - trying to activate
+attempt to activate on Murano
+exeception: [Errno -5] No address associated with hostname
+Cause: 手動OK,m2-stg.exosite.com pass but http://m2-stg.exosite.com false
+
+murano-staging-api
+------------------------------------------
+FILES: trigger-\{contextid\}-\{servicealias\}-\{eventtype\}.robot
+Testcase:Trigger-\{contextid\}-\{servicealias\}-\{eventtype\} - post - should return 200 OK
+Error:failed: KeyError: '/'
+Cause: failed: KeyError: '/'
+
+FILES:library-{libraryid}.robot
+Testcase:All File
+Error:No keyword with name 'Library Libraryid Get' found.
+Cause:config import * remove
+
+FILES:route-{routeid}.robot
+Testcase:All File
+Error:No keyword with name 'Route Post' found.
+Cause:config import * remove  
+
+FILES:business-{bizid}-tier.robot
+Testcase:SuiteSetup-  ExoYeti . Create Business Via Api
+Error:NameError: global name 'CONTACT_NAME' is not defined
+Cause: can not catch setting.py global name 'CONTACT_NAME' 
+
+
+murano-staging-docs
+-----------------------------------------
+FILES:test_check_business_area.robot
+Testcase:SuiteSetup-  ExoYeti . Create Business Via Api
+Error:NameError: global name 'CONTACT_NAME' is not defined
+Cause:can not catch setting.py global name 'CONTACT_NAME' 
+
+
+murano-staging-business
+-----------------------------------------
+FILES:test_upgrade_business_tier.robot
+Testcase:SuiteSetup-  ExoYeti . Create Business Via Api
+Error:NameError: global name 'CONTACT_NAME' is not defined
+Cause:can not catch setting.py global name 'CONTACT_NAME' 
+
+/code
+#murano-staging-product has bug
+#murano-staging-api has bug
+#murano-staging-docs log page MUR-3130
+#murano-staging-business profile page MUR-3130
+
+/code
+murano-staging-product
+------------------------------------------------
+FILES: test_update_device_resources
+Cause: ImportError: No module named exoline
+
+FILES: test_product_simulator.robot
+Cause: 手動OK,m2-stg.exosite.com pass but http://m2-stg.exosite.com false
+
+murano-staging-api
+------------------------------------------
+FILES: trigger-{contextid}-{servicealias}-{eventtype}.robot
+Cause: failed: KeyError: '/'
+
+FILES:library-{libraryid}.robot
+Cause:config import * remove
+
+FILES:route-{routeid}.robot
+Cause:config import * remove  
+
+FILES:business-{bizid}-tier.robot
+Cause: can not catch setting.py global name 'CONTACT_NAME' 
+
+murano-staging-docs
+-----------------------------------------
+FILES:test_check_business_area.robot
+Cause:can not catch setting.py global name 'CONTACT_NAME' 
+
+
+murano-staging-business
+-----------------------------------------
+FILES:test_upgrade_business_tier.robot
+Cause:can not catch setting.py global name 'CONTACT_NAME' 

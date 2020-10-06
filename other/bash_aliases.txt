@@ -1,0 +1,71 @@
+alias aliases='. ~/.bash_aliases'
+alias sync='. portals_sync alihsu projects/portals'
+alias sb='ssh -L 127.0.0.1:9443:127.0.0.1:9443 -L 127.0.0.1:9080:127.0.0.1:9080 54.193.27.115'
+
+alias gfs='grep --binary-files=without-match --color=auto --exclude=jquery* --exclude=Session.vim --exclude-dir=logs --fixed-strings --ignore-case --line-number --recursive'
+alias ga='git add'
+alias gaa='git add --all'
+alias gap='git add --patch'
+
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -D'
+alias gbdd='git branch -D development'
+alias gbdm='git branch -D master'
+alias gbdnb='git branch -D next_bugfix'
+alias gbdr='git branch -D review'
+
+alias gcma='git commit --amend'
+alias gcmf='git commit --fixup'
+alias gcmm='git commit -m'
+alias gcms='git commit --squash'
+
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcod='git checkout development'
+alias gcom='git checkout master'
+alias gconb='git checkout next_bugfix'
+alias gcor='git checkout review'
+
+alias gcp='git cherry-pick'
+
+alias gd='git diff'
+
+alias gf='git fetch'
+alias gfp='git fetch -p'
+
+alias gl='git log --graph --oneline --decorate'
+alias gla='git log --graph --oneline --decorate --all'
+alias glas='git log --all --date-order --decorate --graph --oneline --simplify-by-decoration'
+alias glor='git log --graph --oneline --decorate origin/review'
+
+alias gm='git merge'
+alias gmt='git mergetool'
+
+alias gpo='git push origin'
+alias gpod='git push origin development'
+alias gpom='git push origin master'
+alias gponb='git push origin next_bugfix'
+
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias grd='git rebase development'
+alias grm='git rebase master'
+alias grnb='git rebase next_bugfix'
+alias gria='git rebase --interactive --autosquash'
+alias grod='git rebase origin development'
+alias grom='git rebase origin master'
+alias gronb='git rebase origin next_bugfix'
+alias gror='git rebase origin review'
+
+alias gpsba='git -p show-branch -a'
+alias gs='git status'
+alias gsb='git show-branch'
+alias gsh='git show'
+
+alias gss='git stash'
+alias gssd='git stash drop'
+alias gssl='git stash list'
+alias gssp='git stash pop'
+
+

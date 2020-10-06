@@ -1,0 +1,16 @@
+${host}   --host ${BP_HOST}
+${comment}    --this is comment for cli test
+${dirCLI}    ${CURDIR}/exosite-cli
+${jsonFile}   ${CURDIR}/automation/Applicationfile.json
+${pathCLI}   ${dirCLI}/exosite.py
+${jsonFileVersion2.0}    cli-2.0
+${jsonFileVersion3.0}    cli-3.0
+${template}   ${CURDIR}/automation
+
+python2 ./exosite-cli/exosite.py --init --host bizapi-staging.hosted.exosite.io
+#all update
+python2 ./exosite-cli/exosite.py --deploy --host bizapi-staging.hosted.exosite.io
+#endpoint update
+python2 ./exosite-cli/exosite.py -a --host bizapi-staging.hosted.exosite.io
+#service update
+python2 ./exosite-cli/exosite.py -e --host bizapi-staging.hosted.exosite.io

@@ -1,0 +1,519 @@
+{
+    "version": "v1",
+    "operations": {
+        "putTest": {
+            "summary": "put Test",
+            "responses": {
+                "200": {
+                    "description": "JSON content",
+                    "title": "OK",
+                    "type": [
+                        "object",
+                        "null",
+                        "array",
+                        "string",
+                        "number",
+                        "boolean"
+                    ],
+                    "additionalProperties": true
+                },
+                "default": {
+                    "description": "Unexpected execution result"
+                }
+            },
+            "parameters": [
+                {
+                    "id": "parameters",
+                    "description": "Object containing service call parameters.",
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                        "body": {
+                            "name": "body",
+                            "required": false,
+                            "description": "JSON content",
+                            "type": [
+                                "object",
+                                "null",
+                                "array",
+                                "string",
+                                "number",
+                                "boolean"
+                            ],
+                            "title": "Body content",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            ],
+            "description": "put Test",
+            "operationId": "putTest",
+            "url": false,
+            "path": "/test",
+            "method": "put"
+        },
+        "postTest": {
+            "summary": "post Test",
+            "responses": {
+                "200": {
+                    "description": "JSON content",
+                    "title": "OK",
+                    "type": [
+                        "object",
+                        "null",
+                        "array",
+                        "string",
+                        "number",
+                        "boolean"
+                    ],
+                    "additionalProperties": true
+                },
+                "default": {
+                    "description": "Unexpected execution result"
+                }
+            },
+            "parameters": [
+                {
+                    "id": "parameters",
+                    "description": "Object containing service call parameters.",
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                        "body": {
+                            "name": "body",
+                            "required": false,
+                            "description": "JSON content",
+                            "type": [
+                                "object",
+                                "null",
+                                "array",
+                                "string",
+                                "number",
+                                "boolean"
+                            ],
+                            "title": "Body content",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            ],
+            "description": "post Test",
+            "operationId": "postTest",
+            "url": false,
+            "path": "/test",
+            "method": "post"
+        },
+        "patchTest": {
+            "summary": "patch Test",
+            "responses": {
+                "200": {
+                    "description": "JSON content",
+                    "title": "OK",
+                    "type": [
+                        "object",
+                        "null",
+                        "array",
+                        "string",
+                        "number",
+                        "boolean"
+                    ],
+                    "additionalProperties": true
+                },
+                "default": {
+                    "description": "Unexpected execution result"
+                }
+            },
+            "parameters": [
+                {
+                    "id": "parameters",
+                    "description": "Object containing service call parameters.",
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                        "body": {
+                            "name": "body",
+                            "required": false,
+                            "description": "JSON content",
+                            "type": [
+                                "object",
+                                "null",
+                                "array",
+                                "string",
+                                "number",
+                                "boolean"
+                            ],
+                            "title": "Body content",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            ],
+            "description": "patch Test",
+            "operationId": "patchTest",
+            "url": false,
+            "path": "/test",
+            "method": "patch"
+        },
+        "deleteEmpty": {
+            "summary": "delete Empty",
+            "responses": {
+                "200": {
+                    "description": "JSON content",
+                    "title": "OK",
+                    "type": [
+                        "object",
+                        "null",
+                        "array",
+                        "string",
+                        "number",
+                        "boolean"
+                    ],
+                    "additionalProperties": true
+                },
+                "default": {
+                    "description": "Unexpected execution result"
+                }
+            },
+            "parameters": [],
+            "description": "delete Empty",
+            "operationId": "deleteEmpty",
+            "url": false,
+            "path": "/empty",
+            "method": "delete"
+        },
+        "postTest2": {
+            "summary": "post Test2",
+            "responses": {
+                "200": {
+                    "description": "JSON content",
+                    "title": "OK",
+                    "type": [
+                        "object",
+                        "null",
+                        "array",
+                        "string",
+                        "number",
+                        "boolean"
+                    ],
+                    "additionalProperties": true
+                },
+                "default": {
+                    "description": "Unexpected execution result"
+                }
+            },
+            "parameters": [
+                {
+                    "id": "parameters",
+                    "description": "Object containing service call parameters.",
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                        "body": {
+                            "name": "body",
+                            "required": false,
+                            "description": "JSON content",
+                            "type": [
+                                "object",
+                                "null",
+                                "array",
+                                "string",
+                                "number",
+                                "boolean"
+                            ],
+                            "title": "Body content",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            ],
+            "description": "post Test2",
+            "operationId": "postTest2",
+            "url": false,
+            "path": "/test2",
+            "method": "post"
+        },
+        "getTestTest": {
+            "summary": "get TestTest",
+            "responses": {
+                "200": {
+                    "description": "JSON content",
+                    "title": "OK",
+                    "type": [
+                        "object",
+                        "null",
+                        "array",
+                        "string",
+                        "number",
+                        "boolean"
+                    ],
+                    "additionalProperties": true
+                },
+                "default": {
+                    "description": "Unexpected execution result"
+                }
+            },
+            "parameters": [
+                {
+                    "id": "parameters",
+                    "description": "Object containing service call parameters.",
+                    "type": "object",
+                    "required": [
+                        "test"
+                    ],
+                    "properties": {
+                        "test": {
+                            "name": "test",
+                            "type": "string",
+                            "required": true,
+                            "description": "test path parameter"
+                        }
+                    }
+                }
+            ],
+            "description": "get TestTest",
+            "operationId": "getTestTest",
+            "url": false,
+            "path": "/test/{test}",
+            "method": "get"
+        }
+    },
+    "events": {},
+    "configs": {
+        "parameters": {
+            "description": "Service configuration parameters used for service operation calls",
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {}
+        },
+        "triggers": {
+            "description": "Service configuration triggers used for service event trigger routing",
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {}
+        }
+    },
+    "id": "19a86840-2d79-11e8-938b-258eadf9a852",
+    "alias": "mur5296",
+    "default_script_key": "mur5296",
+    "name": "Solution API: mur5296-01.apps.exosite-staging.io",
+    "description": "This is your solutions own custom API. You best get started with one of our many example APIs that are Turn-Key-Solutions for most common IoT problems. From there this solution interface allows you to fine tune what is there to your needs or add new functions that are specific to the business you're building.\n\nBuild something great!\n\nIn this example customers interfaces such as websites and mobile devices can directly interact with `mur5296-01.apps.exosite-staging.io` to access the APIs defined here.\n\nUser registration is the first step and happens in this example via `POST /user/{email}` documented below. From there devices can be added and roles assigned.\n\n#### Documentation\nIn future versions it will be also possible for you to change this documentation itself and publish it to your customers via http://mur5296-01.apps.exosite-staging.io/docs`\n",
+    "tags": [],
+    "type": "E",
+    "business_id": "loz8gtd7hcmims4i",
+    "url": "https://mur5296-01.apps.exosite-staging.io",
+    "schema": {
+        "host": "mur5296-01.apps.exosite-staging.io",
+        "info": {
+            "title": "Solution API: mur5296-01.apps.exosite-staging.io",
+            "contact": {
+                "name": "XX XX",
+                "email": "xxxx@xxxx.xxx"
+            },
+            "version": "v1",
+            "description": "This is your solutions own custom API. You best get started with one of our many example APIs that are Turn-Key-Solutions for most common IoT problems. From there this solution interface allows you to fine tune what is there to your needs or add new functions that are specific to the business you're building.\n\nBuild something great!\n\nIn this example customers interfaces such as websites and mobile devices can directly interact with `mur5296-01.apps.exosite-staging.io` to access the APIs defined here.\n\nUser registration is the first step and happens in this example via `POST /user/{email}` documented below. From there devices can be added and roles assigned.\n\n#### Documentation\nIn future versions it will be also possible for you to change this documentation itself and publish it to your customers via http://mur5296-01.apps.exosite-staging.io/docs`\n"
+        },
+        "paths": {
+            "/test": {
+                "put": {
+                    "summary": "put Test",
+                    "responses": {
+                        "200": {
+                            "schema": {
+                                "$ref": "#/definitions/jsonContent"
+                            },
+                            "description": "OK"
+                        },
+                        "default": {
+                            "description": "Unexpected execution result"
+                        }
+                    },
+                    "parameters": [
+                        {
+                            "$ref": "#/parameters/json"
+                        }
+                    ],
+                    "description": "put Test",
+                    "operationId": "putTest"
+                },
+                "post": {
+                    "summary": "post Test",
+                    "responses": {
+                        "200": {
+                            "schema": {
+                                "$ref": "#/definitions/jsonContent"
+                            },
+                            "description": "OK"
+                        },
+                        "default": {
+                            "description": "Unexpected execution result"
+                        }
+                    },
+                    "parameters": [
+                        {
+                            "$ref": "#/parameters/json"
+                        }
+                    ],
+                    "description": "post Test",
+                    "operationId": "postTest"
+                },
+                "patch": {
+                    "summary": "patch Test",
+                    "responses": {
+                        "200": {
+                            "schema": {
+                                "$ref": "#/definitions/jsonContent"
+                            },
+                            "description": "OK"
+                        },
+                        "default": {
+                            "description": "Unexpected execution result"
+                        }
+                    },
+                    "parameters": [
+                        {
+                            "$ref": "#/parameters/json"
+                        }
+                    ],
+                    "description": "patch Test",
+                    "operationId": "patchTest"
+                }
+            },
+            "/empty": {
+                "delete": {
+                    "summary": "delete Empty",
+                    "responses": {
+                        "200": {
+                            "schema": {
+                                "$ref": "#/definitions/jsonContent"
+                            },
+                            "description": "OK"
+                        },
+                        "default": {
+                            "description": "Unexpected execution result"
+                        }
+                    },
+                    "parameters": [],
+                    "description": "delete Empty",
+                    "operationId": "deleteEmpty"
+                }
+            },
+            "/test2": {
+                "post": {
+                    "summary": "post Test2",
+                    "responses": {
+                        "200": {
+                            "schema": {
+                                "$ref": "#/definitions/jsonContent"
+                            },
+                            "description": "OK"
+                        },
+                        "default": {
+                            "description": "Unexpected execution result"
+                        }
+                    },
+                    "parameters": [
+                        {
+                            "$ref": "#/parameters/json"
+                        }
+                    ],
+                    "description": "post Test2",
+                    "operationId": "postTest2"
+                }
+            },
+            "/test/{test}": {
+                "get": {
+                    "summary": "get TestTest",
+                    "responses": {
+                        "200": {
+                            "schema": {
+                                "$ref": "#/definitions/jsonContent"
+                            },
+                            "description": "OK"
+                        },
+                        "default": {
+                            "description": "Unexpected execution result"
+                        }
+                    },
+                    "parameters": [
+                        {
+                            "in": "path",
+                            "name": "test",
+                            "type": "string",
+                            "required": true,
+                            "description": "test path parameter"
+                        }
+                    ],
+                    "description": "get TestTest",
+                    "operationId": "getTestTest"
+                }
+            }
+        },
+        "schemes": [
+            "https"
+        ],
+        "swagger": "2.0",
+        "basePath": "/",
+        "consumes": [
+            "application/json"
+        ],
+        "produces": [
+            "application/json"
+        ],
+        "parameters": {
+            "json": {
+                "in": "body",
+                "name": "body",
+                "schema": {
+                    "$ref": "#/definitions/jsonContent"
+                },
+                "required": false,
+                "description": "Body content"
+            }
+        },
+        "definitions": {
+            "jsonContent": {
+                "type": [
+                    "object",
+                    "null",
+                    "array",
+                    "string",
+                    "number",
+                    "boolean"
+                ],
+                "description": "JSON content",
+                "additionalProperties": true
+            }
+        },
+        "securityDefinitions": {}
+    },
+    "status": "hidden",
+    "whitelist": [],
+    "metrics": {
+        "data": {
+            "name": "Data In/Out",
+            "type": "counter",
+            "unit": "byte",
+            "categories": {
+                "in": "Data transitting in the solution",
+                "out": "Data transitting out of the solution"
+            },
+            "description": "Bandwith count between the scripting environment and the service"
+        },
+        "calls": {
+            "name": "Service calls",
+            "type": "counter",
+            "unit": "call",
+            "description": "Count of operation calls targetting the service made from the scripting environment",
+            "quota_daily": 1000000
+        },
+        "events": {
+            "name": "Event triggers",
+            "type": "counter",
+            "unit": "event",
+            "description": "Count of events generated by the service triggering scripting execution"
+        }
+    },
+    "created_at": "2018-03-22T02:31:17.956Z",
+    "updated_at": "2018-03-22T02:31:17.956Z",
+    "deleted_at": null
+}

@@ -1,0 +1,240 @@
+  NAME:
+
+    murano
+
+  DESCRIPTION:
+
+    Manage Applications and Products in Exosite's Murano
+
+  COMMANDS:
+                                                                                                                        
+    business                About business              
+    business find           Find business by name or ID         
+    business list           List businesses                             
+    config                  Get and set options         
+    content                 About Content Area          
+    content delete          Delete a content item               
+    content download        Download a content item             
+    content info            Show more info for a content item           
+    content list            List downloadable content for a product             
+    content upload          Upload content              
+    cors                    Get the CORS for the project.               
+    cors set                Set the CORS for the project 
+    device                  Interact with a device              
+    device activate         Activate a serial number, retriving its CIK         
+    device delete           Delete a device             
+    device enable           Enable Identifiers in Murano for real world devices         
+    device httpurl          Get the URL for the HTTP-Data-API for this Project          
+    device list             List identifiers for a product              
+    device lock             Lock a device, not allowing connections to it until unlocked 
+    device read             Read state of a device              
+    device revoke           Force device to reprovision         
+    device unlock           Unlock a device, allowing connections to it again           
+    device write            Write to 'set' of aliases on devices                   
+    domain                  Print the domain for this solution                          
+    exchange                About IOT Exchange                          
+    exchange list           List Exchange Elements                              
+    exchange purchase       Add an Exchange Element to your Business  
+    help                    Display global or [command] help documentation              
+    init                    The easy way to start a project             
+    keystore                About Keystore              
+    keystore clearAll       Delete all keys in the keystore                     
+    keystore command        Call some Redis commands in the Keystore                    
+    keystore delete         Delete a key from the Keystore              
+    keystore get            Get the value of a key in the Keystore              
+    keystore info           Show info about the Keystore                                
+    keystore list           List all of the keys in the Keystore                     
+    keystore set            Set the value of a key in the Keystore   
+    link                    Use the link commands to manage solution links              
+    link list               List the solutions that are linked          
+    link set                Link a solution to an event handler         
+    link unset              Unlink a solution from an event handler                      
+    login                   Log into Murano             
+    logout                  Log out of Murano           
+    logs                    Get the logs for a solution                         
+    mock                    Enable or disable testpoint, or show current UUID           
+    mock disable            Remove the testpoint file           
+    mock enable             Create a testpoint file             
+    mock show               Remove the testpoint file           
+    password                About password commands                     
+    password delete         Delete password for username                
+    password list           List the usernames with saved passwords             
+    password set            Set password for username                   
+    postgresql              Query the relational database               
+    postgresql migrate      Run database migration scripts.
+    setting                 Use the setting commands to manage service settings         
+    setting list            List which services and settings are available              
+    setting read            Read a setting on a Service         
+    setting write           Write a setting on a Service                        
+    show                    Show readable information about the current configuration  
+    show location           Show readable location information          
+    solution                About solution              
+    solution create         Create a new solution               
+    solution delete         Delete a solution           
+    solution find           Find solution by name or ID         
+    solution list           List solutions              
+    solutions expunge       Delete all solutions                        
+    status                  Get the status of files             
+    syncdown                Sync project down from Murano               
+    syncup                  Sync project up into Murano         
+    tsdb                    Show list of TSDB commands          
+    tsdb list metrics       List metrics                
+    tsdb list tags          List tags           
+    tsdb query              Query data from the TSDB            
+    tsdb write              Write data to the TSDB              
+    usage                   Get usage info for the Application and Product   
+
+  ALIASES:
+  
+    application create      solution create --type application  
+    application delete      solution delete --type application  
+    application diff        status --diff --no-grouped --type application  
+    application domain      domain --type application  
+    application find        solution find --type application --brief  
+    application list        solution list --type application --brief  
+    application logs        logs --type application  
+    application pull        syncdown --no-delete --type application  
+    application push        syncup --no-delete --type application  
+    application usage       usage --type application  
+    applications list       solution list   
+    assign list             link list   
+    assign set              link set   
+    assign unset            link unset   
+    businesses              business   
+    businesses list         business list   
+    create application      solution create --type application  
+    create product          solution create --type product  
+    delete application      solution delete --type application  
+    delete product          solution delete --type product  
+    devices list            device list   
+    diff                    status --diff --no-grouped  
+    diff application        status --diff --no-grouped --type application  
+    diff product            status --diff --no-grouped --type product  
+    domain application      domain --type application  
+    domain product          domain --type product  
+    exchange add            exchange purchase   
+    exchange buy            exchange purchase   
+    exchange list available exchange list --no-added  
+    exchange list purchased exchange list --added  
+    find application        solution find --type application --brief  
+    find product            solution find --type product --brief  
+    keystore cmd            keystore command   
+    keystore del            keystore delete   
+    keystore lindex         keystore command lindex  
+    keystore linsert        keystore command linsert  
+    keystore llen           keystore command llen  
+    keystore lpush          keystore command lpush  
+    keystore lrange         keystore command lrange  
+    keystore lrem           keystore command lrem  
+    keystore lset           keystore command lset  
+    keystore ltrim          keystore command ltrim  
+    keystore rm             keystore delete   
+    keystore rpop           keystore command rpop  
+    keystore rpush          keystore command rpush  
+    keystore sadd           keystore command sadd  
+    keystore scard          keystore command scard  
+    keystore smembers       keystore command smembers  
+    keystore spop           keystore command spop  
+    keystore srem           keystore command srem  
+    links list              link list   
+    list application        solution list --type application --brief  
+    list applications       solution list   
+    list product            solution list --type product --brief  
+    list products           solution list   
+    list solutions          solution list   
+    logs application        logs --type application  
+    logs product            logs --type product  
+    password current        config user.name  
+    passwords list          password list   
+    product create          solution create --type product  
+    product delete          solution delete --type product  
+    product device          device   
+    product device activate device activate   
+    product device delete   device delete   
+    product device enable   device enable   
+    product device httpurl  device httpurl   
+    product device list     device list   
+    product device lock     device lock   
+    product device read     device read   
+    product device revoke   device revoke   
+    product device twee     device read   
+    product device unlock   device unlock   
+    product device write    device write   
+    product devices list    device list   
+    product diff            status --diff --no-grouped --type product  
+    product domain          domain --type product  
+    product find            solution find --type product --brief  
+    product list            solution list --type product --brief  
+    product logs            logs --type product  
+    product pull            syncdown --no-delete --type product  
+    product push            syncup --no-delete --type product  
+    product usage           usage --type product  
+    products list           solution list   
+    pull                    syncdown --no-delete  
+    pull application        syncdown --no-delete --type application  
+    pull product            syncdown --no-delete --type product  
+    push                    syncup --no-delete  
+    push application        syncup --no-delete --type application  
+    push product            syncup --no-delete --type product  
+    settings list           setting list   
+    solutions list          solution list   
+    usage application       usage --type application  
+    usage product           usage --type product  
+
+  GLOBAL OPTIONS:
+        
+    --[no-]color 
+        Disable fancy output
+        
+    -c, --config KEY=VALUE 
+        Set a single config key
+        
+    -C, --configfile FILE 
+        Load additional configuration file
+        
+    -L, --curl 
+        Print out a curl command for each network call
+        
+    -n, --dry 
+        Do not run actions that make changes
+        
+    --csv 
+        Output as comma-separated values
+        
+    --json 
+        Output as JSON
+        
+    --yaml 
+        Output as Yaml
+        
+    --pp 
+        Output using Ruby pretty-printer
+        
+    --exclude-scopes SCOPES 
+        Except config values from the specified scope(s).
+        SCOPES can be 1 scope or comma-separated list of
+        ["internal", "specified", "env", "project", "user", "defaults"]
+        
+    --[no-]page 
+        Do not page --help output
+        
+    --[no-]plugins 
+        Do not load plugins. Good for when one goes bad
+        
+    --[no-]progress 
+        Disable spinner and progress message
+        
+    --[no-]ascii 
+        Use only ASCII in output
+        
+    -V, --verbose 
+        Be chatty
+        
+    -h, --help 
+        Display help documentation
+        
+    -v, --version 
+        Display version information
+        
+    -t, --trace 
+        Display backtrace when an error occurs

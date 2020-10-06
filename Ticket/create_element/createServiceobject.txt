@@ -1,0 +1,65 @@
+{
+  "status": "available",
+  "alias": "qa20171107113409",
+  "name": "qa20171107113409",
+  "whitelist": [
+    ""
+  ],
+  "schema": {
+    "info": {
+      "version": "v1",
+      "contact": {
+        "name": "Testing",
+        "email": "testing@exosite.com"
+      },
+      "description": "Testing",
+      "title": "Testing"
+    },
+    "paths": {
+      "/qa": {
+        "get": {
+          "operationId": "TEST",
+          "responses": {
+            "204": {
+              "description": "Return the operation result"
+            }
+          },
+          "parameters": [],
+          "description": "A testing operation"
+        }
+      }
+    },
+    "schemes": [
+      "https"
+    ],
+    "basePath": "/",
+    "x-exosite-events": {
+      "event": {
+        "type": "SQS",
+        "description": "Test service",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "description": "Return eventhandler event value"
+            },
+            "name": "qa",
+            "in": "body"
+          }
+        ],
+        "summary": "Test service"
+      }
+    },
+    "x-exosite-health-path": "/",
+    "host": "stacychen.apps.exosite-dev.io",
+    "x-exosite-config-parameters": [
+      {
+        "x-exosite-internal-use": false,
+        "type": "string",
+        "name": "private",
+        "description": "A private parameter"
+      }
+    ],
+    "swagger": "2.0"
+  }
+}

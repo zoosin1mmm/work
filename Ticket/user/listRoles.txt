@@ -1,0 +1,35 @@
+[
+  {
+    "parameter": [
+      {
+        "name": "sn"
+      },
+      {
+        "name": "location"
+      }
+    ],
+    "role_id": "guest"
+  },
+  {
+    "parameter": [
+      {
+        "name": "sn"
+      },
+      {
+        "name": "location"
+      }
+    ],
+    "role_id": "admin"
+  },
+  {
+    "parameter": [
+      {
+        "name": "sn"
+      },
+      {
+        "name": "location"
+      }
+    ],
+    "role_id": "employee"
+  }
+]

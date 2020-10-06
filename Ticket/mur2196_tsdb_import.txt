@@ -1,0 +1,60 @@
+# CASE:1------------------------------------------------------------------------------------
+test:use dead link 
+result:
+{
+  "cancel": 0,
+  "error": "http: status code 403",
+  "job_id": "d9afb92224ee4b786c3bdd28441a0e2a",
+  "length": 0,
+  "offset": 0,
+  "percentage": 0,
+  "remaining_time": "n/a",
+  "required_time": "n/a",
+  "solution_id": "v28qvpzmdmhlrf6r",
+  "start_time": 1493976281,
+  "state": "stopped",
+  "update_time": 0,
+  "url": "https://s3-us-west-1.amazonaws.com/murano-content-service-staging/x42exop0xiil766r/testing-qa-04247?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAICJLJ5PJRFJB32SA%2F20170425%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20170425T054456Z&X-Amz-Expires=30&X-Amz-SignedHeaders=host&X-Amz-Signature=c064c282eaeeaf22ef7b828ce40d9513bd726dfac0be3d3cc8ef2daec43f118f"
+}
+if
+"url timeout"
+then
+"status still can be started"
+# CASE:2------------------------------------------------------------------------------------
+test:test general
+if 
+"status dead and wait for 10 second"
+then
+"status started"
+# CASE:3------------------------------------------------------------------------------------
+test:
+if 
+"status stop and show status started "
+then
+"after that status won't change to dead and can't to create job"
+# CASE:4------------------------------------------------------------------------------------
+test:
+if 
+"jobs are failed and something running with TSDB "
+then
+"Import worker is too busy" or "Internal server error"
+# CASE:5------------------------------------------------------------------------------------
+test:test general  result: arround 30 minute then dead
+if 
+"import data 1.7GB "
+then
+"failed in less than 10% progress"
+# CASE:6------------------------------------------------------------------------------------
+test:test general
+"Job finished but the status is still dead"
+
+
+
+
+# CASE:2
+# CASE:4 
+-create job and job keep to work .when job count is three ,create a job will fail
+# CASE:5  
+# CASE:6  
+import 700MB fail cause CASE:5 
+import 50MB ok ,cause CASE:6 issue

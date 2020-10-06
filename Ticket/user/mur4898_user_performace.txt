@@ -1,0 +1,60 @@
+User.getRole()
+User.hasUserRoleParam()
+User.listRoleParamUsers()
+User.listRoleUsers()
+User.listRoles()
+User.listUserRoleParamValues()
+User.listUserRoles()
+
+
+
+
+getRole
+	{"role_id":"roleId"}
+setup
+	create role
+	curl -X POST \
+	  https://bizapi-staging.hosted.exosite.io/api:1/solution/<solutionID>/role \
+	  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+	  -H 'content-type: application/json' \
+	  -d '{"role_id": "roleId","parameter": []}'
+
+hasUserRoleParam
+{"role_id":"guest","id":"11","parameter_name":"location","parameter_value":"1"}
+	{"role_id":"roleId","id":"userId","parameter_name":"name","parameter_value":"value"}
+setup
+	create user 
+	{"name": "userName", "email": "userEmail", "password": "userPassword"}
+	get user id
+	create role
+	{"role_id": "roleId","parameter": [{"name":"anything"}]}
+	assign user
+	curl -X POST \
+	  https://stacy3.apps.exosite-staging.io/assignUser \
+	  -H 'content-type: application/json' \
+	  -d '{"roleId": "roleId","name": "name","userId": "userId","value": "value"}'
+
+listRoleParamUsers
+	{"role_id" : "roleId","parameter_name" : "name","parameter_value" : "value"}
+setup (same as hasUserRoleParam)
+
+
+listRoleUsers
+	{"role_id":"roleId"}
+setup (same as hasUserRoleParam)
+
+
+listRoles
+	{}
+setup 
+	create role
+
+
+listUserRoleParamValues
+	{"role_id":"roleId","id":"userId","parameter_name":"name"}
+setup (same as hasUserRoleParam)
+
+
+listUserRoles
+	{"id":"userid"}
+setup (same as hasUserRoleParam)

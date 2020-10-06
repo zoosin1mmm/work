@@ -1,0 +1,32 @@
+murano-staging-service-solution
+------------------------------------------------
+FILES:test_user_social
+Testcase:Check oauth for amazon can get user information
+Error:
+Evaluating expression 'json.loads('''Verifying it's you
+For your security, we need to verify your identity. We've sent a code to the email testing@exosite.com. Please enter it below.
+Enter code
+Continue
+Resend code
+Conditions of Use Privacy Notice Help
+© 1996-2017, Amazon.com, Inc. or its affiliates''')' failed: ValueError: No JSON object could be decoded
+Cause: Page behavior is changed
+
+FILES:test_spms_performance
+Testcase:Spms of getting tree should less than 315ms
+Error: '0.338111184 <= 0.315' should be true.
+Cause:execute over time
+
+murano-staging-deploy-tool
+------------------------------------------------
+FILES: test_murano_CLI
+Testcase:SuiteTeardown -Remove Directory
+Error: Permission denied: '/mnt_jenkins/workspace/murano-staging-deploy-tool/dqa-murano/solution/integration/file-20170613045343-qa/.murano'
+Cause:no Permission and need to use 'sudo rm -rf'
+
+/code
+    # adc_staging_ui   device MUR-3035 
+    # murano-staging-service-migration  twilio MUR-2890,timseries MUR-3004
+    # murano-staging-service-solution   timer  MUR-3019,  timseries MUR-3004 ,twilio MUR-2890
+    # adc_staging_project   Content MUR-3043,Lua Library MUR-2905,Timer MUR-2957
+   # murano-staging-deploy-tool   test exosite CLI MUR-3050, Test Exosite Cli Tool MUR-3050

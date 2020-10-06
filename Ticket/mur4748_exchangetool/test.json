@@ -1,0 +1,23 @@
+{
+  "type": "service",
+  "name": "Auth0 Service",
+  "apiServiceName": "auth0",
+  "image": "partner_element-auth0.png",
+  "description": "Create a single sign-on solution for an application",
+  "tiers": [
+    "professional",
+    "enterprise"
+  ],
+  "tags": [
+    "Security",
+    "User Management",
+    "Integration"
+  ],
+  "actions": [
+    {
+      "url": "https://raw.githubusercontent.com/exosite-garage/...",
+      "type": "service",
+      "primary": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+murano-staging-solution
+------------------------------------------------
+FILES: test_add_application 
+Cause:MUR-2952
+FILES: test_delete_modules 
+Cause:MUR-3381
+FILES: test_verify_application_navigation_link_in_new_window
+Cause:MUR-2735
+FILES:Test Application Domain
+Cause:MUR-3398
+
+
+XavierChang
+--------------------------
+TEST : Test Application Domain
+The application domain can create device
+Text will appear, but robot can't catch the number.
+
+
+Comet
+--------------------------
+Test Add Application
+
+TEST Cases : Add Application to check community account application maximum
+1.Click Side Bar Link 讀取不到 //a[@data-qa=""SideNav-${text}-Link""]元素 , 目前錯誤已修正
+2.Delete Solution Via Api 驗證後沒有正確傳送值出去
+3.在keyword_common.robot裡的keyword: Click Dialog Cancel Button,  抓取不到//button[@data-qa=""Dialog-${dialog}Cancel-Button""] 元素 
+
+TEST Cases : Add application with customer template
+verify Endpoint Is Existing 裡等待元素顯示出來時存取不到//span[contains(@data-qa, ""Content-Route-Item"")][contains(.,""development/test"")]這個元素
+
+
+Evelyn Huang
+--------------------------
+fomat string
+
+murano-staging-solution test_add_application 
+    Applications 頁面沒連上（沒有出現Applications的Side Bar），所以找不到//button[@data-qa=""Dialog-ApplicationLimitCancel-Button""]
+
+LouisKe
+--------------------------
+Test Application Domain:
+-The application domain can create device: 
+when action the keyword “Add Device In Application Domain” then add device show Error: Not Found
+
+Why?
+
+Cessna
+--------------------------
+testTest Add Application
+  - Add application to check community account application maximum
+    - Click Side Bar Link
+      - Wait Until Element Is Visible //a[@data-qa=""SideNav-${text}-Link""]
+        Element locator '//a[@data-qa=""SideNav-Applications-Link""]' did not match any elements after 30 seconds
+        沒有//a[@data-qa=""SideNav-Applications-Link""]可以按, 舊UI的東西, 但我跑robot時他切換過去的Business是新的UI       
+
+Can report one time or format it

@@ -1,0 +1,39 @@
+
+dqa_http_okami
+--------------------------------------
+test case:OneP Hybrid write and read - write and get all alias with auth header should success and get 200
+error:
+curl -X POST 'https://t3lpjzoreys600000.m2.exosite-staging.io/onep:v1/stack/alias?uptime&humidity&state&temperature' \
+-H "content-type: application/x-www-form-urlencoded; charset=utf-8" -H 'Accept: application/x-www-form-urlencoded; charset=utf-8' -H 'Authorization: Token aQ9qbIoCfOfmcmlT52EK0GivZXcenlAlae5ZsEzd' -d 'uptime=1&humidity=1.0&state=1&temperature=1.0' -ik
+HTTP/1.1 500 Internal Server Error
+content-length: 0
+
+
+OneP Read - read device alias value with auth header will success and get 200
+error:
+curl -X POST 'https://o4itlbgvounq00000.m2.exosite-staging.io/onep:v1/stack/alias' -H "content-type: application/x-www-form-urlencoded; charset=utf-8" -H 'Accept: application/x-www-form-urlencoded; charset=utf-8' -H 'X-Exosite-CIK: ztidyMWv409RTqhvoJqtK6pc9KlhW2b9FOA57lli' -d 'state=10' -ik
+HTTP/1.1 500 Internal Server Error
+content-length: 0
+
+test_onep_record
+curl -X POST 'https://e1mbpamupobgg0000.m2.exosite-staging.io/onep:v1/stack/record' -H "content-type: application/x-www-form-urlencoded; charset=utf-8" -H 'Accept: application/x-www-form-urlencoded; charset=utf-8' -H 'X-Exosite-CIK: B4Kd234Ek4jZQGzMX6H4qjLO3cVwy8zNjCMrh2dS' -d 'alias=test&1528177860=3&1528264263=80' -ik
+HTTP/1.1 500 Internal Server Error
+content-length: 0
+
+
+murano-staging-murano-cli-tool
+----------------------------------------
+Murano CLI product can enable a device with specific type
+error:
+sudo murano device enable test --auth=hash --cred=jHhOdPTgQCceCJYh2AlNpFOnSK3uT9vMP2cldidS --curl
+
+curl -s -H 'Authorization: token cf996f36cb60fcffe8755326016e571bd538b930' -H 'User-Agent: MrMurano/3.1.0' -H 'Content-Type: application/json' -X PUT 'https://bizapi-staging.hosted.exosite.io/api:1/service/n40sdvdp9ksy00000/device2/identity/test' -d '{"auth":{"type":"hash","key":"jHhOdPTgQCceCJYh2AlNpFOnSK3uT9vMP2cldidS"},"locked":false}'
+Request Failed: 500:  
+
+
+adc_staging_mqtt
+------------------------------------------
+batch fail
+wscat -c 'wss://bizapi-staging.hosted.exosite.io/api:1/solution/e1mbpamupobgg0000/logs?token=aa6980ff178ee260d1c1815ac0567479329a9146'
+[{"timestamp":1528164558022353,"values":{"test":"sss"}}]
+455PBXqTw6IyzGbI7CjCw1e5nyJeP1jnHIvniFZp

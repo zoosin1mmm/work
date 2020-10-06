@@ -1,0 +1,5 @@
+adc-staging-exchange
+---------------------------
+file:test_add_element.robot
+test case:Add element with valid URL
+error: can not build element

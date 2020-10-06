@@ -1,0 +1,64 @@
+{field_name}
+  Type: Array
+  Description: functions to format the specific field.
+  Items:
+  Type: object
+  Description: function to format the specific field. Each object only one function can be specified
+  properties:
+
+    rename:
+      Type: string
+      Description: Rename a field to the given value.
+      Support fields: metrics only.
+    label:
+      Type: string
+      Description: Append the  given string to field value. 
+      Support fields: metrics only.
+    round:
+      Type: number
+      Description: Round the field value with given value as n-decimal.
+      Range: 0 ~ 15
+      Support fields: metrics only.
+    replace: 
+      Type: object
+      Description: Replace the field value matching the pattern with the new value.
+      Support fields: metrics only.
+      Properties:
+          match:
+            Type: string
+            Description: string or regular expression
+          to
+            Type: string
+            Description: replacement value
+    datetime:
+      Type: integer
+      Description: Convert the unix timestamp to human readable format( support ISO 8601: ‘yyyy-mm-ddThh:mm:ss.[mmm]’) for given value as UTC offset seconds (n or -n). For  example the timestamp 1509437405123 will be converted to 2017-10-31T08:10:05.123Z when value is 0.
+      Support fields: timestamp and metrics.
+    normalize:
+      Type: array
+      Description: Normalize the given list of tag names, it will fill into different columns. The tags are not specified will be dropped. The field parameter should be “tags” and only support “tags” field. 
+      Max: 20
+      Support fields: tags only.
+
+
+
+
+
+
+Tsdb.export({
+  query = {
+     metrics = {"field_a", "field_b", "field_c", "field_d", "field_e"}
+  },
+  filename = "sample.csv",
+  format = {
+    field_a={{label="C"}},
+    field_b={
+      {rename="new_field_name"},
+      {label="B"}
+    },
+    field_c={{round=2}},
+    field_d={{replace={match="/a(b|d)c/", to="[\1]"}}},
+    timestamp={{datetime=8}},
+    tags={{normalize={"sn", "device"}}}
+  }
+})

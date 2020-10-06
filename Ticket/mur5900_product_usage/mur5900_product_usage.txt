@@ -1,0 +1,152 @@
+* create application and product 
+* link application and product
+* check product usage
+{
+    "device2": {
+        "service": "device2",
+        "quota": {
+            "calls_daily": 1000000
+        },
+        "usage": {
+            "data_in_daily": 0,
+            "data_in_monthly": 0,
+            "data_in_total": 0,
+            "data_out_daily": 0,
+            "data_out_monthly": 0,
+            "data_out_total": 0,
+            "calls_daily": 0,
+            "calls_monthly": 0,
+            "calls_total": 0,
+            "events_daily": 0,
+            "events_monthly": 0,
+            "events_total": 0,
+            "identity_provisioned": 0,
+            "identity_provisioned_max_monthly": 0,
+            "transacted_0": 0,
+            "transacted_0_max_monthly": 0,
+            "transacted_51": 0,
+            "transacted_51_max_monthly": 0,
+            "transacted_1001": 0,
+            "transacted_1001_max_monthly": 0,
+            "transacted_5001": 0,
+            "transacted_5001_max_monthly": 0,
+            "transacted_10001": 0,
+            "transacted_10001_max_monthly": 0,
+            "transacted_50001": 0,
+            "transacted_50001_max_monthly": 0,
+            "transacted_200001": 0,
+            "transacted_200001_max_monthly": 0,
+            "transacted_500001": 0,
+            "transacted_500001_max_monthly": 0,
+            "transacted_1000001": 0,
+            "transacted_1000001_max_monthly": 0,
+            "transacted_2000001": 0,
+            "transacted_2000001_max_monthly": 0,
+            "transacted_2600001": 0,
+            "transacted_2600001_max_monthly": 0
+        }
+    }
+}
+
+* create device
+* check product usage
+{
+    "device2": {
+        "service": "device2",
+        "quota": {
+            "calls_daily": 1000000
+        },
+        "usage": {
+            "data_in_daily": 0,
+            "data_in_monthly": 0,
+            "data_in_total": 0,
+            "data_out_daily": 0,
+            "data_out_monthly": 0,
+            "data_out_total": 0,
+            "calls_daily": 0,
+            "calls_monthly": 0,
+            "calls_total": 0,
+            "events_daily": 0,
+            "events_monthly": 0,
+            "events_total": 0,
+            "identity_provisioned": 0,
+            "identity_provisioned_max_monthly": 0,
+            "transacted_0": 1,
+            "transacted_0_max_monthly": 1,
+            "transacted_51": 0,
+            "transacted_51_max_monthly": 0,
+            "transacted_1001": 0,
+            "transacted_1001_max_monthly": 0,
+            "transacted_5001": 0,
+            "transacted_5001_max_monthly": 0,
+            "transacted_10001": 0,
+            "transacted_10001_max_monthly": 0,
+            "transacted_50001": 0,
+            "transacted_50001_max_monthly": 0,
+            "transacted_200001": 0,
+            "transacted_200001_max_monthly": 0,
+            "transacted_500001": 0,
+            "transacted_500001_max_monthly": 0,
+            "transacted_1000001": 0,
+            "transacted_1000001_max_monthly": 0,
+            "transacted_2000001": 0,
+            "transacted_2000001_max_monthly": 0,
+            "transacted_2600001": 0,
+            "transacted_2600001_max_monthly": 0
+        }
+    }
+}
+* device activate 
+curl \
+ -X POST 'https://b5bsxk62654g00000.m2.exosite-staging.io/provision/activate' \
+ -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' \
+ -d 'sn=test'
+i3GoWSWofl9XOjQOaEY5RmOpTEYc2mGpJitk70da
+* check product usage
+{
+    "device2": {
+        "service": "device2",
+        "quota": {
+            "calls_daily": 1000000
+        },
+        "usage": {
+            "data_in_daily": 147,
+            "data_in_monthly": 147,
+            "data_in_total": 147,
+            "data_out_daily": 102,
+            "data_out_monthly": 102,
+            "data_out_total": 102,
+            "calls_daily": 0,
+            "calls_monthly": 0,
+            "calls_total": 0,
+            "events_daily": 1,
+            "events_monthly": 1,
+            "events_total": 1,
+            "identity_provisioned": 1,
+            "identity_provisioned_max_monthly": 1,
+            "transacted_0": 1,
+            "transacted_0_max_monthly": 1,
+            "transacted_51": 0,
+            "transacted_51_max_monthly": 0,
+            "transacted_1001": 0,
+            "transacted_1001_max_monthly": 0,
+            "transacted_5001": 0,
+            "transacted_5001_max_monthly": 0,
+            "transacted_10001": 0,
+            "transacted_10001_max_monthly": 0,
+            "transacted_50001": 0,
+            "transacted_50001_max_monthly": 0,
+            "transacted_200001": 0,
+            "transacted_200001_max_monthly": 0,
+            "transacted_500001": 0,
+            "transacted_500001_max_monthly": 0,
+            "transacted_1000001": 0,
+            "transacted_1000001_max_monthly": 0,
+            "transacted_2000001": 0,
+            "transacted_2000001_max_monthly": 0,
+            "transacted_2600001": 0,
+            "transacted_2600001_max_monthly": 0
+        }
+    }
+}
+* create device 50 

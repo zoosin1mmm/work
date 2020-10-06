@@ -1,0 +1,15 @@
+pod1
+20 user 100 request
+50%  23.805s
+
+pod2
+40 user 200 request
+50%  24.303s
+
+pod3
+60 user 300 request
+50% 24.046 s
+
+pod4
+90 user 450 request
+50% 28.019s

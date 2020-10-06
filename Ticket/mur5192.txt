@@ -1,0 +1,16 @@
+curl -XPOST 'http://localhost:8081/api/v1/solution/f2hu4pljqmda00000/serviceconfig' -H 'Content-Type:application/json' \
+-d '{"service":"qa20171212104400","solution_id":"f2hu4pljqmda00000"}'
+
+curl -XPOST 'http://localhost:8081/api/v1/eventhandler' \
+-H 'Content-Type:application/json' \
+-d '{"name": "testingevent","service": "qa20171212104400", "event": "event","solution_id": "f2hu4pljqmda00000","script": "return \"Hello world!\""}'
+
+
+curl -XPOST 'http://localhost:4101/api/v1/trigger/f2hu4pljqmda00000/qa20171212104400/event' -i
+
+
+
+curl -X DELETE 'http://localhost:8081/api/v1/solution/f2hu4pljqmda00000/serviceconfig/qa20171212104400'
+
+
+curl -X DELETE 'http://localhost:8081/api/v1/service/qa20171212104400'

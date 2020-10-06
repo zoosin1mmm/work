@@ -1,0 +1,178 @@
+###############
+  stream="utcchilleris001",
+  device="utcchilleric001",
+  cluster_hostname="ingestion-jugygg6zny2u.us3.sfdcnow.com",
+  Authorization="Bearer 1tvfJCjwm1po1ReKmAwg0xPxFsZA5ORplbiEp4zCpp9mXo53wB7eyXnoVjXYYcfoXkVia3JDs5PDoltXliBeW4"
+###############
+test Documentation HostName And Token can be used
+###############
+1.set HostName and Token From Documentation
+HostName=ingestion-jugygg6zny2u.us3.sfdcnow.com
+Token=1tvfJCjwm1po1ReKmAwg0xPxFsZA5ORplbiEp4zCpp9mXo53wB7eyXnoVjXYYcfoXkVia3JDs5PDoltXliBeW4
+2.create enpoint and run
+local params = {
+  ["stream"] = "utcchilleris001",
+  ["device"] = "utcchilleric001",
+  ["events"] = {
+    {
+      ["test_field_1"] = "field_1",
+      ["test_field_2"] = "field_2"
+    },
+    {
+      ["test_field_1"] = "field_1",
+      ["test_field_2"] = "field_2",
+      ["test_field_3"] = "field_3"
+    }
+  }
+}
+response.message = Salesforceiot.sentEvents(params)
+3.return
+{
+  "count": 2
+}
+###############
+test Documentation Host with not existing Token can not be used
+###############
+1.set HostName and Token
+HostName=ingestion-jugygg6zny2u.us3.sfdcnow.com
+Token=123456789
+2.create endpoint and run
+local params = {
+  ["stream"] = "utcchilleris001",
+  ["device"] = "utcchilleric001",
+  ["events"] = {
+    {
+      ["test_field_1"] = "field_1",
+      ["test_field_2"] = "field_2"
+    }
+  }
+}
+response.message = Salesforceiot.sentEvents(params)
+3.return 
+{
+  "error": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 401 </title>\n</head>\n<body>\n<h2>HTTP ERROR: 401</h2>\n<p>Problem accessing /streams/utcchilleris001/utcchilleric001/event. Reason:\n<pre>    Unauthorized</pre></p>\n<hr /><i><small>Powered by Jetty://</small></i>\n</body>\n</html>\n",
+  "status": 401,
+  "type": "QueryError"
+}
+###############
+test Murano HostName And Token can be used
+###############
+1.set HostName and Token
+HostName=stacychen-qa-test.apps.exosite-staging.io
+Token=dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=
+2.create endpoint 
+POST  streams/{Astream}/{Bdevice}/event
+response.message = {
+  body = request.body,
+  headers = request.headers
+}
+3. create endpoint and run
+local params = {
+  ["stream"] = "Astream",
+  ["device"] = "Bdevice",
+  ["events"] = {
+    {
+      ["test_field_1"] = "field_1",
+      ["test_field_2"] = "field_2"
+    }
+  }
+}
+response.message = Salesforceiot.sentEvents(params)
+4.return
+{
+  "body": [
+    {
+      "test_field_1": "field_1",
+      "test_field_2": "field_2"
+    },
+    {
+      "test_field_1": "field_1",
+      "test_field_2": "field_2",
+      "test_field_3": "field_3"
+    }
+  ],
+  "headers": {
+    "authorization": "Bearer dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=",
+    "content-length": "130",
+    "content-type": "application/json",
+    "forwarded": "for=13.56.80.204;host=stacychen-qa-test.apps.exosite-staging.io;proto=https",
+    "host": "stacychen-qa-test.apps.exosite-staging.io",
+    "user-agent": "hackney/1.8.6",
+    "user_agent": "hackney/1.8.6",
+    "x-forwarded-for": "13.56.80.204",
+    "x-forwarded-host": "stacychen-qa-test.apps.exosite-staging.io",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https",
+    "x-request-id": "997b639cd4f249c192510518f4fb0c78"
+  }
+}
+###############
+test not existing HostName can not be used
+###############
+1.set HostName and Token
+HostName=www.testing.com
+Token=<random>
+2.create endpoint and run
+local params = {
+  ["stream"] = "utcchilleris001",
+  ["device"] = "utcchilleric001",
+  ["events"] = {
+    {
+      ["test_field_1"] = "field_1",
+      ["test_field_2"] = "field_2"
+    }
+  }
+}
+response.message = Salesforceiot.sentEvents(params)
+3. return
+{
+  "error": "Service inaccessible",
+  "status": 500,
+  "type": "ServerError"
+}
+###############
+test Murano Host with not existing Token can not be used
+###############
+1.set HostName and Token
+HostName=stacychen-qa-test.apps.exosite-staging.io
+Token=123456789
+2.create endpoint and run
+local params = {
+  ["stream"] = "utcchilleris001",
+  ["device"] = "utcchilleric001",
+  ["events"] = {
+    {
+      ["test_field_1"] = "field_1",
+      ["test_field_2"] = "field_2"
+    }
+  }
+}
+response.message = Salesforceiot.sentEvents(params)
+3.return 
+{
+  "body": [
+    {
+      "test_field_1": "field_1",
+      "test_field_2": "field_2"
+    },
+    {
+      "test_field_1": "field_1",
+      "test_field_2": "field_2",
+      "test_field_3": "field_3"
+    }
+  ],
+  "headers": {
+    "authorization": "Bearer 123456789",
+    "content-length": "130",
+    "content-type": "application/json",
+    "forwarded": "for=54.67.125.42;host=stacychen-qa-test.apps.exosite-staging.io;proto=https",
+    "host": "stacychen-qa-test.apps.exosite-staging.io",
+    "user-agent": "hackney/1.8.6",
+    "user_agent": "hackney/1.8.6",
+    "x-forwarded-for": "54.67.125.42",
+    "x-forwarded-host": "stacychen-qa-test.apps.exosite-staging.io",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https",
+    "x-request-id": "53bcb12d87654440b845e1db1112503e"
+  }
+}

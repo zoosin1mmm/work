@@ -1,0 +1,33 @@
+1.create node two node under root (root=>t1=>t1-1)
+        "children": [
+          {
+            "children": [],
+            "description": "t1-1",
+            "devices": [],
+            "id": "45d9282f-8898-4d3a-9236-1c6069c4ab03",
+            "name": "t1-1",
+            "parent_id": "1c252e1d-c0e8-497f-9f26-40a122d59477",
+            "roles": [],
+            "rules": [],
+            "users": []
+          }
+        ],
+        "description": "t1",
+        "devices": [],
+        "id": "1c252e1d-c0e8-497f-9f26-40a122d59477",
+        "name": "t1",
+        "parent_id": "4d050ef7-bba1-496b-860e-dbf078b33704",
+        "roles": [],
+        "rules": [],
+        "users": []
+      }
+ 2.update t1 parent to t1-1
+ return Spms.updateNode(request.body)
+ {"node_id":"1c252e1d-c0e8-497f-9f26-40a122d59477","name":"t1","description":"t1","parent_node_id":"45d9282f-8898-4d3a-9236-1c6069c4ab03"}
+
+ return
+ {
+  "error": "{\"statusCode\":400,\"error\":\"Bad Request\",\"message\":\"Cannot assign nodes child as parent node.\"}",
+  "status": 400,
+  "type": "QueryError"
+}

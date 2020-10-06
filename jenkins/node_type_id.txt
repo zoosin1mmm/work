@@ -1,0 +1,24 @@
+curl 'http://localhost:8081/api/v1/serviceconfig' -H 'Content-Type: application/json' -d '{"service":"spms","solution_id": "kt5pels11my7rpb9"}' -i    shell=True
+
+--#ENDPOINT POST /spms/init
+return Spms.init(request.body)
+{
+  "result": {
+    "id": "94fb90d9-731e-40f4-8b36-3ee72bb13779",
+    "node_type_id": "fb5513c5-2181-4d77-95b8-d5df0d631f3b"
+  },
+  "status": 200
+}
+--#ENDPOINT POST /spms/createNode
+return Spms.createNode(request.body)
+
+{"parent_node_id":"94fb90d9-731e-40f4-8b36-3ee72bb13779","node_type_id":"d2d5d1e5-7d8f-43d6-b8f2-73858e8a8dfe","name":"My node name","description":"Description of the node"}
+
+{
+  "error": "{\"statusCode\":404,\"error\":\"Not Found\",\"message\":\"Unable to find node_type_id in solution\"}",
+  "status": 404,
+  "type": "QueryError"
+}
+
+
+ {"error":"{\"statusCode\":404,\"error\":\"Not Found\",\"message\":\"Unable to find node_type_id in solution\"}","status":404,"type":"QueryError"} != {"error":"{\"statusCode\":404,\"error\":\"Not Found\",\"message\":\"Unable to find given node_type_id\"}","status":404,"type":"QueryError"} 

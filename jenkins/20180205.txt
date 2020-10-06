@@ -1,0 +1,12 @@
+murano-staging-solution
+------------------------------
+file:test_write_application_service_value.robot
+keyword:Verify Timer Confirmation Message Is Correct
+fix://*[@action="Close"]//span 已經存在 容易拿到空的message
+
+
+adc-staging-application-services
+------------------------------
+file:test_check_services.robot
+test case:Check timer services configuration checkbox can be cancel
+fix:需要更多時間等timer 寫完資料

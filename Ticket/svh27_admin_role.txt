@@ -1,0 +1,24 @@
+1.get user session(use not exosite.com accout)
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjExLCJpc3MiOiJodHRwOlwvXC9zcGhpbngtdXNtOjMwMDBcL2FwaVwvdjFcL3VzZXJcL2xvZ2luIiwiaWF0IjoxNTAxNjYzOTAxLCJleHAiOjE1MDQyNTU5MDEsIm5iZiI6MTUwMTY2MzkwMSwianRpIjoiMTNmNmEyNzk2OGYzMDVkZTllNWRhZmMxOWJkZWQ4NTIifQ.-I-_ghtNLt3VInus-MjyutGdytZv0DGyHkmrWCjQ7oQ
+
+2.add admin
+curl 'https://testing-qa20170802160400-semi-vert.apps.exosite.io/api:1/admin' -H 'Host: testing-qa20170802160400-semi-vert.apps.exosite.io' -H 'Content-Type: application/json' -H 'Cookie: sid=<has provision user token>' -X POST -d '{"email":"testing+20170802160454+semi+vert@exosite.com"}'
+-----return------
+Add success.
+------------
+3.verify admin role is existing
+curl -X GET 'https://testing-qa20170802160400-semi-vert.apps.exosite.io/api:1/admin' -H 'Host: testing-qa20170802160400-semi-vert.apps.exosite.io' -H 'Content-Type: application/json' -H 'Cookie: sid=<token>'
+-----return------
+ok.
+------------
+
+1.delete existing admin role
+curl -X DELETE 'https://testing-qa20170802160400-semi-vert.apps.exosite.io/api:1/admin' -H 'Host: testing-qa20170802160400-semi-vert.apps.exosite.io' -H 'Content-Type: application/json' -H 'Cookie: sid=<has provision user token>'  -d '{"email": "testing+20170728100021+guest+semi@test.com"}'
+
+-----return------
+delete admin success.
+------------
+2. verify whether role is existing or not
+-----return------
+"Permission Denied"
+------------

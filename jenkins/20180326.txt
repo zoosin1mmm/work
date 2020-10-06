@@ -1,0 +1,49 @@
+murano-staging-api-internal
+-----------------------------
+file:solution-test.js / solution-{solution_id}-serviceconfig-{serviceconfig_id}.js
+test case: test teardown
+error: delete solution via sphixn api 204 !=200
+change: now is return 200
+
+
+file:solution-{solution_id}-test.js
+test case:
+solution-{solution_id}-test - put - should respond with 204 OK.
+solution-{solution_id}-test - put - should respond with 204 OK with full object
+solution-{solution_id}-test - put - should respond with 400 Bad Request with exist domain.
+error: put solution via sphixn api 204 !=200
+change: now is return 200
+
+
+file:solution-{solution_id}-test.js
+test case:
+solution-{solution_id}-test - delete - should respond with 204 No Content
+solution-{solution_id}-test - delete - should respond with 204 No Content for delete the same solution twice.
+error: delete solution via sphixn api 204 !=200
+change: now is return 200
+
+
+
+file:solution-{solution_id}-update-test.js
+test case:solution-{solution_id}-update-test - post - should respond with 200 OK
+error: update solution with template return error
+change: {"statusCode":400,"message":"current transaction is aborted, commands ignored until end of transaction block","code":"BadRequestError"}
+
+
+file:http-{solutionid}-patch.robot
+test case: Http-{solutionid}-patch - post - should return 200 OK with params and json
+
+file:http-{solutionid}-post.robot
+test case:Http-{solutionid}-post - post - should return 200 OK with params and json
+
+file:http-{solutionid}-put.robot
+test case:Http-{solutionid}-put - post - should return 200 OK with params and json
+
+file:Http-{solutionid}-request.robot
+Http-{solutionid}-request - post - should return 200 OK with params and json
+error: content-type 沒帶 
+ticket: MUR-6298
+
+file:Http-{solutionid}-request.robot
+Http-{solutionid}-request - post - should return 200 OK with body parameter
+fix:MUR-6300

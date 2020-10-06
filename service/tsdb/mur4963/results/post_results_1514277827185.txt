@@ -1,0 +1,14 @@
+Avg Spend time: 0.647714897 
+
+--------------------------------------------------
+solutionID: u2o29ufxmmfc00000 
+Metirc: qa_metrics 
+Metirc Size: 100 
+Metirc length: 100 
+Tags Size: 19 
+Datapoint length: 2 
+export post Data to data/post_body_1514277827182.txt 
+Get Response: 647.714897ms 
+spend times : 0.647714897 s
+
+--------------------------------------------------

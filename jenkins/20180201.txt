@@ -1,0 +1,13 @@
+murano-staging-docs
+-------------------------------------
+file:test_check_product_area
+test case: Check dashboard tab should redirected to dashboard page after reload page
+error: 有兩個tag標籤
+
+
+murano-staging-api-external
+------------------------------------
+file:business-{businessId}-solution.robot
+test case:business-{businessId}-solution - post - create solution with sphinx example template should response 201
+error: create application with https://github.com/dominicletz/sphinx-example.git return 504
+

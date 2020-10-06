@@ -1,0 +1,50 @@
+source.from = 'url'  source.url is required
+source.from = 'service'  source.schema is required
+source.from = 'github'  source.token is required
+curl --request POST \
+  --url https://bizapi-staging.hosted.exosite.io/api:1/exchange/loz8gtd7hcmims4i/element/ \
+  --header 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  --header 'content-type: application/json' \
+  --cookie OPENSHIFT_EDGE_murano-staging_bizapi_SERVERID=81a4f7a313dfff3052a05037a5439862 \
+  --data '{
+    "markdown": "Element markdown of element-20180312175707",
+    "description": "Element description of element-20180312175707",
+    "tags": [
+        "tagelement-20180312175707"
+    ],
+    "image": {
+        "detail": {
+            "color": "#FFFFFF",
+            "url": "https://exosite-exchange-staging.s3.amazonaws.com/images/qa-20180312175707.png",
+            "size": 111453,
+            "type": "image/png",
+            "filename": "qa-20180312175707.png"
+        },
+        "thumbnail": {
+            "color": "#FFFFFF",
+            "url": "https://exosite-exchange-staging.s3.amazonaws.com/images/qa-20180312175707.png",
+            "size": 111453,
+            "type": "image/png",
+            "filename": "qa-20180312175707.png"
+        }
+    },
+    "specs": "test",
+    "name": "element-20180312175707",
+    "bizid": "loz8gtd7hcmims4i",
+    "access": "private",
+    "source": {
+        "url": "https://github.com/exosite/getting-started-solution-template",
+        "from": "github",
+			  "token":"C1CU5ROkvRyZTYftsmhY5wmwqr4MvCXXvWFNVv0i"
+    },
+    "contact": "QA",
+    "attachment": {
+        "download": {
+            "url": "https://github.com/exosite/getting-started-solution-template",
+            "size": 1234,
+            "type": "product/pdf",
+            "filename": "download.pdf"
+        }
+    },
+    "type": "application"
+}'

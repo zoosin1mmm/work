@@ -1,0 +1,25 @@
+dqa_http_okami
+----------------------------------------
+file:test_onep_logging_events.robot
+test case:OneP Log-{projectId}-events - websocket should get response when activate expired device
+bug:MUR-6363
+
+
+adc-staging-docs
+---------------------------------------
+file:adcWeb/test_check_application_docs_area
+test case:Check application docs page when application has get endpoint
+Check application docs page when application has the endpoint with body
+error:
+//li[@id="default_getQa20180331145612"]//h2[@class="operation-title"]=>//li[@id="default_getQa"]//h2[@class="operation-title"]
+
+file:test_two_factor
+error: not found business name
+fix:MUR-6365
+
+
+murano-staging-service-migration
+------------------------------------------
+file:test_lua_library.robot
+test case:Lua library CPU run time more than 10 second will return 504 timeout
+bug:IN-549

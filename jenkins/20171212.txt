@@ -1,0 +1,35 @@
+每個測試並留言
+file:solution-{solution_id}-test.robot https://jira.exosite.com/browse/MUR-5054
+test case:
+solution-{solution_id}-test - delete - should respond with 204 No Content
+改成驗證serviceconfig不存在
+
+solution-{solution_id}-test - delete - should respond with 204 No Content for delete the same solution twice.
+第一次204 第二次404
+solution-{solution_id}-test - delete - should respond with 400 Bad Request for delete with invalid solution id, solutionId
+變成404 not found
+
+
+
+file:timeseries-{solution_id}-tags-test.robot
+test case:  timeseries-{solution_id}-tags-test - get - should respond with 200 tags information retrieved
+1.給limit 但沒有用
+2.有時候刪太快可能還沒建立完
+{ result: null,
+  error: 'Client Error: Solution instance (solution_id: 3hTII6WoxF) has not been created yet. Request rejected.' }
+http://pegasus-api.hosted.exosite.io/api/v1/solution/x54elbta82lc0s4ss/logs
+curl -XPOST 'http://pegasus-dispatcher-staging.hosted.exosite.io/api/v1/trigger/x54elbta82lc0s4ss/qa20171212104400/event'
+
+
+
+自己的測試 => 一樣
+file:trigger-{contextid}-{servicealias}-{eventtype}.robot
+curl -XPOST 'http://localhost:4101/api/v1/trigger/n1ecjyfucd1b40000/qa20171212104400/event' -i
+HTTP/1.1 502 Bad Gateway
+Content-Type: application/json
+cache-control: max-age=0, private, must-revalidate
+content-length: 54
+content-type: application/json; charset=utf-8
+date: Tue, 12 Dec 2017 02:44:22 GMT
+server: Cowboy
+{"error":"{\"error\":\"invalid request parameters\"}"}%

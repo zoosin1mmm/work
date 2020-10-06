@@ -1,0 +1,34 @@
+(including service triggering events, service script key, event name, and current solution ID)
+
+_G["context"]["solution_id"]
+_G["context"]["service"]
+_G["context"]["event"]
+_G["context"]["script_key"]
+
+
+curl -X POST \
+  https://bizapi-dev.hosted.exosite.io/api:1/solution/i1jv36y464vsw0000/user/ \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{"name":"test","email":"testing+a@exosite.com","password":"1234eszxcv"}' 
+
+  curl -X POST \
+http://pegasus-dispatcher-dev.hosted.exosite.io/api/v1/trigger/i1jv36y464vsw0000/user/account \
+-H 'Content-Type: application/json' \
+-d '{}'
+
+
+
+
+
+curl -X POST \
+  https://bizapi-staging.hosted.exosite.io/api:1/solution/u58cvblvsrmk00000/user/ \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'content-type: application/json' \
+  -d '{"name":"test","email":"testing+c@exosite.com","password":"1234eszxcv"}' 
+
+  curl -X POST \
+http://pegasus-dispatcher-staging.hosted.exosite.io/api/v1/trigger/u58cvblvsrmk00000/user/account \
+-H 'Content-Type: application/json' \
+-d '{"email":"testing+c@exosite.com","solution_id":"u58cvblvsrmk00000","id":10,"type":"CREATE"}'
+

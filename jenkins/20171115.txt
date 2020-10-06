@@ -1,0 +1,5 @@
+adc-staging-product
+----------------------------
+File:test_check_adc_product_content.robot
+Test case: Check ADC content list empty content
+error://h2[contains(.,"Content")] => //h1[contains(.,"Content")]

@@ -1,0 +1,14 @@
+Avg Spend time: 0.0 
+
+--------------------------------------------------
+solutionID: u58cvblvsrmk00000 
+Metirc: qa_metrics 
+Metirc Size: 1 
+Metirc length: 1 
+Tags Size: 0 
+Datapoint length: 1 
+export post Data to data/post_body_1515648588911.txt 
+Get Response: Server Error: [string "-- Murano Solution Scripting..."]:108: arguments to Tsdb.multiWrite must be a table 
+spend times : 0 s
+
+--------------------------------------------------

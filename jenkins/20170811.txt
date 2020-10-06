@@ -1,0 +1,29 @@
+#need to reload
+murano-staging-api
+
+#Problem
+adc-staging-docs
+------------------------------------
+=>get pop message handly
+=>change "waiting page" to "page should contain" will success
+
+murano-staging-service-migration
+------------------------------------
+File: test_http 
+=>http service reopen will success
+
+File:test_module
+=>migration already has module result in conflict
+
+File:test_user_event.robot
+=>log delay
+
+murano-staging-service-solution
+------------------------------------
+File:test_add_modules.robot
+TestCase: Add module and make the amounts over limit
+=> need more time then it will pass (1000s=>8000s)
+
+File:test_timeseries
+Case:Timeseries of cassandra can lead to next item with next parameter
+=>Split word "_" change to "|" will success

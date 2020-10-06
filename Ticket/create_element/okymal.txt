@@ -1,0 +1,28 @@
+
+\n  info:
+\n    version: v1
+\n    contact:
+\n      name: Testing
+\n      email: testing@exosite.com
+\n    description: Testing
+\n    title: Testing
+\n  paths:
+\n    '/qa':
+\n      get:
+\n        operationId: TEST
+\n        responses:
+\n          default:
+\n            description: Return the operation result
+\n        parameters: []
+\n        description: A testing operation
+\n  schemes:
+\n  - https
+\n  basePath: '/'
+\n  x-exosite-health-path: '/'
+\n  host: stacychen.apps.exosite-dev.io
+\n  x-exosite-config-parameters:
+\n  - x-exosite-internal-use: false
+\n    type: string
+\n    name: private
+\n    description: A private parameter
+\n  swagger: '2.0'

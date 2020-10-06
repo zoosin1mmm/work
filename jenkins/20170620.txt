@@ -1,0 +1,18 @@
+murano-staging-service-solution
+------------------------------------------------
+FILES: test_device
+Testcase:SuiteSetup -Update Solution Products
+Error: {u'message': u'Could not validate parameters pid: 404 - {"statusCode":404,"error":"Not Found"}', u'code': u'BadRequestError', u'error': u'404 - {"statusCode":404,"error":"Not Found"}', u'statusCode': 400}
+Cause:can not link
+
+
+/code
+#murano-staging-docs log and profile error MUR-3130
+#murano-staging-business log and profile error MUR-3130
+#murano-staging-link log and profile error MUR-3130
+#murano-staging-service-solution   murano CLI MUR-3050  
+#murano-staging-api run again pass
+#murano-staging-openshift
+/code
+FILES: test_device
+Cause:can not link product and application 404 error

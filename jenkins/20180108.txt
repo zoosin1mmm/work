@@ -1,0 +1,22 @@
+murano-staging-api-external
+-----------------------------------
+fix:MUR-5459
+file:Exchange-{Businessid}-Element
+test case:exchange-{businessId}-element - post - can auto purchase element after created
+error: keyword missing
+
+murano-staging-service-solution
+------------------------------------
+file:test_relational_db.robot
+test case:Relational database can not work when reach limit
+error change: 
+預期 =>Client Error: *statement error* value too long for type character varying(4)
+結果 =>Client Error: *statement error* value too long for type character(4)
+
+
+murano-staging-service-migration
+-------------------------------------------
+=> tsdb deleteAll return 500 
+fix:會開bug ticket 
+qa-task改成新的migration application
+ID:k1gmlgdqppt5s0000

@@ -1,0 +1,24 @@
+murano-staging-api-internal
+-----------------------------
+file:serviceconfig-test.robot
+test case:should respond with 403 Forbidden for create with x-exosite-solution header
+error : response change
+{
+    "statusCode": 404,
+    "message": "Not Found",
+    "code": "NotFoundError"
+}
+
+/serviceconfig post
+curl -X POST \
+  http://localhost:8081/api/v1/serviceconfig/ \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'x-exosite-solution: w1m2o0i6gbeu80000' \
+  -d '{
+                "alias": "w1m2o0i6gbeu80000_bulknotify",
+                "name": "bulknotify",
+                "solution_id": "w1m2o0i6gbeu80000",
+                "service": "bulknotify"
+            }'

@@ -1,0 +1,31 @@
+---------------------------------------------
+murano-staging-link
+---------------------------------------------
+FILE:test_verify_the_product_navigation_link
+testcase:The business link should redirected to business page
+error:Element '//a[@data-qa="TopNav-SpecificURL-Link"]' did not appear
+localtest: data-qa is change to TopNav-Item-Link
+
+FILE:test_verify_the_solution_navigation_link
+testcase:The business link in debug page should redirected to business page
+error:Element '//a[@data-qa="TopNav-SpecificURL-Link"]' did not appear
+localtest: data-qa is change to TopNav-Item-Link
+
+
+---------------------------------------------
+murano-staging-business
+---------------------------------------------
+FILE:test_log_in
+testcase: suite setup
+error:  	'https://www.exosite-staging.com/business/#/?_k=cjybiu' does not match 'https://.*business/products'
+localtest: link is change after signup 
+
+FILE:test_reset_password
+testcase:  Reset password with valid email and password
+error: 	'https://www.exosite-staging.com/business/' does not match 'https://.*business/products'
+localtest: auto navigate to product page and link is change , so it wil not match
+
+FILE:test_sign_up
+testcase:   Signup with valid email and password
+error: 'https://www.exosite-staging.com/business/#/?_k=ff7uqo' does not match 'https://.*business/products'
+localtest: auto navigate to product page and link is change , so it wil not match

@@ -1,0 +1,33 @@
+murano-staging-api-external
+-----------------------------------
+MUR-6144
+error:create element fail affect by MUR-5506
+
+file:business-{businessId}-member-{email}
+test case:business-{businessId}-member-{email} - put - non ADC business can not invite contributor role
+error:	{"statusCode":400,"error":"Bad Request","message":"child \"solutions\" fails because [\"solutions\" does not contain 1 required value(s)]","validation":{"source":"payload","keys":["solutions"]}}
+fix: solutions array can not be empty
+
+
+
+murano-staging-murano-cli-tool 
+---------------------------------
+error:create element fail affect by MUR-5506
+not check
+
+adc-staging-exchange 
+------------------------------
+error:create element fail affect by MUR-5506
+not check
+error:
+{
+	"statusCode": 400,
+	"error": "Bad Request",
+	"message": "child \"source\" fails because [child \"token\" fails because [\"token\" is required]]",
+	"validation": {
+		"source": "payload",
+		"keys": [
+			"source.token"
+		]
+	}
+}

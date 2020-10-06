@@ -1,0 +1,26 @@
+big
+C MUR-4858 - tsdb export parameter
+L MUR-2622 - timer send with email
+L MUR-4438 - mbed unregister
+
+middle
+M MUR-2690 - websocket binary
+M MUR-3172 - websocket binary
+M MUR-4690 - bulknotify device2
+L MUR-3026 - auth0 can automation
+
+L MUR-4721 - add element to migration  Stacy
+L MUR-4857 - tsdb query invalid metric Stacy
+
+L MUR-2706 - keystore os time
+L MUR-2729 - http performance
+L MUR-2704 - send timer with websocket function
+L MUR-4650 - mbed receive data fix
+L MUR-4722 - Create a script for rebuild migration solution
+L MUR-2644 - cup 640k response time
+
+small
+L MUR-3141 - user oauth RedirectPath   (block)
+L MUR-2574 - config service limit test
+L MUR-3293 - relational DB error
+L MUR-3514 - parameter of any service call is pure array, it will return 400 error.

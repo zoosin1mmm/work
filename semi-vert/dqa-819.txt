@@ -1,0 +1,220 @@
+# Device Step  -------------------------------------------------------------------
+# connect device
+wscat -c wss://<solution_name>.apps.exosite.io/device
+# new device   free <sn>
+{"id": <sn>,  "firmware_version": <firmware_version>} 
+return {"id": <sn>, "key": <key>} 
+# active device (ack link)
+{"ack": true, "type": "token"}
+return {"ack": true, "timestamp": <timestamp>}
+# connect phone (provision link)   new device <sn>    free <secret>
+{"id": 1, "request": "provision",  "data": {"sn": <sn>, "secret": <secret>}}
+return {"id": 1, "response": "provision", "status": "ok"}
+# login new device return result
+{"id": <sn>, "key": <key>} 
+# can use command 
+# Device Step End -------------------------------------------------------------------
+
+# Phone Step	-------------------------------------------------------------------
+# murano api
+# -------------------------------------------------------------------
+#  PUT /api:1/user/{email}   
+curl https://chungear.apps.exosite.io/api:1/user/{email}  -X PUT -H 'Content-Type: application/json'
+-d {"password":"<password>"}
+# POST /api:1/session get token 
+curl https://chungear.apps.exosite.io/api:1/session -X POST -H 'Content-Type: application/json'
+-d {"email": "<email>", "password":"<password>"}
+# -------------------------------------------------------------------
+# connect to phone
+wscat -c wss://<solution_name>.apps.exosite.io/api:1/phone
+# login  POST /api:1/session get<token>
+{"id": 1, "request": "login", "data": {"token": <token>}}
+return {"id": 1, "response": "login",  "status": "ok"}
+# connect phone (provision link)   new device <sn>    free <secret> is same with device
+{"id": 1, "request": "provision",  "data": {"sn": "<sn>", "secret": "<secret>"}}
+return {"id": 1, "response": "provision",  "status": "ok"}
+return {"data":{"device":5,"owner":"testing+stacychen+semi+ver@exosite.com"},"event":"add_device"}
+# Phone Step End   -------------------------------------------------------------------
+# setting.py
+huav8t6aiubd42t9
+SOLUTION_NAME = "semivert"
+SOLUTION_HOST = "apps.exosite.io"
+
+# Test User
+${email}    testing+stacychen+semi+ver@exosite.com
+${password}    testing+stacychen+semi+ver@exosite.com
+
+wscat -c wss://semi-vertical1214.apps.exosite-staging.io/api:1/phone
+wscat -c wss://semi-vertical1214.apps.exosite-staging.io/device
+
+wscat -c wss://semi-vert.apps.exosite-staging.io/api:1/phone
+wscat -c wss://semi-vert.apps.exosite-staging.io/device
+
+wscat -c wss://semi-vert.apps.exosite.io/api:1/phone
+wscat -c wss://semi-vert.apps.exosite.io/device
+
+wscat -c wss://smarthome.apps.exosite.io/api:1/phone
+wscat -c wss://smarthome.apps.exosite.io/device
+
+wscat -c wss://chungear-staging.apps.exosite.io/api:1/phone
+wscat -c wss://chungear-staging.apps.exosite.io/device
+
+wscat -c wss://testing-qa20170824161451-semi-vert.apps.exosite.io/api:1/phone
+wscat -c wss://testing-qa20170824161451-semi-vert.apps.exosite.io/device
+
+{"email": "testing0120+stacychen+semi+ver@exosite.com", "password":"testing+stacychen+semi+ver@exosite.com"}
+{"email": "testing01202+stacychen+semi+ver@exosite.com", "password":"testing+stacychen+semi+ver@exosite.com"}
+# v1
+{"id": 1, "request": "login", "data": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjE5LCJpc3MiOiJodHRwOi8vc3BoaW54LXVzbTozMDAwL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNTA0MDY0OTY1LCJleHAiOjE1MDY2NTY5NjUsIm5iZiI6MTUwNDA2NDk2NSwianRpIjoiTXh6TjhPSFoyZVZCY2puYyJ9.Ypp3kh8_sJ70DgtbhE911329k4WqMSc3ctEL3_D6slE"}}
+# v2
+{"id": 1, "request": "login", "data": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9zcGhpbngtdXNtOjMwMDAvYXBpL3YxL3VzZXIvbG9naW4iLCJpYXQiOjE1MDQwNjQ5MjgsImV4cCI6MTUwNjY1NjkyOCwibmJmIjoxNTA0MDY0OTI4LCJqdGkiOiJST2JFV0t4WXlQak5mdTREIn0.5KWHf5FNFXLBv_FoxVeQbtrwyqfjFIb1gHGTDfkKNaw"}}
+{"id": 1, "request": "provision", "data": {"sn":"3", "secret": "1234"}}
+{"id": "3",  "firmware_version": 1.1} 
+{"ack": true, "type": "token"}
+{"id":4,"key":"46070328575249871784"}
+
+{"id":1,"request":"set_properties","device":"1","data":{"key":1234 }}
+< {"id":1,"response":"set_properties","status":"ok"}
+< {"data":{"changes":{"properties":{"key":1.234123e+06}},"device":"1"},"event":"device_change"}
+
+# set_group
+{"id":1,"request":"set_group","data":{"name":"group1","devices":["1"],"properties":{"test":"test1"}}}
+<{"id":1,"response":"set_group","status":"ok"}
+< {"data":{"devices":["3"],"name":"group1","properties":{"test":"test1"}},"event":"set_group"}
+
+# lst_group  all the group will list
+{"id": 1, "request": "lst_group"}  
+< {"data":["group1"],"id":1,"response":"lst_group","status":"ok"}
+
+# get_group  all the group can be searched
+{"id": 1, "request": "get_group", "data": {"name": "group1"}}
+< {"data":{"devices":["1"],"name":"123","properties":{"test2":"2"}},"id":1,"response":"get_group","status":"ok"}
+
+{"id":1,"request":"del_group","data":{"name":"group1"}}
+< {"id":1,"response":"del_group","status":"ok"}
+< {"data":{"name":"group1"},"event":"del_group"}
+
+{"id":1,"request":"del_properties","device":"1","data":["key"]}
+< {"id":1,"response":"del_properties","status":"ok"}
+< {"data":{"changes":{"properties":{}},"device":"1"},"event":"device_change"}
+
+{"id": 1, "request": "lst_device"}
+
+{"id": 1, "request": "calendar", "device":"12", "data": [{ "name":"testsss","start": "12:24","end": "13:24","days": [1,2,3,4,5,6,7],"active": 1,"active_until": 1477377969, "esh": { "H00":1}}]}
+
+"start": Start time of the event in UTC
+"end": End time of the event in UTC
+"days": Mon=1,...,Sun=7 days the event should trigger
+"active": Allows enabling/disabling without deleting
+"active_until": UTC timestamp after which the event is invalid, field can be empty (null).
+"esh": Object of all values to be set during the timeframe. After the event values are reset to their previous value.
+
+# add_user
+{"id": 1,"request":"add_user","device":"test01","data":{"email":"testing+20170807103502+guest+semi@exosite.com","role":"guest"}}
+
+# calendar send ok
+{"id":1, "response": "calendar", "status": "ok"}
+> {"data":{"device":5,"schedules":[{"active":1,"active_until":1.477377969e+09,"days":[1,2,3,4,5,6,7],"end":"13:24","esh":{"H00":1},"start":"12:24"}]},"event":"calendar"}
+
+# lst_user
+{"id": 1, "request": "lst_user", "device": "2"}
+
+# delete device
+{"id": 1, "request": "del_device", "device": "1"}
+< {"id":1,"response":"del_device","status":"ok"}
+< {"data":{"device":6,"owner":"testing+stacychen+semi+ver@exosite.com"},"event":"del_device"}
+
+# remove user
+{"id": 1, "request": "rem_user", "device":"1", "data": {"email": "testing+20170718102011+guest+semi@exosite.com"}}
+>{"id":1,"response":"rem_user","status":"ok"}
+
+# add user
+{"id": 1, "request": "add_user", "device": "1", "data": { "email":"testing01172+stacychen+semi+ver@exosite.com",  "role": "guest"}}
+{"id": 1, "request": "lst_user", "device": 1}
+
+# delete device which include a group when the device is a last one in group
+{"id": 1, "request": "del_device", "device": "6"}
+< {"data":{"name":"group1"},"event":"del_group"}   #cloud to phone 
+< {"id":1,"response":"del_device","status":"ok"}    #phone to cloud
+< {"data":{"device":"6","owner":"testing+stacychen+semi+ver@exosite.com"},"event":"del_device"}   #cloud to phone
+
+# delete device which include a group when the device isn't a last one in group
+{"id": 1, "request": "del_device", "device": "1"}
+< {"data":{"devices":["2"],"name":"group1","properties":{"test":"test1"}},"event":"set_group"}
+< {"id":1,"response":"del_device","status":"ok"}
+< {"data":{"device":"1","owner":"testing+stacychen+semi+ver@exosite.com"},"event":"del_device"}
+
+# remove user(guest) then get delete device massge from cloud
+< {"data":{"device":"1","owner":"testing+stacychen+semi+ver@exosite.com"},"event":"del_device"}
+
+# set device data
+{"id":123, "request": "set", "device": "1","data":{"H00": 2}}
+< {"data":{"H00":2},"id":123,"request":"set"}
+
+# get setted info
+{"id": 1, "request": "get", "device": "2"}
+
+# config user can use fields
+{"id": 1, "request": "config", "device": "1", "data": {"fields": ["H00"]}}
+< {"data":{"fields":["H00"]},"id":1,"request":"config"}
+
+# set calendar over 10
+{"id": 1, "request": "calendar", "device":"3", "data": [{ "start": "12:24","end": "13:24","days": [1,2,3,4,5,6,7],"active": 1,"active_until": 1477377969, "esh": { "H00":1}},{ "start": "12:00","end": "18:24","days": [1,2,4,5,7],"active": 1,"active_until": 1477377969, "esh": { "H00":1}},{ "start": "09:24","end": "10:24","days": [1],"active": 11144,"active_until": 6665656, "esh": { "H00":1}},{ "start": "12:21","end": "16:24","days": [1,7],"active": 1,"active_until": 1477377969, "esh": { "H00":1}},{ "start": "16:24","end": "18:24","days": [1,2],"active": 1,"active_until": 147737969, "esh": { "H00":2}},{ "start": "11:24","end": "12:24","days": [1,2,3,4,5,6],"active": 122,"active_until": 1477377969, "esh": { "H00":1}},{ "start": "10:24","end": "21:24","days": [1,2,3],"active": 1,"active_until": 1477377969, "esh": { "H01":1}},{ "start": "12:10","end": "17:24","days": [1,2,3,4],"active": 1,"active_until": 1477377969, "esh": { "H03":1}},{ "start": "12:00","end": "14:24","days": [1,2,3,4,5],"active": 1,"active_until": 147737796, "esh": { "H04":1}},{ "start": "11:21","end": "19:24","days": [2,3],"active": 1,"active_until": 1477377969, "esh": { "H00":122}},{ "start": "12:24","end": "21:24","days": [4,7],"active": 1,"active_until": 1477377969, "esh": { "H05":1}}]}
+
+# set device info (set in device)
+{"id":1,"response":"info","status":"ok","data":{"device":"2","profile":{"esh":{"class":0,"esh_version":"4.00","device_id":"F","brand":"ACCompany1","model":"AC001"},"module":{"firmware_version":"1.0.0","mac_address":"AC123","local_ip":"192.168.0.13","ssid":"BRX13"},"cert":{"fingerprint":{"sha1":"DE28F4A4FFE5B92FA3C503D1A349A7F9962A8212"},"validity":{"not_before":"5/21/02","not_after":"5/21/22"}}},"calendar":[{"name":"test","start":"12:24","end":"13:24","days":[1,2,3,4,5,6,7],"active":1,"active_until":1477377969,"esh":{"H00":1}}],"fields":["H00", "H01", "H02", "H03", "H04", "H05", "H06", "H07", "H08", "H09", "H10", "H0A", "H0B", "H0C", "H0D"]}}
+{"id":1"response":"info","status":"ok","data":{"device":"4","profile":{"esh":{"class":0,"esh_version":"4.00","device_id":"F","brand":"ACCompany1","model":"AC001"},"module":{"firmware_version":"1.0.0","mac_address":"AC123","local_ip":"192.168.0.13","ssid":"BRX13"},"cert":{"fingerprint":{"sha1":"DE28F4A4FFE5B92FA3C503D1A349A7F9962A8212"},"validity":{"not_before":"5/21/02","not_after":"5/21/22"}}},"fields":["H00", "H01", "H02", "H03", "H04", "H05", "H06", "H07", "H08", "H09", "H10", "H0A", "H0B", "H0C", "H0D"]}}
+
+{"id":1,"request":"ota","device":"1","data":{"url":"https://chungear.apps.exosite.io/","last_firmware":"123.4","sha1":"DE28F4A4FFE5B92FA3C503D1A349A7F9962A8212"}}
+
+# cloud to phone  / after remove guest / guest receive
+{"data":{"device":"2","owner":"testing0120+stacychen+semi+ver@exosite.com"},"event":"del_device"}
+
+# cloud to phone  / after deleting device / guest receive
+{"data":{"devices":["1"],"name":"group1","properties":{"test":"test1"}},"event":"set_group"}
+or
+{"data":{"name":"group1"},"event":"del_group"}
+
+# set calendar
+{"id":1,"request":"calendar","device":"2","data":[{"name":"test","start":"13:24","end":"19:24","days":[1,2,6,7],"active":1,"active_until":1477377969,"esh":{"H02":1222}}]}
+
+# status_change
+{"id":1,"request":"status_change","data":{"H01":1}}
+
+# set user data
+> {"id":1, "request": "set_user_data", "data": {"H01": "1"}}
+< {"id":1,"response":"set_user_data","status":"ok"}
+< {"data":{"testing":"11123"},"event":"user_data_change"}
+
+# delete user data
+{"id": 1, "request": "del_user_data", "data": ["testing"]}
+before
+< {"id":1,"response":"del_user_data","status":"ok"}
+< {"data":["testing"],"event":"user_data_change"}
+after
+< {"id":1,"response":"del_user_data","status":"ok"}
+< {"data":{},"event":"user_data_change"}
+
+# get user data
+{"id":1, "request": "get_user_data"}
+{"data":{"testing":123},"id":1,"response":"get_user_data","status":"ok"}
+
+can not set user data repeat?
+can not set repeat key and value?
+can delete not existing data
+input number and type is string ,and it will get number type 
+can set  !@$%%^^ key ,but can not get 
+can input empty data
+{"id":1, "request": "set_user_data", "data": {"testing": "123","testing": "11123"}}
+{"id":1, "request": "set_user_data", "data": {"testing": "123","testing": "12sssss3"}}
+{"id":1, "request": "set_user_data", "data": {"testing": 123}}
+althaugh{"id":1, "request": "set_user_data", "data": {"!@$%%^^": 123}}
+{"id":1, "request": "set_user_data", "data": {"testing": "123"}}
+{"id":1, "request": "set_user_data", "data": {}}
+
+# get amazon account Alexa link
+{"id": 1, "request": "get_me"}
+< {"data":{"alexa_link":{"status":0},"email":"testing+20170807103458+semi+vert@exosite.com","id":1,"name":"testing+20170807103458+semi+vert@exosite.com","status":1},"id":1,"response":"get_me","status":"ok"}
+
+# Amazon Echo can not over 128 char
+{"id":1,"request":"set_properties","device":"test01","data":{"alexaDeviceName":"test01"}}

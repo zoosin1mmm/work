@@ -1,0 +1,6 @@
+Log types depends on the log producers:
+“Script”' - Pegasus-Engine: on User Lua “print()” function call
+“Call”' - Dispatcher: On service calls from Lua.
+“Event” - Dispatcher: On event trigger from services
+“Config” -  update serviceconfig evenhandler module
+“Service” - Services generated & transmitted to Dispatcher.

@@ -1,0 +1,9 @@
+ node index.js -c template/template.json 
+apitoken  98d2c20cabb20c9ee4d6c2c10b5845a75e33572e
+elementId  5a096bc33faa5600014a13a4
+exosite-element_bulk-notify_thumb.png uploaded
+exosite-element_bulk-notify.png uploaded
+Done
+
+mongodb://bizapi:CHJRAYttkAYP@localhost:27017/console
+oc port-forward mongodb-bizapi-qa 27017

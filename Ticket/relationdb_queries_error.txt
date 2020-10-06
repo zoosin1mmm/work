@@ -1,0 +1,20 @@
+
+
+05:33:56.239 request_id=fv57dqqhe9omkru9gnmm27t4l05h77hv [info] POST /api/v1/pg/u58cvblvsrmk00000/queries
+"solution_id: u58cvblvsrmk00000"
+
+05:33:56.245 request_id=fv57dqqhe9omkru9gnmm27t4l05h77hv [error] time=2017-12-28T03:33:47.214577+00:00 msg=failed to decode error=[reason: "%ArgumentError{message: \"argument error\"}", trace: "    :erlang.iolist_to_binary([%{columns: nil, num_rows: 0, rows: nil}])\n    (poison) lib/poison/parser.ex:35: Poison.Parser.parse/2\n    (poison) lib/poison.ex:69: Poison.decode/2\n    (pegasus_rdb_service) lib/models/response.ex:17: PegasusRdbService.Models.Response.success/1\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:195: PegasusRdbService.RdbController.send_ok/3\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:1: PegasusRdbService.RdbController.action/2\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:1: PegasusRdbService.RdbController.phoenix_controller_pipeline/2\n    (pegasus_rdb_service) lib/pegasus_rdb_service/endpoint.ex:1: PegasusRdbService.Endpoint.instrument/4\n"]  module=PegasusRdbService.Models.Response function=success/1 line=23 type=error
+
+05:33:56.245 request_id=fv57dqqhe9omkru9gnmm27t4l05h77hv [info] Sent 200 in 5ms
+
+05:33:56.247 request_id=s21hi149ucbk2168hb432378u9lktta7 [info] POST /api/v1/pg/u58cvblvsrmk00000/queries
+"solution_id: u58cvblvsrmk00000"
+
+05:33:56.252 request_id=s21hi149ucbk2168hb432378u9lktta7 [error] time=2017-12-28T03:33:47.214577+00:00 msg=failed to decode error=[reason: "%ArgumentError{message: \"argument error\"}", trace: "    :erlang.iolist_to_binary([%{columns: nil, num_rows: 0, rows: nil}, %{columns: nil, num_rows: 0, rows: nil}])\n    (poison) lib/poison/parser.ex:35: Poison.Parser.parse/2\n    (poison) lib/poison.ex:69: Poison.decode/2\n    (pegasus_rdb_service) lib/models/response.ex:17: PegasusRdbService.Models.Response.success/1\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:195: PegasusRdbService.RdbController.send_ok/3\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:1: PegasusRdbService.RdbController.action/2\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:1: PegasusRdbService.RdbController.phoenix_controller_pipeline/2\n    (pegasus_rdb_service) lib/pegasus_rdb_service/endpoint.ex:1: PegasusRdbService.Endpoint.instrument/4\n"]  module=PegasusRdbService.Models.Response function=success/1 line=23 type=error
+
+05:33:56.252 request_id=s21hi149ucbk2168hb432378u9lktta7 [info] Sent 200 in 4ms
+
+05:33:56.255 request_id=jsumebcd8p4nifjhorhurb3l00jr6mc9 [info] POST /api/v1/pg/u58cvblvsrmk00000/queries
+"solution_id: u58cvblvsrmk00000"
+
+05:33:56.259 request_id=jsumebcd8p4nifjhorhurb3l00jr6mc9 [error] time=2017-12-28T03:33:47.214577+00:00 msg=failed to decode error=[reason: "%ArgumentError{message: \"argument error\"}", trace: "    :erlang.iolist_to_binary([%{columns: nil, num_rows: 0, rows: nil}, %{columns: nil, num_rows: 1, rows: nil}])\n    (poison) lib/poison/parser.ex:35: Poison.Parser.parse/2\n    (poison) lib/poison.ex:69: Poison.decode/2\n    (pegasus_rdb_service) lib/models/response.ex:17: PegasusRdbService.Models.Response.success/1\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:195: PegasusRdbService.RdbController.send_ok/3\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:1: PegasusRdbService.RdbController.action/2\n    (pegasus_rdb_service) web/controllers/rdb_controller.ex:1: PegasusRdbService.RdbController.phoenix_controller_pipeline/2\n    (pegasus_rdb_service) lib/pegasus_rdb_service/endpoint.ex:1: PegasusRdbService.Endpoint.instrument/4\n"]  module=PegasusRdbService.Models.Response function=success/1 line=23 type=error

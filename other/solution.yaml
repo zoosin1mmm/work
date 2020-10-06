@@ -1,0 +1,300 @@
+Solution:
+    description:  The user solution context
+    type:         object
+    x-gen-db:     true
+    properties:
+      id:
+        description:  Unique name used as service reference in scripts
+        type:         string
+        minLength:    5
+        maxLength:    20
+        pattern:      ^[a-zA-Z0-9]+$
+        readOnly:     true
+      alias:
+        description:  Unique name used as service reference in scripts. Actually same as Id.
+        type:         string
+        pattern:      ^[a-z][a-z0-9]+$
+        maxLength:    50
+        x-db-unique:  true
+        x-db-index:   true
+      name:
+        description:  User defined custom name
+        type:         string
+        maxLength:    100
+      notifications:
+        description:  Send email notification to Solution administrator(s).
+        type:         object
+        properties:
+          deprecation:
+            description:  Solution is using a deprecated Service or function.
+            type:         boolean
+            default:      false
+          quota_reached:
+            description:  Solution reach its usage quota limitation.
+            type:         boolean
+            default:      false
+      template:
+        description:  >
+                      Type of context bootstrap template
+                      - solution: Solution context create by pegasus using OneP
+                      - empty: Nothing is created besides a default route
+                      - application: Application context
+                      - product: Product context
+        type:         string
+        enum:         [ solution, empty, application, product ]
+        default:      solution
+        x-db-type:    string
+      domain:
+        description:  Customer API domain
+        type:         string
+        pattern:      ^[a-zA-Z0-9\_\-\.]+$
+        maxLength:    255
+        x-db-unique:  true
+      business_id:
+        description:  Customer Account Id
+        type:         string
+        pattern:      ^[a-zA-Z0-9\_\-]+$
+        maxLength:    50
+      products:
+        x-deprecated:   true
+        description:  >
+                      The list of products supported by this solution
+                      OneP @Legacy for matching product to solution
+        type:         array
+        items:
+          description:  A product unique Id
+          type:         string
+          pattern:      ^[a-zA-Z0-9\_\-\.]+$
+          maxLength:    50
+        default:      []
+      quota:
+        description:  Context-wide quotas
+        type:         object
+        properties:
+          processing_time_daily:
+            description:  Daily Murano processing time quota, a day by default
+            type:         integer
+            default:      864000000
+        default: {processing_time_daily: 864000000}
+      created_at:
+        description:  Auto-generated item creation date
+        type:         string
+        format:       date-time
+        readOnly:     true
+      updated_at:
+        description:  Auto-generated item last update date
+        type:         string
+        format:       date-time
+        readOnly:     true
+        x-db-index:   true
+      deleted_at:
+        description:  Auto-generated item deletion date
+        type:         [ string, "null" ]
+        format:       date-time
+        readOnly:     true
+      count:
+        type: object
+        readOnly:     true
+        x-db-virtual: true
+        properties:
+          route:
+            type: integer
+            description: Number of route of this solution
+          serviceConfig:
+            type: integer
+            description: Number of service configured for this solution
+          library:
+            type: integer
+            description: Number of library scripts
+          eventHandler:
+            type: integer
+            description: Number of event handler scripts
+
+  PostSolution:
+    description:  The user solution context
+    type:         object
+    properties:
+      template:
+        description:  >
+                      Type of context bootstrap template
+                      - solution: Solution context create by pegasus using OneP
+                      - empty: Nothing is created besides a default route
+                      - application: Application context
+                      - product: Product context
+        type:         string
+        enum:         [ solution, empty, application, product ]
+        default:      solution
+      name:
+        description:  User defined custom name
+        type:         string
+        maxLength:    100
+      domain:
+        description:  Customer API domain. Unique globally.
+        type:         string
+        pattern:      ^[a-zA-Z0-9\_\-\.]+$
+        maxLength:    255
+      business_id:
+        description:  Customer Account Id
+        type:         string
+        pattern:      ^[a-zA-Z0-9\_\-]+$
+        maxLength:    50
+      notifications:
+        description:  Send email notification to Solution administrator(s).
+        type:         object
+        properties:
+          deprecation:
+            description:  Solution is using a deprecated Service or function.
+            type:         boolean
+            default:      false
+          quota_reached:
+            description:  Solution reach its usage quota limitation.
+            type:         boolean
+            default:      false
+      products:
+        x-deprecated:   true
+        description:  >
+                      The list of products supported by this solution
+                      OneP @Legacy for matching product to solution
+        type:         array
+        items:
+          description:  A product unique Id
+          type:         string
+          pattern:      ^[a-zA-Z0-9\_\-\.]+$
+          maxLength:    50
+        default:      []
+      quota:
+        description:  Context-wide quotas
+        type:         object
+        properties:
+          processing_time_daily:
+            description:  Daily Murano processing time quota, a day by default
+            type:         integer
+            default:      864000000
+        default: {processing_time_daily: 864000000}
+      services:
+        description:  The list of services bootstrapped for this solution
+        type:         array
+        items:
+          description:  A service reference & configuration
+          type:         object
+          properties:
+            service:
+              description:  Service alias reference
+              type:         string
+              pattern:      ^[a-z][a-z0-9]+$
+              maxLength:    50
+            parameters:
+              description:  Map of service parameters default value, contains parameters for all operations of this service. Definitions matching the operation parameters of the service swagger schema.
+              type:         object
+              default:      {}
+              x-additionalProperties: true
+            triggers:
+              description:  Map of parameters to route events to a solution script. Definitions matching the x-event 'required' parameters of the service swagger schema.
+              type:         object
+              default:      {}
+              x-additionalProperties: true
+            quota:
+              description:  Service calls quota
+              type:         object
+              properties:
+                daily:
+                  description:  Daily service call quota
+                  type:         integer
+                monthly:
+                  description:  Monthly service call quota
+                  type:         integer
+              default: {}
+    required:	 [ business_id ]
+
+  PutSolution:
+    description:  The user solution context
+    type:         object
+    properties:
+      name:
+        description:  User defined custom name
+        type:         string
+        maxLength:    100
+      domain:
+        description:  Customer API domain. Unique globally.
+        type:         string
+        pattern:      ^[a-zA-Z0-9\_\-\.]+$
+        maxLength:    255
+      products:
+        x-deprecated:   true
+        description:  >
+                      The list of products supported by this solution
+                      OneP @Legacy for matching product to solution
+        type:         array
+        items:
+          description:  A product unique Id
+          type:         string
+          pattern:      ^[a-zA-Z0-9\_\-\.]+$
+          maxLength:    50
+      notifications:
+        description:  Send email notification to Solution administrator(s).
+        type:         object
+        properties:
+          deprecation:
+            description:  Solution is using a deprecated Service or function.
+            type:         boolean
+            default:      false
+          quota_reached:
+            description:  Solution reach its usage quota limitation.
+            type:         boolean
+            default:      false
+      quota:
+        description:  Context-wide quotas
+        type:         object
+        properties:
+          processing_time_daily:
+            description:  Daily Murano processing time quota, a day by default
+            type:         integer
+            default:      864000000
+        default: {processing_time_daily: 864000000}
+
+  SolutionUsage:
+    type: object
+    description: Current solution usage. Note here the alias is the one from serviceconfig.
+    properties:
+      serviceAlias:
+        type: object
+        description: Info for a particular service.
+        properties:
+          service:
+            description:  Unique name used as service reference in scripts.
+            type:         string
+            pattern:      ^[a-z][a-z0-9]+$
+            maxLength:    50
+          usage:
+            type: object
+            description: Current usage for this service.
+            properties:
+              daily_calls:
+                type: number
+                description: Today's service calls counts.
+              monthly_calls:
+                type: number
+                description: Service calls counts so far this month.
+              total_calls:
+                type: number
+                description: Service calls counts for this solution.
+              other_metric:
+                type: number
+                description: >
+                             Other Service specific metrics.
+                             See <a href="http://docs.exosite.com/murano/services">http://docs.exosite.com/murano/services</a> for more information on service available metrics and quota.
+          quota:
+            type: object
+            description: Current quota for this service.
+            properties:
+              daily_calls:
+                type: number
+                description: Service call limitation per day.
+              monthly_calls:
+                type: number
+                description: Service call limitation per month.
+              other_quota:
+                type: number
+                description: >
+                             Other Service specific limitation.
+                             See <a href="http://docs.exosite.com/murano/services">http://docs.exosite.com/murano/services</a> for more information on service limitations.

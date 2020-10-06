@@ -1,0 +1,60 @@
+bizapi-staging.hosted.exosite.io
+businessID=odo5kryct0oa8aor
+
+# create project
+curl -X POST \
+  https://bizapi-staging.hosted.exosite.io/api:1/business/odo5kryct0oa8aor/solution/ \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 949380ca-e82a-59be-7bce-f7b55c3de9ca' \
+  -d '{"label": "testing-mur1586-qa", "type": "product"}'
+
+POST
+{"label": "solutionName", "type": "product"}
+('post', "/business/businessId/solution/")
+{
+  "id": "df59hcq6vr1cerk9"
+}
+
+# create device
+curl -X PUT \
+  https://bizapi-staging.hosted.exosite.io/api:1/service/df59hcq6vr1cerk9/device2/identity/mur1587 \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: cf202815-f56f-759f-83b6-2febae9a3186' \
+  -d '{"locked": false}'
+PUT
+{"locked": False}
+"/service/df59hcq6vr1cerk9/device2/identity/mur1587"
+
+#create resource
+curl -X PATCH \
+  https://bizapi-staging.hosted.exosite.io/api:1/service/df59hcq6vr1cerk9/device2 \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: c6e71882-63ee-1620-d260-2fefae1bb386' \
+  -d '{"resources":{"uptime":{"format":"number","settable":false, "allowed":["0:100"]}}}'
+patch
+{"resources":{"uptime":{"format":"number","settable":false, "allowed":["0:100"]}}}
+ "/service/df59hcq6vr1cerk9/device2"
+
+# delete resource
+/service/df59hcq6vr1cerk9/device2/resource/testing
+curl -X DELETE \
+  https://bizapi-staging.hosted.exosite.io/api:1/service/df59hcq6vr1cerk9/device2/resource/testing \
+  -H 'authorization: Basic dGVzdGluZ0BleG9zaXRlLmNvbToxMjM0ZXN6eGN2Kys=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: e9c95a73-7def-121e-11ee-2076a4d52a62'
+
+
+# get resource
+  GET
+/service/df59hcq6vr1cerk9/device2/resource/testing
+  {
+  "code": 404,
+  "message": "Could not find resource"
+}

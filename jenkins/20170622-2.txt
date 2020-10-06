@@ -1,0 +1,53 @@
+murano-staging-link
+------------------------------------------------
+FILES: test_verify_the_adc_application_navigation_link.robot
+Testcase:The application page should be redirect to business application page via back button
+The application page should be redirect to business product page via url
+Error: Variable '${VALID_ADC_COMPANY}' not found.
+Cause: Variable '${VALID_ADC_COMPANY}' not found.
+
+murano-staging-business
+------------------------------------------------
+FILES:test_user_auth.robot
+Testcase:Go to dashboard product page
+Error: Text 'You are now signed out' did not appear in 30 seconds
+Cause: go to Dashboard need to log in again
+
+murano-staging-api
+------------------------------------------------
+FILES:business-{bizid}-tier.robot
+Testcase:Teardown ExoBusiness .Leave Business 
+Error: No keyword with name 'ExoMail.get_verify_key' found.
+Cause: init.robot not import ExoMail
+
+/code
+#murano-staging-product error is same as morning
+#murano-staging-deploy-tool  error is same as morning
+#murano-staging-business has error
+#murano-staging-link has error
+#murano-staging-api has error
+#murano-staging-docs    log page error MUR-3129
+#adc_staging_project   ADC_COMPANY_ID MUR-3174
+#murano-staging-service-solution   user event MUR-3178
+#murano-staging-service-migration   user event MUR-3178
+#adc_staging_ui  ADC_COMPANY_ID MUR-3174  log page MUR-3129
+/code
+murano-staging-link
+------------------------------------------------
+FILES: test_verify_the_adc_application_navigation_link
+Cause: Variable '${VALID_ADC_COMPANY}' not found.
+
+murano-staging-business
+------------------------------------------------
+FILES:test_user_auth.robot
+Cause: go to Dashboard need to login again
+
+murano-staging-api
+------------------------------------------------
+FILES:business-{bizid}-tier.robot
+Cause: init.robot not import ExoMail
+
+murano-staging-service-solution
+------------------------------------------------
+FILES:test_user_event.robot
+Cause: keyword repeat

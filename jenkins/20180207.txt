@@ -1,0 +1,4 @@
+adc-staging-application-services
+-----------------------------------
+file:test_check_services.robot
+error: MUR-5644

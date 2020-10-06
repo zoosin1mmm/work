@@ -1,0 +1,686 @@
+hi @Orga,
+ *Problem*
+I think these scenario has some problem.
+ * Scenario7
+ * Scenario8
+ * Scenario10
+* Scenario11
+* Scenario12
+
+(/) Scenario1: Tsdb.query one metrics with different tags value
+(/) Scenario2: Tsdb.query two metrics and each with different tags value
+(/) Scenario3: Tsdb.query two metrics.one with two tag value and another with one of tags value
+(/) Scenario4: Tsdb.query with 'or' tags but one of 'or' tags value is not exsiting
+(/) Scenario5: Tsdb.query with 'or' tags but metrics is not existing
+(/) Scenario6: Tsdb.query one metric and one tag and one 'or' tag
+(?) Scenario7: Tsdb.query with 'or' tags defult limit (1000)
+(?) Scenario8: Tsdb.query 'or' tags with 50 limit
+(/) Scenario9: Tsdb.query over 100 tags in 'or' tags
+(?) Scenario10: Tsdb.query with 100 tags in 'or' tags
+(?) Scenario11: Tsdb.query with one 'or' tags and many tags
+(?) Scenario12: Tsdb.query with two 'or' tags
+
+*Setup*
+ * create endpoint
+{code:java}
+--#POST /write
+return Tsdb.write(request.body)
+{code}
+{code:java}
+--#POST /query
+return Tsdb.query(request.body)
+{code}
+{panel:title=Scenario1: Tsdb.query one metrics with different tags value}
+ * write data
+{code:java}
+{"metrics":{"M1": "M1_data"}, "tags":{"T1": "T1_data"}}{code}
+{code:java}
+{"metrics":{"M1": "M1_1_data"}, "tags":{"T1": "T1_1_data"}}
+{"metrics":{"M1": "M1_2_data"}, "tags":{"T1": "T1_1_data"}}
+{"metrics":{"M1": "M1_3_data"}, "tags":{"T1": "T1_1_data"}}
+{code}
+ * query
+{code:java}
+{"metrics":["M1"], "tags":{"T1": ["T1_data","T1_1_data"]}}{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"M1"
+	],
+	"metrics": [
+		"M1"
+	],
+	"tags": {},
+	"values": {
+		"T1": {
+			"T1_1_data": [
+				[
+					"2018-04-16T02:10:29.345745Z",
+					"M1_3_data"
+				],
+				[
+					"2018-04-16T02:09:43.180914Z",
+					"M1_2_data"
+				],
+				[
+					"2018-04-16T02:09:31.603728Z",
+					"M1_1_data"
+				]
+			],
+			"T1_data": [
+				[
+					"2018-04-16T02:09:20.480087Z",
+					"M1_data"
+				]
+			]
+		}
+	}
+}{code}
+{panel}
+{panel:title=Scenario2: Tsdb.query two metrics and each with different tags value}
+ * write data
+{code:java}
+{"metrics":{"M1": "M1_data"}, "tags":{"T1": "T1_data"}}{code}
+{code:java}
+{"metrics":{"M2": "M2_1_data"}, "tags":{"T1": "T1_1_data"}}
+{"metrics":{"M2": "M2_2_data"}, "tags":{"T1": "T1_1_data"}}
+{code}
+ * query
+{code:java}
+{"metrics":["M1","M2"], "tags":{"T1": ["T1_data","T1_1_data"]}}{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"M1",
+		"M2"
+	],
+	"metrics": [
+		"M1",
+		"M2"
+	],
+	"tags": {},
+	"values": {
+		"T1": {
+			"T1_1_data": [
+				[
+					"2018-04-16T02:30:06.040248Z",
+					"none",
+					"M2_2_data"
+				],
+				[
+					"2018-04-16T02:29:58.319480Z",
+					"none",
+					"M2_1_data"
+				]
+			],
+			"T1_data": [
+				[
+					"2018-04-16T02:29:48.960042Z",
+					"M1_data",
+					"none"
+				]
+			]
+		}
+	}
+}
+{code}
+{panel}
+{panel:title=Scenario3: Tsdb.query two metrics.one with two tag value and another with one of tags value}
+ * write data
+{code:java}
+{"metrics":{"M1": "M1_data"}, "tags":{"T1": "T1_data"}}
+{"metrics":{"M1": "M1_1_data"}, "tags":{"T1": "T1_1_data"}}{code}
+{code:java}
+{"metrics":{"M2": "M2_1_data"}, "tags":{"T1": "T1_1_data"}}
+{"metrics":{"M2": "M2_2_data"}, "tags":{"T1": "T1_1_data"}}
+{code}
+ * query
+{code:java}
+{"metrics":["M1","M2"], "tags":{"T1": ["T1_data","T1_1_data"]}}{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"M1",
+		"M2"
+	],
+	"metrics": [
+		"M1",
+		"M2"
+	],
+	"tags": {},
+	"values": {
+		"T1": {
+			"T1_1_data": [
+				[
+					"2018-04-16T02:41:33.881783Z",
+					"none",
+					"M2_2_data"
+				],
+				[
+					"2018-04-16T02:41:27.859262Z",
+					"none",
+					"M2_1_data"
+				],
+				[
+					"2018-04-16T02:41:23.414013Z",
+					"M1_1_data",
+					"none"
+				]
+			],
+			"T1_data": [
+				[
+					"2018-04-16T02:41:18.630218Z",
+					"M1_data",
+					"none"
+				]
+			]
+		}
+	}
+}
+{code}
+{panel}
+{panel:title=Scenario4: Tsdb.query with 'or' tags but one of 'or' tags value is not exsiting}
+ * write data follow scenario1
+ * query
+{code:java}
+{"metrics":["M1"], "tags":{"T1": ["T1_data","T1_1_data","TT"]}}{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"M1"
+	],
+	"metrics": [
+		"M1"
+	],
+	"tags": {},
+	"values": {
+		"T1": {
+			"T1_1_data": [
+				[
+					"2018-04-16T02:10:29.345745Z",
+					"M1_3_data"
+				],
+				[
+					"2018-04-16T02:09:43.180914Z",
+					"M1_2_data"
+				],
+				[
+					"2018-04-16T02:09:31.603728Z",
+					"M1_1_data"
+				]
+			],
+			"T1_data": [
+				[
+					"2018-04-16T02:09:20.480087Z",
+					"M1_data"
+				]
+			],
+			"TT": []
+		}
+	}
+}{code}
+{panel}
+{panel:title=Scenario5: Tsdb.query with 'or' tags but metrics is not existing}
+ * write data follow scenario1
+ * query
+{code:java}
+{"metrics":["M1","test"], "tags":{"T1": ["T1_data","T1_1_data"]}}{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"M1",
+		"test"
+	],
+	"metrics": [
+		"M1",
+		"test"
+	],
+	"tags": {},
+	"values": {
+		"T1": {
+			"T1_1_data": [
+				[
+					"2018-04-16T02:10:29.345745Z",
+					"M1_3_data",
+					"none"
+				],
+				[
+					"2018-04-16T02:09:43.180914Z",
+					"M1_2_data",
+					"none"
+				],
+				[
+					"2018-04-16T02:09:31.603728Z",
+					"M1_1_data",
+					"none"
+				]
+			],
+			"T1_data": [
+				[
+					"2018-04-16T02:09:20.480087Z",
+					"M1_data",
+					"none"
+				]
+			]
+		}
+	}
+}{code}
+{panel}
+{panel:title=Scenario6: Tsdb.query one metric and one tag and one 'or' tag}
+ * write data
+{code:java}
+{"metrics":{"M1": "M1_1_data"}, "tags":{"T1": "T1_data","T2":"T2_data"}}{code}
+{code:java}
+{"metrics":{"M1": "M1_2_data"}, "tags":{"T1": "T1_1_data","T2":"T2_data"}}{code}
+{code:java}
+{"metrics":{"M1": "M1_data"}, "tags":{"T2":"T2_data"}}{code}
+ * query
+{code:java}
+{"metrics":["M1"], "tags":{"T1":["T1_data","T1_1_data"],"T2":"T2_data"}}
+{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"M1"
+	],
+	"metrics": [
+		"M1"
+	],
+	"tags": {
+		"T2": "T2_data"
+	},
+	"values": {
+		"T1": {
+			"T1_1_data": [
+				[
+					"2018-04-16T04:15:09.726359Z",
+					"M1_2_data"
+				]
+			],
+			"T1_data": [
+				[
+					"2018-04-16T04:14:01.460082Z",
+					"M1_1_data"
+				]
+			]
+		}
+	}
+}{code}
+{panel}
+{panel:title=Scenario7: Tsdb.query with 'or' tags defult limit (1000)}
+ * write data 1001 count
+ and body likes
+{code:java}
+ {"metrics": {"qa_metrics_0": "WQsAVi4="}, "tags": {"qa_metrics_1": "qa_metrics_1"}}
+{code}
+{code:java}
+ {"metrics": {"qa_metrics_0": "WQsAVi4="}, "tags": {"qa_metrics_1": "qa_metrics"}}
+{code}
+ * query
+{code:java}
+{"metrics":["qa_metrics_0"], "tags":{"qa_metrics_1":["qa_metrics_1","qa_metrics"]}}{code}
+ * return result
+ FILE:
+ * calculate each values.tags.tagValue count and each one is 1000
+
+ *Expected*
+ each values.tags.tagValue count should be 500{panel}
+{panel:title=Scenario8: Tsdb.query 'or' tags with 50 limit}
+ * write data 100 count
+ and body likes
+{code:java}
+{"metrics": {"qa_metrics_0": "YukVDw8="}, "tags": {"qa_metrics_0": "qa_metrics_0"}}{code}
+{code:java}
+{"metrics": {"qa_metrics_0": "YukVDw8="}, "tags": {"qa_metrics_0": "qa_metrics"}}{code}
+ * query
+{code:java}
+{"metrics":["qa_metrics_0"], "tags":{"qa_metrics_0":["qa_metrics_0","qa_metrics"]},"limit":50}{code}
+ * return result
+ FILE:
+ * calculate each values.tags.tagValue count and each one is 50
+
+ *Expected*
+ each values.tags.tagValue count should be 25{panel}
+{panel:title=Scenario9: Tsdb.query over 100 tags in 'or' tags}
+ * query
+{code:java}
+{"metrics": ["qa_metrics"], "tags": {"qa_metrics": ["qa_metrics_0", "qa_metrics_1", "qa_metrics_2", "qa_metrics_3", "qa_metrics_4", "qa_metrics_5", "qa_metrics_6", "qa_metrics_7", "qa_metrics_8", "qa_metrics_9", "qa_metrics_10", "qa_metrics_11", "qa_metrics_12", "qa_metrics_13", "qa_metrics_14", "qa_metrics_15", "qa_metrics_16", "qa_metrics_17", "qa_metrics_18", "qa_metrics_19", "qa_metrics_20", "qa_metrics_21", "qa_metrics_22", "qa_metrics_23", "qa_metrics_24", "qa_metrics_25", "qa_metrics_26", "qa_metrics_27", "qa_metrics_28", "qa_metrics_29", "qa_metrics_30", "qa_metrics_31", "qa_metrics_32", "qa_metrics_33", "qa_metrics_34", "qa_metrics_35", "qa_metrics_36", "qa_metrics_37", "qa_metrics_38", "qa_metrics_39", "qa_metrics_40", "qa_metrics_41", "qa_metrics_42", "qa_metrics_43", "qa_metrics_44", "qa_metrics_45", "qa_metrics_46", "qa_metrics_47", "qa_metrics_48", "qa_metrics_49", "qa_metrics_50", "qa_metrics_51", "qa_metrics_52", "qa_metrics_53", "qa_metrics_54", "qa_metrics_55", "qa_metrics_56", "qa_metrics_57", "qa_metrics_58", "qa_metrics_59", "qa_metrics_60", "qa_metrics_61", "qa_metrics_62", "qa_metrics_63", "qa_metrics_64", "qa_metrics_65", "qa_metrics_66", "qa_metrics_67", "qa_metrics_68", "qa_metrics_69", "qa_metrics_70", "qa_metrics_71", "qa_metrics_72", "qa_metrics_73", "qa_metrics_74", "qa_metrics_75", "qa_metrics_76", "qa_metrics_77", "qa_metrics_78", "qa_metrics_79", "qa_metrics_80", "qa_metrics_81", "qa_metrics_82", "qa_metrics_83", "qa_metrics_84", "qa_metrics_85", "qa_metrics_86", "qa_metrics_87", "qa_metrics_88", "qa_metrics_89", "qa_metrics_90", "qa_metrics_91", "qa_metrics_92", "qa_metrics_93", "qa_metrics_94", "qa_metrics_95", "qa_metrics_96", "qa_metrics_97", "qa_metrics_98", "qa_metrics_99","qa_metrics_100"]}}{code}
+ * return
+{code:java}
+{
+	"error": "{\"result\":null,\"error\":\"Client Error: Invalid number of or tags, limit is 100\"}",
+	"status": 400,
+	"type": "QueryError"
+}
+{code}
+{panel}
+{panel:title=Scenario10: Tsdb.query with 100 tags in 'or' tags}
+ * query
+{code:java}
+{"metrics": ["qa_metrics"], "tags": {"qa_metrics": ["qa_metrics_0", "qa_metrics_1", "qa_metrics_2", "qa_metrics_3", "qa_metrics_4", "qa_metrics_5", "qa_metrics_6", "qa_metrics_7", "qa_metrics_8", "qa_metrics_9", "qa_metrics_10", "qa_metrics_11", "qa_metrics_12", "qa_metrics_13", "qa_metrics_14", "qa_metrics_15", "qa_metrics_16", "qa_metrics_17", "qa_metrics_18", "qa_metrics_19", "qa_metrics_20", "qa_metrics_21", "qa_metrics_22", "qa_metrics_23", "qa_metrics_24", "qa_metrics_25", "qa_metrics_26", "qa_metrics_27", "qa_metrics_28", "qa_metrics_29", "qa_metrics_30", "qa_metrics_31", "qa_metrics_32", "qa_metrics_33", "qa_metrics_34", "qa_metrics_35", "qa_metrics_36", "qa_metrics_37", "qa_metrics_38", "qa_metrics_39", "qa_metrics_40", "qa_metrics_41", "qa_metrics_42", "qa_metrics_43", "qa_metrics_44", "qa_metrics_45", "qa_metrics_46", "qa_metrics_47", "qa_metrics_48", "qa_metrics_49", "qa_metrics_50", "qa_metrics_51", "qa_metrics_52", "qa_metrics_53", "qa_metrics_54", "qa_metrics_55", "qa_metrics_56", "qa_metrics_57", "qa_metrics_58", "qa_metrics_59", "qa_metrics_60", "qa_metrics_61", "qa_metrics_62", "qa_metrics_63", "qa_metrics_64", "qa_metrics_65", "qa_metrics_66", "qa_metrics_67", "qa_metrics_68", "qa_metrics_69", "qa_metrics_70", "qa_metrics_71", "qa_metrics_72", "qa_metrics_73", "qa_metrics_74", "qa_metrics_75", "qa_metrics_76", "qa_metrics_77", "qa_metrics_78", "qa_metrics_79", "qa_metrics_80", "qa_metrics_81", "qa_metrics_82", "qa_metrics_83", "qa_metrics_84", "qa_metrics_85", "qa_metrics_86", "qa_metrics_87", "qa_metrics_88", "qa_metrics_89", "qa_metrics_90", "qa_metrics_91", "qa_metrics_92", "qa_metrics_93", "qa_metrics_94", "qa_metrics_95", "qa_metrics_96", "qa_metrics_97", "qa_metrics_98", "qa_metrics_99"]}}{code}
+ * return
+{code:java}
+{
+	"error": "{\"result\":null,\"error\":\"Client Error: Invalid limit argument, max limit is 100\"}",
+	"status": 400,
+	"type": "QueryError"
+}
+{code}
+ * add limit argument in query
+{code:java}
+{"metrics": ["qa_metrics"], "tags": {"qa_metrics": ["qa_metrics_0", "qa_metrics_1", "qa_metrics_2", "qa_metrics_3", "qa_metrics_4", "qa_metrics_5", "qa_metrics_6", "qa_metrics_7", "qa_metrics_8", "qa_metrics_9", "qa_metrics_10", "qa_metrics_11", "qa_metrics_12", "qa_metrics_13", "qa_metrics_14", "qa_metrics_15", "qa_metrics_16", "qa_metrics_17", "qa_metrics_18", "qa_metrics_19", "qa_metrics_20", "qa_metrics_21", "qa_metrics_22", "qa_metrics_23", "qa_metrics_24", "qa_metrics_25", "qa_metrics_26", "qa_metrics_27", "qa_metrics_28", "qa_metrics_29", "qa_metrics_30", "qa_metrics_31", "qa_metrics_32", "qa_metrics_33", "qa_metrics_34", "qa_metrics_35", "qa_metrics_36", "qa_metrics_37", "qa_metrics_38", "qa_metrics_39", "qa_metrics_40", "qa_metrics_41", "qa_metrics_42", "qa_metrics_43", "qa_metrics_44", "qa_metrics_45", "qa_metrics_46", "qa_metrics_47", "qa_metrics_48", "qa_metrics_49", "qa_metrics_50", "qa_metrics_51", "qa_metrics_52", "qa_metrics_53", "qa_metrics_54", "qa_metrics_55", "qa_metrics_56", "qa_metrics_57", "qa_metrics_58", "qa_metrics_59", "qa_metrics_60", "qa_metrics_61", "qa_metrics_62", "qa_metrics_63", "qa_metrics_64", "qa_metrics_65", "qa_metrics_66", "qa_metrics_67", "qa_metrics_68", "qa_metrics_69", "qa_metrics_70", "qa_metrics_71", "qa_metrics_72", "qa_metrics_73", "qa_metrics_74", "qa_metrics_75", "qa_metrics_76", "qa_metrics_77", "qa_metrics_78", "qa_metrics_79", "qa_metrics_80", "qa_metrics_81", "qa_metrics_82", "qa_metrics_83", "qa_metrics_84", "qa_metrics_85", "qa_metrics_86", "qa_metrics_87", "qa_metrics_88", "qa_metrics_89", "qa_metrics_90", "qa_metrics_91", "qa_metrics_92", "qa_metrics_93", "qa_metrics_94", "qa_metrics_95", "qa_metrics_96", "qa_metrics_97", "qa_metrics_98", "qa_metrics_99"]},"limit":100}{code}
+ * return
+ {code:java}
+{
+	"columns": [
+		"time",
+		"qa_metrics"
+	],
+	"metrics": [
+		"qa_metrics"
+	],
+	"tags": {},
+	"values": {
+		"qa_metrics": {
+			"qa_metrics_0": [],
+			....
+			"qa_metrics_99": []
+		}
+	}
+}
+{code}
+
+ *Expected*
+ I can query data without 'limit' arguments
+ and I found when count of tags in range 11~100 it will return error
+ but If count under 11, it will return expected value
+ seems like
+{code:java}
+{
+	"columns": [
+		"time",
+		"qa_metrics"
+	],
+	"metrics": [
+		"qa_metrics"
+	],
+	"tags": {},
+	"values": {
+		"qa_metrics": {
+			"qa_metrics_0": [],
+			....
+			"qa_metrics_9": []
+		}
+	}
+}
+{code}
+{panel}
+{panel:title=Scenario11: Tsdb.query with one 'or' tags and many tags}
+ * follow scenario10 'expected'. I want to test how many tags can be used when or tags has 10 tags.
+ and I found that query 10 'or' tags and 19 tags is Upper limit
+ * query 10 'or' tags and 19 tags
+{code:java}
+{
+    "metrics": [
+        "qa_metrics"
+    ],
+    "tags": {
+        "qa_metrics": [
+            "qa_metrics_0",
+            "qa_metrics_1",
+            "qa_metrics_2",
+            "qa_metrics_3",
+            "qa_metrics_4",
+            "qa_metrics_5",
+            "qa_metrics_6",
+            "qa_metrics_7",
+            "qa_metrics_8",
+            "qa_metrics_9"
+        ],
+        "qa_metrics_0": "qa_metrics_0",
+        "qa_metrics_1": "qa_metrics_1",
+        "qa_metrics_2": "qa_metrics_2",
+        "qa_metrics_3": "qa_metrics_3",
+        "qa_metrics_4": "qa_metrics_4",
+        "qa_metrics_5": "qa_metrics_5",
+        "qa_metrics_6": "qa_metrics_6",
+        "qa_metrics_7": "qa_metrics_7",
+        "qa_metrics_8": "qa_metrics_8",
+        "qa_metrics_9": "qa_metrics_9",
+        "qa_metrics_10": "qa_metrics_10",
+        "qa_metrics_11": "qa_metrics_11",
+        "qa_metrics_12": "qa_metrics_12",
+        "qa_metrics_13": "qa_metrics_13",
+        "qa_metrics_14": "qa_metrics_14",
+        "qa_metrics_15": "qa_metrics_15",
+        "qa_metrics_16": "qa_metrics_16",
+        "qa_metrics_17": "qa_metrics_17",
+        "qa_metrics_18": "qa_metrics_18"
+    }
+}
+{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"qa_metrics"
+	],
+	"metrics": [
+		"qa_metrics"
+	],
+	"tags": {
+		"qa_metrics_0": "qa_metrics_0",
+		"qa_metrics_1": "qa_metrics_1",
+		"qa_metrics_10": "qa_metrics_10",
+		"qa_metrics_11": "qa_metrics_11",
+		"qa_metrics_12": "qa_metrics_12",
+		"qa_metrics_13": "qa_metrics_13",
+		"qa_metrics_14": "qa_metrics_14",
+		"qa_metrics_15": "qa_metrics_15",
+		"qa_metrics_16": "qa_metrics_16",
+		"qa_metrics_17": "qa_metrics_17",
+		"qa_metrics_18": "qa_metrics_18",
+		"qa_metrics_2": "qa_metrics_2",
+		"qa_metrics_3": "qa_metrics_3",
+		"qa_metrics_4": "qa_metrics_4",
+		"qa_metrics_5": "qa_metrics_5",
+		"qa_metrics_6": "qa_metrics_6",
+		"qa_metrics_7": "qa_metrics_7",
+		"qa_metrics_8": "qa_metrics_8",
+		"qa_metrics_9": "qa_metrics_9"
+	},
+	"values": {
+		"qa_metrics": {
+			"qa_metrics_0": [],
+			"qa_metrics_1": [],
+			"qa_metrics_2": [],
+			"qa_metrics_3": [],
+			"qa_metrics_4": [],
+			"qa_metrics_5": [],
+			"qa_metrics_6": [],
+			"qa_metrics_7": [],
+			"qa_metrics_8": [],
+			"qa_metrics_9": []
+		}
+	}
+}{code}
+ * query 10 'or' tags and 20 tags
+{code:java}
+{
+    "metrics": [
+        "qa_metrics"
+    ],
+    "tags": {
+        "qa_metrics": [
+            "qa_metrics_0",
+            "qa_metrics_1",
+            "qa_metrics_2",
+            "qa_metrics_3",
+            "qa_metrics_4",
+            "qa_metrics_5",
+            "qa_metrics_6",
+            "qa_metrics_7",
+            "qa_metrics_8",
+            "qa_metrics_9"
+        ],
+        "qa_metrics_0": "qa_metrics_0",
+        "qa_metrics_1": "qa_metrics_1",
+        "qa_metrics_2": "qa_metrics_2",
+        "qa_metrics_3": "qa_metrics_3",
+        "qa_metrics_4": "qa_metrics_4",
+        "qa_metrics_5": "qa_metrics_5",
+        "qa_metrics_6": "qa_metrics_6",
+        "qa_metrics_7": "qa_metrics_7",
+        "qa_metrics_8": "qa_metrics_8",
+        "qa_metrics_9": "qa_metrics_9",
+        "qa_metrics_10": "qa_metrics_10",
+        "qa_metrics_11": "qa_metrics_11",
+        "qa_metrics_12": "qa_metrics_12",
+        "qa_metrics_13": "qa_metrics_13",
+        "qa_metrics_14": "qa_metrics_14",
+        "qa_metrics_15": "qa_metrics_15",
+        "qa_metrics_16": "qa_metrics_16",
+        "qa_metrics_17": "qa_metrics_17",
+        "qa_metrics_18": "qa_metrics_18",
+        "qa_metrics_19": "qa_metrics_19"
+    }
+}
+* return 
+{code}{
+	"error": "{\"result\":null,\"error\":\"Client Error: Invalid number of tags.\"}",
+	"status": 400,
+	"type": "QueryError"
+}{code}
+
+*Expected*
+some error about tags limit
+{code}
+{panel}
+{panel:title=Scenario12: Tsdb.query with two 'or' tags}
+ * query 5 tags for each 'or' tags
+{code:java}
+{
+    "metrics": [
+        "qa_metrics"
+    ],
+    "tags": {
+        "qa_metrics": [
+            "qa_metrics_0",
+            "qa_metrics_1",
+            "qa_metrics_2",
+            "qa_metrics_3",
+            "qa_metrics_4"
+        ],"qa_metrics1": [
+            "qa_metrics_10",
+            "qa_metrics_11",
+            "qa_metrics_12",
+            "qa_metrics_13",
+            "qa_metrics_14"
+        ]
+    }
+}{code}
+ * return
+{code:java}
+{
+	"columns": [
+		"time",
+		"qa_metrics"
+	],
+	"metrics": [
+		"qa_metrics"
+	],
+	"tags": {},
+	"values": {
+		"qa_metrics": {
+			"qa_metrics_0": [],
+			"qa_metrics_1": [],
+			"qa_metrics_2": [],
+			"qa_metrics_3": [],
+			"qa_metrics_4": []
+		},
+		"qa_metrics1": {
+			"qa_metrics_10": [],
+			"qa_metrics_11": [],
+			"qa_metrics_12": [],
+			"qa_metrics_13": [],
+			"qa_metrics_14": []
+		}
+	}
+}{code}
+ * if over this count then it will return error
+ * query tatol 11 tags
+{code:java}
+{
+    "metrics": [
+        "qa_metrics"
+    ],
+    "tags": {
+        "qa_metrics": [
+            "qa_metrics_0",
+            "qa_metrics_1",
+            "qa_metrics_2",
+            "qa_metrics_3",
+            "qa_metrics_4"
+            "qa_metrics_5"
+        ],"qa_metrics1": [
+            "qa_metrics_10",
+            "qa_metrics_11",
+            "qa_metrics_12",
+            "qa_metrics_13",
+            "qa_metrics_14"
+        ]
+    }
+}{code}
+ * return
+{code:java}
+{
+	"error": "{\"result\":null,\"error\":\"Client Error: Invalid limit argument, max limit is 909\"}",
+	"status": 400,
+	"type": "QueryError"
+}{code}
+
+*Expected*
+ I think this scenario is relative Scenario10
+ and I expect it return
+{code}{
+	"columns": [
+		"time",
+		"qa_metrics"
+	],
+	"metrics": [
+		"qa_metrics"
+	],
+	"tags": {},
+	"values": {
+		"qa_metrics": {
+			"qa_metrics_0": [],
+			"qa_metrics_1": [],
+			"qa_metrics_2": [],
+			"qa_metrics_3": [],
+			"qa_metrics_4": [],
+			"qa_metrics_5": []
+		},
+		"qa_metrics1": {
+			"qa_metrics_10": [],
+			"qa_metrics_11": [],
+			"qa_metrics_12": [],
+			"qa_metrics_13": [],
+			"qa_metrics_14": []
+		}
+	}
+}{code}
+or some error message
+{panel}

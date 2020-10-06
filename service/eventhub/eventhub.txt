@@ -1,0 +1,30 @@
+curl -X POST \
+  https://eventhub-dev.apps.exosite-dev.io/eventhub/send \
+  -H 'content-type: application/json' \
+  -d '{"test":"1234567ss"}' -i
+
+
+curl -X POST http://event-hub-dev.hosted.exosite.io/api/v1/eventhub/u29i9d7t2cdus0000/messages -H 'content-type: application/json'  -d '{
+  "solution_id": "u29i9d7t2cdus0000",
+  "id": "1",
+  "publisher": "123456789",
+  "event_data": "{\"hello\":\"eventhubdemo\"}",
+  "config_params": [
+    {
+      "sas_key_name": "key0",
+      "sas_key": "EOGniO66yFa6Mu05ZO+6saN4KJyz/D1/aQpxLtaxqrM=",
+      "namespace": "eventhubdemo-ns4",
+      "id": "1",
+      "event_hub": "eventhubdemo2"
+    }
+  ]
+}' -ik
+
+
+ninazhang+dev@exosite.com
+ninazhang+dev
+
+curl -X POST \
+  https://dsdadsd.apps.exosite-staging.io/eventhub \
+  -H 'content-type: application/json' \
+  -d '{"event_data":{"test":"1234567ss"},"publisher":"stacy"}' -i

@@ -1,0 +1,131 @@
+SolutionID:x54elbta82lc0s4ss
+1.create service with metric
+{
+    "alias": "testmetric",
+    "name": "testmetric",
+    "status": "available",
+    "whitelist": [],
+    "schema": {
+        "swagger": "2.0",
+        "info": {
+            "version": "v1",
+            "title": "Testing",
+            "description": "Testing",
+            "contact": {
+                "name": "Testing",
+                "email": "testing@exosite.com"
+            }
+        },
+        "schemes": [
+            "https"
+        ],
+        "host": "dsdadsd.apps.exosite-staging.io",
+        "x-healthPath": "/docs",
+        "basePath": "/docs",
+        "x-config-parameters": [
+            {
+                "name": "private",
+                "description": "A private parameter",
+                "x-internal-use": true,
+                "type": "string"
+            }
+        ],
+        "paths": {
+            "/qa": {
+                "get": {
+                    "description": "A testing operation",
+                    "operationId": "test1234",
+                    "parameters": [],
+                    "responses": {
+                        "204": {
+                            "description": "Return the operation result"
+                        }
+                    }
+                }
+            }
+        },
+        "x-usage-metrics": {
+            "mymetricid": {
+                "name": "test",
+                "description": "A testing metrics",
+                "type": "gauge",
+                "unit": "byte"
+            }
+        }
+    }
+}
+2. return
+{
+    "id": "d1550170-78f1-11e7-a2d9-252df2b522de",
+    "quota": {},
+    "tags": [],
+    "type": "E",
+    "business_id": null,
+    "alias": "testmetric",
+    "name": "testmetric",
+    "status": "available",
+    "whitelist": [],
+    "schema": {
+        "host": "dsdadsd.apps.exosite-staging.io",
+        "info": {
+            "title": "Testing",
+            "contact": {
+                "name": "Testing",
+                "email": "testing@exosite.com"
+            },
+            "version": "v1",
+            "description": "Testing"
+        },
+        "paths": {
+            "/qa": {
+                "get": {
+                    "responses": {
+                        "204": {
+                            "description": "Return the operation result"
+                        }
+                    },
+                    "parameters": [],
+                    "description": "A testing operation",
+                    "operationId": "test1234"
+                }
+            }
+        },
+        "schemes": [
+            "https"
+        ],
+        "swagger": "2.0",
+        "basePath": "/docs",
+        "x-healthPath": "/docs",
+        "x-usage-metrics": {
+            "mymetricid": {
+                "name": "test",
+                "type": "gauge",
+                "unit": "byte",
+                "description": "A testing metrics"
+            }
+        },
+        "x-config-parameters": [
+            {
+                "name": "private",
+                "type": "string",
+                "description": "A private parameter",
+                "x-internal-use": true
+            }
+        ]
+    },
+    "default_script_key": "testmetric",
+    "description": "Testing",
+    "metrics": {
+        "mymetricid": {
+            "name": "test",
+            "type": "gauge",
+            "unit": "byte",
+            "description": "A testing metrics"
+        }
+    },
+    "url": "https://dsdadsd.apps.exosite-staging.io",
+    "updated_at": "2017-08-04T08:49:25.256Z",
+    "created_at": "2017-08-04T08:49:25.256Z",
+    "deleted_at": null,
+    "provider_id": null
+}

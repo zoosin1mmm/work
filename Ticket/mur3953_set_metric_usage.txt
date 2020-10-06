@@ -1,0 +1,80 @@
+SolutionID: x54elbta82lc0s4ss
+Command:
+wscat -c ws://localhost:4101/ws/service/user/metric/users
+Origin Usage:
+
+"user": {
+    "quota": {
+      "calls_daily": 1000000
+    },
+    "service": "user",
+    "usage": {
+      "calls_daily": 0,
+      "calls_monthly": 0,
+      "calls_total": 2,
+      "users": 1
+    }
+  }
+
+Scenario1: send metric value can use timestamp via websocket
+Send: 11507799885797x54elbta82lc0s4ss2
+Usage: 
+
+"user": {
+    "quota": {
+      "calls_daily": 1000000
+    },
+    "service": "user",
+    "usage": {
+      "calls_daily": 0,
+      "calls_monthly": 0,
+      "calls_total": 2,
+      "users": 2
+    }
+  }
+
+Scenario2: send metric value can use timestamp and counters via websocket
+Send: 11507799885797x54elbta82lc0s4ss310
+Usage: 
+
+"user": {
+    "quota": {
+      "calls_daily": 1000000
+    },
+    "service": "user",
+    "usage": {
+      "calls_daily": 0,
+      "calls_monthly": 0,
+      "calls_total": 2,
+      "users": 2,
+      "users:10": 3,
+      "users:10_max_monthly": 3
+    }
+  }
+
+Scenario3: send metric value can use gauges via websocket
+Send: 11507800543156x54elbta82lc0s4ss41510010
+Usage: 
+
+"user": {
+    "quota": {
+      "calls_daily": 1000000
+    },
+    "service": "user",
+    "usage": {
+      "calls_daily": 0,
+      "calls_monthly": 0,
+      "calls_total": 2,
+      "users": 4,
+      "users:10": 3,
+      "users:10_max_monthly": 3,
+      "users_max_monthly": 100
+    }
+  }
+
+
+$seq = 1;
+$solution_id = 'y4l0kcukghwu00000';
+$count = 1;
+$msg = $seq.chr(29).$solution_id.chr(29).$count;
+echo $msg;

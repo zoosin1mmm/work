@@ -1,0 +1,52 @@
+ ab -c 45 -n 200 -k -T 'application/json' -p mur4963_content http://pegasus-cass-service-murano-staging-preview.hosted.exosite.io/api/v1/timeseries/q2c2eeradintw0000/multi_data
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking pegasus-cass-service-murano-staging-preview.hosted.exosite.io (be patient)
+Completed 100 requests
+Completed 200 requests
+Finished 200 requests
+
+
+Server Software:        
+Server Hostname:        pegasus-cass-service-murano-staging-preview.hosted.exosite.io
+Server Port:            80
+
+Document Path:          /api/v1/timeseries/q2c2eeradintw0000/multi_data
+Document Length:        0 bytes
+
+Concurrency Level:      45
+Time taken for tests:   130.913 seconds
+Complete requests:      200
+Failed requests:        59
+   (Connect: 0, Receive: 0, Length: 59, Exceptions: 0)
+Non-2xx responses:      59
+Keep-Alive requests:    136
+Total transferred:      55238 bytes
+Total body sent:        6205000
+HTML transferred:       5428 bytes
+Requests per second:    1.53 [#/sec] (mean)
+Time per request:       29455.362 [ms] (mean)
+Time per request:       654.564 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.41 [Kbytes/sec] received
+                        46.29 kb/s sent
+                        46.70 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    2   3.6      0      13
+Processing:  9300 27226 2838.3  27104   30057
+Waiting:        0 26476 5091.3  26998   30057
+Total:       9300 27229 2839.8  27104   30063
+
+Percentage of the requests served within a certain time (ms)
+  50%  27104
+  66%  29989
+  75%  30038
+  80%  30042
+  90%  30047
+  95%  30062
+  98%  30062
+  99%  30063
+ 100%  30063 (longest request)

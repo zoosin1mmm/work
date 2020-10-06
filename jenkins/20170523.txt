@@ -1,0 +1,33 @@
+murano-staging-business
+---------------------------------------------------------------------
+doc error
+
+murano-staging-product
+---------------------------------------------------------------------
+murano-staging-docs
+--------------------------------------------------------------------- 
+FILE:test_check_product_area.robot
+test case:Check product devices list sort alphabetical     
+error:The text of element '//*[@id="app"]/div/div[1]/div/div[2]/div[2]/main/div[2]/div[2]/div[2]/div/div/div[3]/span/div/div/div/div[1]' should have been 'ZZZ' but in fact it was 'abc'.
+localtest: create last one and back end is too slow ,so it can not catch it
+
+test case:Check product detail resource page after reload page
+error:Element locator '//span[contains(@data-qa,"Content-Resource-Item")]//div[text()="qa-20170523163842"]' did not match any elements after 30 seconds
+localtest: add "Wait Until Element Is Visible    //span[contains(@data-qa,"Content-Resource-Item")]//div[text()="${alias}"]" and case will pass
+
+murano-staging-service-migration
+---------------------------------------------------------------------
+FILE:Test Device
+testcase:Device should list correct device numbers
+error:
+1) 60 != 100
+2) 0 != 22
+3) 0 != 22
+local test: create device limit be met ,so device can not create
+
+murano-staging-solution
+---------------------------------------------------------------------
+murano-staging-service-solution
+---------------------------------------------------------------------
+
+

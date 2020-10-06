@@ -1,0 +1,1 @@
+echo "engineering.kli.v3.tracking.staging.meet.plan 1 1521453333" | nc tsdb-sink.exosite.com 2003

@@ -1,0 +1,107 @@
+ curl -XPUT 'http://localhost:8081/api/v1/serviceconfig/ihat6xksaimw0000_email' -d '{"quota": {"emails_daily": 50}}' -H 'content-type:application/json' -ik
+
+{
+  "service_function": "Email.send",
+  "parameters": [
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    },
+    {
+      "to": "stacychen@exosite.com",
+      "subject": "Hello",
+      "text": "World"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+-------------------------------------------------
+------------------ApacheBench--------------------
+-------------------------------------------------
+-------------------------------------------------
+ab -c 1 -n 1 -k -T 'application/json' -p mur4963_content http://localhost:4000/api/v1/timeseries/u58cvblvsrmk00000/multi_data
+
+ab -c 1 -n 1 -k -s 600 -T 'application/x-www-form-urlencoded' -p mur4963_content.txt -H 'Content-type:application/json' http://pegasus-cass-service-murano-staging-preview.hosted.exosite.io/api/v1/timeseries/u2o29ufxmmfc00000/multi_data
+
+
+ab -c 1 -n 1 -k -T 'application/x-www-form-urlencoded' -p mur4963_content.txt -H 'Content-type:application/json' http://pegasus-cass-service-dev.hosted.exosite.io/api/v1/timeseries/xrv6xq7vzgz40000/multi_data 
+
+-c 同時上線user 
+-n 總共request
+第一項測試
+1.以lua測試使用者response time
+2.跑100次算平均時間
+第2項測試
+1.測試後紀錄50%response time
+2.10%以上fail則重新調整
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+{"datapoints":[{"metrics":{"test":"test"},"tags":{"tag":"s"},"ts":"1513668075273ms","return_ts":true},{"metrics":{"test":"test"},"tags":{"tag":"s"},"ts":"1513668090228ms"}],"return_ts":true}
+
+
+curl -X POST 'http://localhost:4000/api/v1/timeseries/u2o29ufxmmfc00000/multi_data' -d '{"return_ts": false, "datapoints": [{"metrics": {"qa_metrics_0": "8B99OX1A4KPWYX6H25ZGY66UJ5MNQODYLX3I5HVRAOP5869H40LU4D36MIOGCHWCQJCV0PEMSSDGF2FIB2GYT3Q9AL4DD1NZ"}, "ts": "1514340162355ms", "tags": {"qa_metrics_0": "qa_metrics"}}]}' -H 'Content-type:application/json' -ik
+
+
+curl -X POST 'http://localhost:4000/api/v1/timeseries/u2o29ufxmmfc00000/multi_data' -H 'Content-Type:application/json' -d '{"datapoints":[{"metrics":{"test":"test"},"tags":{"tag":"s"},"ts":"1513668075273ms","return_ts":true},{"metrics":{"test":"test"},"tags":{"tag":"s"},"ts":"1513668090228ms"}],"return_ts":true}' -ik

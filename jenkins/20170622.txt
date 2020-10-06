@@ -1,0 +1,99 @@
+murano-staging-product
+------------------------------------------------
+
+murano-staging-api
+------------------------------------------------
+FILES: business-{bizid}-tier.robot
+Testcase:ExoBusiness.leave_business
+Error:AttributeError: 'ExoBusiness' object has no attribute 'password'
+Cause: self.password not config
+
+murano-staging-docs
+------------------------------------------------
+FILES: test_check_business_area	
+Testcase:ExoBusiness.leave_business
+Error:AttributeError: 'ExoBusiness' object has no attribute 'password'
+Cause: self.password not config 
+
+murano-staging-business
+------------------------------------------------
+FILES: test_upgrade_business_tier.robot	
+Testcase:ExoBusiness.leave_business
+Error:AttributeError: 'ExoBusiness' object has no attribute 'password'
+Cause: self.password not config 
+
+murano-staging-link
+------------------------------------------------
+murano-staging-service-solution
+------------------------------------------------
+murano-staging-service-migration
+------------------------------------------------
+murano-staging-deploy-tool
+------------------------------------------------
+FILES: test_exosite_CLI.robot
+Testcase:Exosite CLI upload after modify secret file
+Template : Modify Secret File And Upload productID, ********, Could not validate parameters pid
+Error:{"statusCode":400,"message":"Could not validate trigger pid","code":"BadRequestError","error":"404 - undefined"}
+400 Client Error: Bad Request for url: https://bizapi-staging.hosted.exosite.io/api:1/solution/j2pv2nl2pwc8wg0c8/serviceconfig/6fc67eb1-5688-11e7-94b5-598749c9123d' does not contain 'Could not validate parameters pid'
+Cause: error change
+
+curl 'https://bizapi-staging.hosted.exosite.io/api:1/solution/s2dnvzwmel3ms8s4w/serviceconfig/5cf3c361-5624-11e7-81c0-1db5189f01cb' -X PUT -H 'Content-Type: application/json' -H 'Authorization: token 6641d43f1c74520289bfc3ec879f261d54bd401b' --data '{"solution_id":"s2dnvzwmel3ms8s4w","service":"device","parameters":{"pid":["**********"],"x-exosite-bizid":"odo5kryct0oa8aor"},"triggers":{"pid":["************"]}}' -i  
+HTTP/1.1 400 Bad Request
+content-type: application/json; charset=utf-8
+content-length: 131
+date: Thu, 22 Jun 2017 02:39:30 GMT
+x-exosite-bizid: odo5kryct0oa8aor
+vary: origin
+cache-control: no-cache
+Set-Cookie: OPENSHIFT_EDGE_murano-staging_bizapi_SERVERID=dcb42c15d46abf77212fc692416e277b; path=/; HttpOnly; Secure
+{"statusCode":400,"message":"Could not validate parameter pid: 404 - undefined","code":"BadRequestError","error":"404 - undefined"}
+
+adc_staging_project
+------------------------------------------------
+FILES: test_murano_CLI3.robot	
+Testcase:SuiteSetup-Shell Call sudo, murano, config, business.id, ${ADC_COMPANY_ID}
+Error:Variable '${ADC_COMPANY_ID}' not found.
+Cause: 	Variable '${ADC_COMPANY_ID}' not found.
+
+/code
+#murano-staging-product same as yesterday
+#murano-staging-api has error
+#murano-staging-docs has error
+#murano-staging-business has error,profile url error MUR-3130
+#murano-staging-link  log page and profile url error MUR-3130
+#murano-staging-service-solution run again ok
+#murano-staging-service-migration run again ok
+#murano-staging-deploy-tool has erro
+#adc_staging_project has erro
+#adc_staging_ui  profile url error MUR-3130
+/code
+murano-staging-api
+------------------------------------------------
+FILES: business-{bizid}-tier.robot
+Keyword:ExoBusiness.leave_business
+Cause: self.password not config
+
+murano-staging-docs
+------------------------------------------------
+FILES: test_check_business_area
+Testcase:ExoBusiness.leave_business
+Cause: self.password not config 
+
+murano-staging-business
+------------------------------------------------
+FILES: test_upgrade_business_tier.robot	
+Testcase:ExoBusiness.leave_business
+Cause: self.password not config 
+
+murano-staging-deploy-tool
+------------------------------------------------
+FILES: test_exosite_CLI.robot
+Error:{"statusCode":400,"message":"Could not validate trigger pid","code":"BadRequestError","error":"404 - undefined"}
+does not contain 
+'Could not validate parameters pid'
+Cause: error change
+
+adc_staging_project
+------------------------------------------------
+FILES: test_murano_CLI3.robot	
+Cause: 	Variable '${ADC_COMPANY_ID}' not found.

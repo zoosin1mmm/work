@@ -1,0 +1,2 @@
+{"role_id":"guest","id":"11","parameter_name":"location","parameter_value":"1"}
+ok

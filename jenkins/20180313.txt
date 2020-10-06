@@ -1,0 +1,45 @@
+murano-staging-solution
+----------------------------------
+file:test_write_application_service_value.robot
+error: service page UI and xpath change
+
+
+adc-staging-application
+-----------------------------------
+file:adcWeb/test_add_application.robot
+test case:Add application with customer template
+error: service page UI and xpath change
+
+
+file:adcWeb/test_application_domain.robot
+error: service page UI and xpath change
+
+
+
+adc-staging-exchange
+--------------------------------------
+file:adcWeb/test_purchase_element.robot
+error: service page UI and xpath change
+
+
+adc-staging-application-services
+---------------------------------------
+file:adcWeb/test_check_services.robot
+file:adcWeb/test_write_application_eventhandler.robot
+file:adcWeb/test_update_services_config.robot
+error: service page UI and xpath change
+
+file:test_purchase_element
+test case:The purchase service element
+
+murano-staging-api-external
+-------------------------------------
+file:business-{businessId}-member-{email}.robot
+file:business-{businessId}-network-business-{childBusinessId}.robot
+file:business-{businessId}-network-business.robot
+file:business-{businessId}-overview.robot
+fix: MUR-6167
+
+file:exchange-*.robot
+error: create element error
+fix: MUR-6174

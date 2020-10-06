@@ -1,0 +1,27 @@
+murano-staging-service-migration
+------------------------------------
+file:test_email.robot
+test case:Email can send email with connection after set serviceconfig SMTP
+ Email can send email without specific parameters after set serviceconfig SMTP
+error: email 被migration type=C 不是null 驗證schema 錯誤
+
+murano-staging-business
+------------------------------------
+file:test_invite_member.robot
+
+file:test_check_business_area
+test case:Check business page transfer ownership when having member
+
+file:test_delete_business_member
+file:adcWeb/test_transfer_owner.robot
+ticket:MUR-5941
+error:enterprise 不該限制member limit
+
+
+# Problem
+murano-staging-business(Stacy) MUR-5941 bug: memeber 被限制數量
+murano-staging-service-solution-performance(Stacy) 5.00830910124 <= 0.315 SPMS
+murano-staging-api-external(Stacy) child business 被限制建立數量 affected by:MUR-6113
+# Fix
+adc-staging-exchange (Jeffery) MUR-6729
+murano-staging-service-migration(Stacy) email service type 被migrate成C schema 驗證錯誤 affected by:MUR-6372

@@ -1,0 +1,13 @@
+ssh linux-jenkins-002.exosite.biz
+cd dqa/dqa-env/script/MUR/usm
+pwd
+export localpwd=
+docker run -v $localpwd/scala/conf:/opt/gatling/conf \
+-v $localpwd/scala/user-files:/opt/gatling/user-files \
+-v $localpwd/scala/results:/opt/gatling/results -e JAVA_OPTS="-Dusers=300" -it --rm denvazh/gatling
+
+// download
+rsync -avzh ninazhang@linux-jenkins-002.exosite.biz:/home/ninazhang/dqa/dqa-env/script/MUR/usm/scala/results/ ./result
+
+// upload
+rsync -avzh ./scala/user-files/simulations/getCurrentUser.scala ninazhang@linux-jenkins-002.exosite.biz:/home/ninazhang/dqa/dqa-env/script/MUR/usm/scala/user-files/simulations/getCurrentUser.scala

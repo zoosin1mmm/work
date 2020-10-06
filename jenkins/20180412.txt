@@ -1,0 +1,18 @@
+murano-staging-api-external
+-----------------------------------
+file:
+exchange-{businessId}-element-{elementId}
+exchange-{businessId}-element
+exchange-{businessId}-purchase-{purchaseId}
+exchange-{businessId}-purchase
+error: create element fail
+fix:MUR-6440
+
+file:solution-{solutionId}-usage.robot
+test case:solution-{solution_Id}-usage - get - delete provisioning device should decrease device2 metrics
+product-usage identity_provisioned 1個小時候沒有更新
+
+murano-staging-service-solution
+-----------------------------------
+file:test_auth0_* /test_user_social.robot
+error :can not open browser

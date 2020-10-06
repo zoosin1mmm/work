@@ -1,0 +1,311 @@
+*TSDB query data:*
+ !query.png|thumbnail! 
+*Export Lua code:*
+{code}
+--#POST /export
+local job_id = Tsdb.export({
+  query = request.body ,filename = "test"
+})
+response.message = Content.download({
+  id = "test"
+})
+{code}
+*Get Content Lua code:*
+{code}
+--#GET /content
+response.message = Content.download({
+  id = request.parameters.id
+})
+{code}
+
+
+*Scenario1: TSDB.export with metric and tags*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    }
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502938337462565,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+.....
+{code}
+
+*Scenario2: TSDB.export with start_time*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "start_time":"2017-08-17T02:11:02.101665+00:00"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502938337462565,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+....
+{code}
+
+*Scenario3: TSDB.export with end_time*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "end_time":"2017-08-17T02:11:02.101665+00:00"
+}
+{code}
+* */export reponse:*
+{code}
+{
+  "error": "{\"errors\":{\"detail\":\"Internal server error\"}}",
+  "status": 500,
+  "type": "ServerError"
+}
+{code}
+* *File Content of Export*
+None
+
+*Scenario4: TSDB.export with fill*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "noExisting"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "fill":"none"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,noExisting,tags
+1502938337462565,37.2,73.0,"none","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+.....
+{code}
+
+*Scenario5: TSDB.export with mode*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "mode":"split"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502938337462565,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+.....
+{code}
+
+*Scenario6: TSDB.export with epoch*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "epoch":"s"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502938337,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+.....
+{code}
+
+*Scenario7: TSDB.export with limit*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "limit":"1"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502938337462565,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+{code}
+
+*Scenario8: TSDB.export with order_by*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "order_by":"asc"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502934007070417,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+1502934009257075,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+.....
+{code}
+
+*Scenario9: TSDB.export with order_by*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "aggregate":["count"]
+}
+{code}
+* */export Response*
+{code}
+{
+  "error": "{\"result\":null,\"error\":\"Client Error: Invalid query arguments (sampling_size and aggregate are not allowed)\"}",
+  "status": 400,
+  "type": "QueryError"
+}
+{code}
+* *File Content of Export*
+None
+
+*Scenario10: TSDB.export with sampling_size*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "sampling_size":"30m"
+}
+{code}
+* */export Response*
+{code}
+{
+  "error": "{\"result\":null,\"error\":\"Client Error: Invalid query arguments (sampling_size and aggregate are not allowed)\"}",
+  "status": 400,
+  "type": "QueryError"
+}
+{code}
+* *File Content of Export*
+None
+
+*Scenario11: TSDB.export with relative_start*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "relative_start":"-1d"
+}
+{code}
+* *File Content of Export*
+{code}
+timestamp,temperature,humidity,switch,tags
+1502938337462565,37.2,73.0,"on","region=us;pid=pzomp8vn4twklnmi;identity=000001;city=minneapolis"
+....
+{code}
+
+*Scenario12: TSDB.export with relative_end*
+* *Export Body:*
+{code}
+{
+    "metrics": [
+        "temperature",
+        "humidity",
+        "switch"
+    ],
+    "tags": {
+        "region": "us",
+        "city": "minneapolis"
+    },
+    "relative_end":"-30m"
+}
+{code}
+* */export Response*
+{code}
+{
+  "error": "{\"result\":null,\"error\":\"Client Error: Failed to start an export job: relative_start must be defined.\"}",
+  "status": 400,
+  "type": "QueryError"
+}
+{code}
+* *File Content of Export*
+None

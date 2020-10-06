@@ -1,0 +1,200 @@
+-----------------------------------------
+Count : 1
+name :BLK  
+email:testing+WTG@exosite.com 
+password:1234eszxcv++ 
+userID:1 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 2
+name :Z  
+email:testing+VXV@exosite.com 
+password:1234eszxcv++ 
+userID:2 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 3
+name :PXG  
+email:testing+YQLQFQLT@exosite.com 
+password:1234eszxcv++ 
+userID:3 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 4
+name :MUHJS  
+email:testing+JGKTLE@exosite.com 
+password:1234eszxcv++ 
+userID:4 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 5
+name :IVBEP  
+email:testing+GTP@exosite.com 
+password:1234eszxcv++ 
+userID:5 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 6
+name :GY  
+email:testing+IVXTKPXVN@exosite.com 
+password:1234eszxcv++ 
+userID:6 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 7
+name :U  
+email:testing+XMVGZ@exosite.com 
+password:1234eszxcv++ 
+userID:7 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 8
+name :LSKXP  
+email:testing+TZY@exosite.com 
+password:1234eszxcv++ 
+userID:8 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 9
+name :QCHSZ  
+email:testing+RNVZ@exosite.com 
+password:1234eszxcv++ 
+userID:9 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 10
+name :SURN  
+email:testing+IVNKJ@exosite.com 
+password:1234eszxcv++ 
+userID:10 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 11
+name :OYYM  
+email:testing+VPDJIWGKX@exosite.com 
+password:1234eszxcv++ 
+userID:11 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 12
+name :SIF  
+email:testing+L@exosite.com 
+password:1234eszxcv++ 
+userID:12 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 13
+name :A  
+email:testing+GIQIDTD@exosite.com 
+password:1234eszxcv++ 
+userID:13 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 14
+name :MCC  
+email:testing+KWELVWYGD@exosite.com 
+password:1234eszxcv++ 
+userID:14 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 15
+name :CP  
+email:testing+KETDWINCS@exosite.com 
+password:1234eszxcv++ 
+userID:15 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 16
+name :PVJ  
+email:testing+VZBUKW@exosite.com 
+password:1234eszxcv++ 
+userID:16 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 17
+name :LGXA  
+email:testing+RDJKTZUPW@exosite.com 
+password:1234eszxcv++ 
+userID:17 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 18
+name :LSQT  
+email:testing+CJPQQHHUD@exosite.com 
+password:1234eszxcv++ 
+userID:18 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 19
+name :QEWX  
+email:testing+KRNKG@exosite.com 
+password:1234eszxcv++ 
+userID:19 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------
+-----------------------------------------
+Count : 20
+name :EYT  
+email:testing+WKZDIWJKYK@exosite.com 
+password:1234eszxcv++ 
+userID:20 
+roleID: admin 
+parameter_name:location
+assignValue: name:location value:1~21
+-----------------------------------------

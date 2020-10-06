@@ -1,0 +1,59 @@
+get export job info error
+Upload phase of export job failed
+
+openshift reason
+data streaming failed
+
+
+Export job uploader terminated then job show start 
+
+fail
+08:48:45.586 [warn]  ExAws: HTTP ERROR: :nxdomain
+
+08:49:00.783 [warn]  ExAws: HTTP ERROR: :nxdomain
+
+08:49:07.269 [info]  Sent 400 in 37334ms
+
+4444303743 break timeout
+job not start
+https://openshift.exosite.io/console/project/murano-staging-preview/browse/pods/pegasus-content-service-6-lj0g8
+
+https://openshift.exosite.io/console/project/murano-staging-preview/browse/pods/pegasus-cass-exp-service-8-mm0yk
+{"job_id":"BxpKuW3XTzViMiXj2FIXPYwVo4Sdx5_wnmHHkNvLOMuuAv9WzNTUAOMEGyiBxnhk_shqM_B2ld1_H0pnTOOm6OwISMc6wWxJaem2zikMtUQUpexNcFDi6ajH7Nttz6uf"}
+
+
+fail
+Sent 400 in 6456ms
+419698710 break
+job start
+https://openshift.exosite.io/console/project/murano-staging-preview/browse/pods/pegasus-content-service-6-yp1bz
+
+https://openshift.exosite.io/console/project/murano-staging-preview/browse/pods/pegasus-cass-exp-service-8-r5hcj
+Request ID: {"job_id":"jdYKtCx__eqCgd0ZeQlkqZFgX6pJZQPEdr32ngLsOjEZiuo3JrNeyEF9q7wGF8msSjAAcAGNoS0CMsyP4nU3vmwlS_dcZkjMvIEyqlcG2WLsN8dO4ZELps.qJyl6wSLD"}
+
+fail
+1978577382 break
+job not start
+https://openshift.exosite.io/console/project/murano-staging-preview/browse/pods/pegasus-cass-exp-service-8-teh14
+Request ID: {"job_id":"bGOe.Bg8QShTc9EgOjbeDZ.HRSHcJ9TS88MuJ_wKfoAJM.2ZZA89pzDcawYbmOWc2yhrrO60rJzwcZ5pYlWdiUeQwf8mGwyP_YtsDc_8BAIGDHd8asnAagAHX1n6ehr9"}
+
+fail
+Sent 400 in 9746ms
+157387395 break
+job start
+https://openshift.exosite.io/console/project/murano-staging-preview/browse/pods/pegasus-content-service-6-f5w9t
+Request ID: {"job_id":"XKngbego6cgHYBK.t.7U.z3IQ0r8Whq3lYp6pShakHfKiCWKZheDuu1kHXe7TbBWWDCkBRknykrsjpKGFE5tS2J_e4DSrBlgf3_7OGxxBAyORddFPdad0YtHuQeAK814"}
+
+
+fail
+ Sent 400 in 5496ms
+ job start
+ 217344267
+ Request ID: {"job_id":"2UDrQ3D5bOnE2LzcaY3IhS_YjbK0YZ9M76hB7q4CIR8L0_JHgXos301ToO45_X4NqYX_HmZ_1OIj5546ht08ah1OgGJS.pbjH8ostqyhbVQOCDmqY0f41MgRFUkA3Asf"}
+
+
+
+success
+ Time spent: 7827 seconds 
+ Request ID: {"job_id":"88YCx7v75g9CcRcobAAQmlJ7wF57MJb2j.35T9uO4tNMsKMS5l01uR8aLSeMFXJ2KWkHdL.N08TbgHah_Xec9_E4Qom6vuomzCDKIrFdA6zax1p1XPwBPteIRy0dN4QZ"}
+

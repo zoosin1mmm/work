@@ -1,0 +1,28 @@
+-----------------------------------------
+MUR-1970 Product and Solution Pages Broken due to no memberships
+-----------------------------------------
+FILE:test_verify_the_product_navigation_link
+testcase:The business link under the device page should redirected to business page
+error: 	'https://www.exosite-staging.com/business/products/io9dfw0l8dfpf1or#/devices?_k=76h94r' does not match 'https://.*business/memberships'
+localtest: same
+
+FILE:test_verify_the_solution_navigation_link
+testcase:The business link in debug page should redirected to business page
+error:  	'https://www.exosite-staging.com/business/solutions/abh58iggcunxw29#/services?_k=91tqxa' does not match 'https://.*business/memberships'
+localtest: same
+
+
+-----------------------------------------
+MUR-1941
+When creating new business, redirects to previous business used
+-----------------------------------------
+FILE:test_add_business_platform
+testcase:Add business platform with script type name
+error: 	'https://www.exosite-staging.com/business/' does not match 'https://.*business/memberships'
+localtest: auto navigate to product page and link is change , so it wil not match
+
+FILE:test_invite_member
+testcase: Invite new user with valid email
+error: 	'https://www.exosite-staging.com/business/' does not match 'https://.*business/memberships'
+localtest: auto navigate to product page and link is change , so it wil not match
+

@@ -1,0 +1,37 @@
+{
+    "host": "stacychen-qa-test.apps.exosite-staging.io",
+    "alias":"stacyservice",
+    "schemes": [
+        "https"
+    ],
+    "info": {
+        "title": "test-stacychen-qa",
+        "contact": {
+            "name": "test",
+            "email": "testing@exosite.com"
+        },
+        "version": "v1",
+        "description": "Test service: asset-stacychen"
+    },
+    "paths": {
+        "/service": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "type": "string",
+                            "description": "Operation results"
+                        },
+                        "description": "Return the operation result"
+                    }
+                },
+                "description": "At lease one operation is required.",
+                "operationId": "serviceto"
+            },
+            "x-host": "testing-stacychen.apps.exosite-staging.io/"
+        }
+    },
+    "swagger": "2.0",
+    "basePath": "/",
+    "x-healthPath": "/health"
+}

@@ -1,0 +1,37 @@
+murano-staging-service-migration
+---------------------------------------------
+file:test_email.robot
+test case:
+Email can send email with connection after set serviceconfig SMTP
+Email can send email without specific parameters after set serviceconfig SMTP
+error: update service config error
+{"statusCode":400,"message":"Wrong parameters value","code":"BadRequestError","error":[{"code":"UNKNOWN_FORMAT","params":["password"],"message":"There is no validation function for format "password'","path":"#/properties/connection_password","schemaId":null}]}
+
+
+file:test_http.robot
+test case:
+ Http use credential should return 200 status code
+ Http use credential with underline key should return 200 status code
+error: update service config error
+{"message": "Wrong parameters value", "code": "BadRequestError", "error": [{"path": "#/properties/credentials", "message": u"There is no validation function for format 'password'", "code": "UNKNOWN_FORMAT", "params": ["password"], "schemaId": None}], "statusCode": 400}
+
+
+file:test_salesforceiot.robot
+test case:
+Salesforceiot can send event
+error: update service config error
+{"message": "Wrong parameters value", "code": "BadRequestError", "error": [{"path": "#/properties/token", "message": u"There is no validation function for format 'password'", "code": "UNKNOWN_FORMAT", "params": ["password"], "schemaId": None}], "statusCode": 400}
+
+file:test_twilio.robot
+test case:
+Twilio service with empty authToken
+Twilio service with invalid authToken
+Twilio service with paid authToken and accountSid
+Twilio service with testing accountSid from twilio server
+ Twilio service with testing authToken from twilio server
+error: update service config error
+{"statusCode":400,"message":"Wrong parameters value","code":"BadRequestError","error":[{"code":"UNKNOWN_FORMAT","params":["password"],"message":"There is no validation function for format 'password'","path":"#/properties/AuthToken","schemaId":null}]}
+
+
+file:test_user_social.robot
+error: can not open browser but local ok

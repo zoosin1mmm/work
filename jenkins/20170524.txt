@@ -1,0 +1,35 @@
+adc_staging_project 
+-------------------------------------------------------------
+DQA-1568 bug ticket
+dqa_http_okami
+-------------------------------------------------------------
+更改business 成 okmai ->emma 修
+
+murano-staging-link
+-------------------------------------------------------------
+murano-staging-docs
+-------------------------------------------------------------
+ murano-staging-business
+-------------------------------------------------------------
+
+murano-staging-api
+-------------------------------------------------------------
+FILE: {Contextid}-Item-{Id}-Upload
+error:Test timeout 5 minutes exceeded. 	
+testcase:  {contextid}-item-{id}-upload - post - should get 200 OK when upload 128MB size file
+testcase:  {contextid}-item-{id}-upload - post - should get 400 Bad Request when upload over 128MB size file
+
+murano-staging-service-solution
+-------------------------------------------------------------
+Error:New status: FAIL New message: Parent suite teardown failed: KeyError: 'name'
+error keyword:Get Solution Id Via Api  Delete Solution Via Api
+think: 'name' is deprecated ,so can not be match 'name' key value
+local test: test again is ok
+
+murano-staging-service-migration
+-------------------------------------------------------------
+error:404 or 400
+local test : endpoint update fail
+
+murano-staging-deploy-tool
+-------------------------------------------------------------

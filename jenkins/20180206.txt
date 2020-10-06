@@ -1,0 +1,116 @@
+murano-staging-service-solution
+murano-staging-service-application
+murano-staging-service-migration
+-------------------------------------
+file:test_device_event.robot
+test_user_event.robot
+test_timeseries_event.robot
+error: 所有event 的log message 都多了 /t<nil>
+
+
+murano-staging-api-external
+--------------------------------
+file:solution-{solutionId}-logs.robot
+keyword:Create And Update Solution Config
+error: scripts service 變成預設service 所以再次建立時會409
+
+murano-staging-business
+------------------------------------
+test case:adcWeb/test_add_business_platform.robot
+adcWeb/test_add_credicard.robot
+adcWeb/test_check_business_area.robot
+	 Check business community settings via upgrade UI
+	 Check business page is correct via reset password
+	 Check business page is correct via signup
+	 Check business welcome page should not show after logs into by reset password
+	 Check business welcome page should not show after logs into by sign up
+adcWeb/test_delete_business_member.robot
+	Delete admin member can be executed by admin
+	Delete owner member can not be executed by admin
+adcWeb/test_log_in.robot
+adcWeb/test_reset_password.robot
+	Reset password to check reset password page is correct
+	Reset password with verification key<script>alert(test script)</script>
+adcWeb/test_sign_up.robot
+	Signup to check create account page is correct
+	Signup to check welcome page is correct
+	
+adcWeb/test_invite_member.robot
+	Invite new user and submit verification key twice
+	Invite new user with valid email
+error: Sign Up With API
+sign up->驗證碼過後->回到登入頁->登入->再度需要驗證碼->收到新的信
+
+
+test case:
+adcWeb/test_check_business_area.robot
+	Check business account profile page
+	Check confirm password page
+	Check two factor authentication page
+erorr:
+twofactor sign up->驗證碼過後->回到登入頁->登入->再度需要驗證碼->收到新的信
+
+
+murano-staging-docs
+-----------------------------
+file:test_check_application_area.robot
+test case: Check application roles page
+error:新增role body的按鈕現在沒有了
+
+test case:Check empty module page
+error: 新增module body的按鈕現在沒有了
+
+
+murano-staging-link
+------------------------------
+file:test_check_application_area.robot
+test case:Check services timer configuration checkbox can be cancel
+fix:需要更多時間等timer 寫完資料
+
+file:adcWeb/test_verify_application_content_link_in_new_window.robot
+test case: Verify auto generated link in new window with each tab
+fix:UI tab data-qa更改
+
+murano-staging-product
+-------------------------------
+file: test_activate_device.robot
+test_add_definition_resources.robot
+test_add_device.robot
+test_add_device_resources.robot
+test_delete_device.robot
+test_update_definition_resources.robot
+test_update_device_resources.robot
+test_product_simulator.robot
+error: MUR-5644
+
+
+murano-staging-solution
+--------------------------------
+error: MUR-5644
+
+
+adc-staging-application-modules
+--------------------------------
+file:test_add_modules.robot adcWeb/test_check_modules.robot
+test case:Add module by tbody button
+error: 新增module body的按鈕現在沒有了
+
+
+
+
+
+
+
+module
+	https://jira.exosite.com/browse/MUR-5837
+sign up/twofactor/invite
+	https://jira.exosite.com/browse/MUR-5838
+
+log message comment
+	https://jira.exosite.com/browse/MUR-5571
+
+data-qa tab
+	https://jira.exosite.com/browse/MUR-5839
+
+solution-log
+	https://jira.exosite.com/browse/MUR-5840

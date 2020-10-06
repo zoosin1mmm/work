@@ -1,0 +1,14 @@
+Avg Spend time: 0.0 
+
+--------------------------------------------------
+solutionID: u58cvblvsrmk00000 
+Metirc: qa_metrics 
+Metirc Size: 100 
+Metirc length: 100 
+Tags Size: 0 
+Datapoint length: 20 
+export post Data to data/post_body_1515648704303.txt 
+Get Response: Bad Request 
+spend times : 0 s
+
+--------------------------------------------------

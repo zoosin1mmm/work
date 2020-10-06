@@ -1,0 +1,358 @@
+05:58:39.426 request_id=6nhmcqeqnb11e4h8klv68gq0h840ujdv [info] POST /api/v1/solution/nw759r5gagg00000
+05:58:39.427 request_id=6nhmcqeqnb11e4h8klv68gq0h840ujdv [info] CUR_CONFIG: nil
+05:58:39.427 request_id=6nhmcqeqnb11e4h8klv68gq0h840ujdv [info] NEW_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "m4u5i80rr75a0000"}
+05:58:39.427 request_id=6nhmcqeqnb11e4h8klv68gq0h840ujdv [info] Sent 200 in 846µs
+05:58:40.014 request_id=7uu9qr3jirjg43bqupo293b9a6t8kc9e [info] PUT /callback/m4u5i80rr75a0000
+05:58:40.014 request_id=7uu9qr3jirjg43bqupo293b9a6t8kc9e [info] Notification received: {}
+05:58:40.015 request_id=7uu9qr3jirjg43bqupo293b9a6t8kc9e [info] Sent 200 in 640µs
+05:58:40.023 [info] Solution init, register callback: :ok; product_id = "m4u5i80rr75a0000"
+05:58:40.044 [info] Solution init, subscribe resource: :ok; product_id = "m4u5i80rr75a0000", endpoint_type = "test"
+05:58:40.048 [info] Solution init, list endpoints: {:ok, []}; product_id = "m4u5i80rr75a0000"
+06:00:07.662 request_id=3f442k5b21efajs2cs1us9oh55g80u2d [info] DELETE /api/v1/solution/nw759r5gagg00000
+06:00:07.663 request_id=3f442k5b21efajs2cs1us9oh55g80u2d [info] CUR_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "m4u5i80rr75a0000"}
+06:00:07.663 request_id=3f442k5b21efajs2cs1us9oh55g80u2d [info] NEW_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "m4u5i80rr75a0000"}
+06:00:07.663 request_id=3f442k5b21efajs2cs1us9oh55g80u2d [info] Sent 200 in 1ms
+06:00:07.663 [info] Disable service for solution: nw759r5gagg00000
+06:00:07.663 [info] Stop mbed connection, product_id: m4u5i80rr75a0000
+06:00:07.777 [info] Deregister callback successfully
+06:00:42.287 request_id=3vplck2onav0fi7onsu00mfj77t7gci0 [info] POST /api/v1/solution/j28phf01ei1a80000
+06:00:42.288 request_id=3vplck2onav0fi7onsu00mfj77t7gci0 [info] CUR_CONFIG: nil
+06:00:42.288 request_id=3vplck2onav0fi7onsu00mfj77t7gci0 [info] NEW_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "i2glba4i197280000"}
+06:00:42.288 request_id=3vplck2onav0fi7onsu00mfj77t7gci0 [info] Sent 200 in 819µs
+06:00:47.563 request_id=17ciqd9qnd0nophio87sptl2ejkenv7l [info] PUT /callback/i2glba4i197280000
+06:00:47.563 request_id=17ciqd9qnd0nophio87sptl2ejkenv7l [info] Notification received: {}
+06:00:47.564 request_id=17ciqd9qnd0nophio87sptl2ejkenv7l [info] Sent 200 in 519µs
+06:00:47.572 [info] Solution init, register callback: :ok; product_id = "i2glba4i197280000"
+06:00:47.580 [info] Solution init, subscribe resource: :ok; product_id = "i2glba4i197280000", endpoint_type = "test"
+06:00:47.584 [info] Solution init, list endpoints: {:ok, []}; product_id = "i2glba4i197280000"
+06:01:14.717 request_id=jflcv0rtfv2ql53ked8ja1lq2a6e9ghr [info] GET /api/v1/health
+06:01:14.717 request_id=jflcv0rtfv2ql53ked8ja1lq2a6e9ghr [info] Sent 200 in 46µs
+06:02:03.462 request_id=dbkq9693041n9iv558t3860jj01r2um4 [info] PUT /callback/m4u5i80rr75a0000
+06:02:03.462 request_id=dbkq9693041n9iv558t3860jj01r2um4 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:02:03.463 request_id=dbkq9693041n9iv558t3860jj01r2um4 [info] Sent 401 in 984µs
+06:02:03.541 request_id=q2p5jgmjcjc4vrjq5a0fa92riojtkqui [info] PUT /callback/y2lzgjul3afs00000
+06:02:03.541 request_id=q2p5jgmjcjc4vrjq5a0fa92riojtkqui [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:02:03.541 request_id=q2p5jgmjcjc4vrjq5a0fa92riojtkqui [info] Sent 200 in 611µs
+06:02:03.601 request_id=aib8crkjgkf4kfsiepd7h68ar6ka0uqo [info] PUT /callback/v14wuxj78tdfg0000
+06:02:03.601 request_id=aib8crkjgkf4kfsiepd7h68ar6ka0uqo [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:02:03.602 request_id=aib8crkjgkf4kfsiepd7h68ar6ka0uqo [info] Sent 200 in 574µs
+06:02:05.851 request_id=h2a87gg9fqqgicb4st88ghacgn7vecjf [info] PUT /callback/h36vc8icztro00000
+06:02:05.851 request_id=h2a87gg9fqqgicb4st88ghacgn7vecjf [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:05.852 request_id=h2a87gg9fqqgicb4st88ghacgn7vecjf [info] Sent 401 in 817µs
+06:02:05.861 request_id=sbh2modbv4g4qphldpouhqo749gmv2nc [info] PUT /callback/v14wuxj78tdfg0000
+06:02:05.861 request_id=sbh2modbv4g4qphldpouhqo749gmv2nc [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:05.861 request_id=s0tv2pvu0bgkfsmr0500m9hlf2eflau8 [info] PUT /callback/y2lzgjul3afs00000
+06:02:05.862 request_id=s0tv2pvu0bgkfsmr0500m9hlf2eflau8 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:05.862 request_id=sbh2modbv4g4qphldpouhqo749gmv2nc [info] Sent 200 in 1ms
+06:02:05.862 request_id=s0tv2pvu0bgkfsmr0500m9hlf2eflau8 [info] Sent 200 in 702µs
+06:02:06.887 request_id=k4lk1bs4bshg9dousrndk8bld66m5si0 [info] PUT /callback/h36vc8icztro00000
+06:02:06.887 request_id=k4lk1bs4bshg9dousrndk8bld66m5si0 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:06.887 request_id=k4lk1bs4bshg9dousrndk8bld66m5si0 [info] Sent 401 in 693µs
+06:02:08.896 request_id=0fdsi8qo1uejikvba3bqpsfo6vi7jghg [info] PUT /callback/h36vc8icztro00000
+06:02:08.897 request_id=0fdsi8qo1uejikvba3bqpsfo6vi7jghg [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:08.897 request_id=0fdsi8qo1uejikvba3bqpsfo6vi7jghg [info] Sent 401 in 781µs
+06:02:12.904 request_id=bacok7s4pdhlmmrf03j20947rr86ne94 [info] PUT /callback/h36vc8icztro00000
+06:02:12.905 request_id=bacok7s4pdhlmmrf03j20947rr86ne94 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:12.905 request_id=bacok7s4pdhlmmrf03j20947rr86ne94 [info] Sent 401 in 813µs
+06:02:13.650 request_id=l2pv85vk0126gvn7m8c97tmi6odo4pg8 [info] PUT /callback/v14wuxj78tdfg0000
+06:02:13.650 request_id=jnlq0mpe9t67j8gjgog0uqcev3stgdtd [info] PUT /callback/y2lzgjul3afs00000
+06:02:13.650 request_id=l2pv85vk0126gvn7m8c97tmi6odo4pg8 [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:13.650 request_id=jnlq0mpe9t67j8gjgog0uqcev3stgdtd [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:13.651 request_id=jnlq0mpe9t67j8gjgog0uqcev3stgdtd [info] Sent 200 in 736µs
+06:02:13.651 request_id=l2pv85vk0126gvn7m8c97tmi6odo4pg8 [info] Sent 200 in 862µs
+06:02:20.919 request_id=cpelki4itjfaua5bheaffbjtsd0vmckt [info] PUT /callback/h36vc8icztro00000
+06:02:20.919 request_id=cpelki4itjfaua5bheaffbjtsd0vmckt [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:20.920 request_id=cpelki4itjfaua5bheaffbjtsd0vmckt [info] Sent 401 in 708µs
+06:02:24.654 request_id=j4settkfamjjbgp5hloaffrjmih36q79 [info] PUT /callback/y2lzgjul3afs00000
+06:02:24.654 request_id=j4settkfamjjbgp5hloaffrjmih36q79 [info] Notification received: {"notifications":[{"payload":"Mg==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:24.654 request_id=3ubmc65rtsc7sf2t8soejrjrltuc39ju [info] PUT /callback/v14wuxj78tdfg0000
+06:02:24.655 request_id=3ubmc65rtsc7sf2t8soejrjrltuc39ju [info] Notification received: {"notifications":[{"payload":"Mg==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:24.655 request_id=j4settkfamjjbgp5hloaffrjmih36q79 [info] Sent 200 in 750µs
+06:02:24.655 request_id=3ubmc65rtsc7sf2t8soejrjrltuc39ju [info] Sent 200 in 771µs
+06:02:35.826 request_id=4hriki0h5f4jjfuevpv14j4sc3psmvvs [info] PUT /callback/y2lzgjul3afs00000
+06:02:35.826 request_id=rltpg1b5d0p1puhm9gku97bkf5tdiim8 [info] PUT /callback/v14wuxj78tdfg0000
+06:02:35.826 request_id=rltpg1b5d0p1puhm9gku97bkf5tdiim8 [info] Notification received: {"notifications":[{"payload":"Mw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:35.826 request_id=4hriki0h5f4jjfuevpv14j4sc3psmvvs [info] Notification received: {"notifications":[{"payload":"Mw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:35.827 request_id=rltpg1b5d0p1puhm9gku97bkf5tdiim8 [info] Sent 200 in 945µs
+06:02:35.827 request_id=4hriki0h5f4jjfuevpv14j4sc3psmvvs [info] Sent 200 in 980µs
+06:02:36.950 request_id=9oe7ntk4gf542dg2gjmipgj01557biq3 [info] PUT /callback/h36vc8icztro00000
+06:02:36.950 request_id=9oe7ntk4gf542dg2gjmipgj01557biq3 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:36.950 request_id=9oe7ntk4gf542dg2gjmipgj01557biq3 [info] Sent 401 in 688µs
+06:02:46.654 request_id=lc6dhp3hutf9105u5tdc5t26gu0lb78s [info] PUT /callback/v14wuxj78tdfg0000
+06:02:46.654 request_id=lc6dhp3hutf9105u5tdc5t26gu0lb78s [info] Notification received: {"notifications":[{"payload":"NA==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:46.655 request_id=lc6dhp3hutf9105u5tdc5t26gu0lb78s [info] Sent 200 in 698µs
+06:02:46.673 request_id=eqt2lpihir95lbsl7125r84stopu8ut9 [info] PUT /callback/y2lzgjul3afs00000
+06:02:46.673 request_id=eqt2lpihir95lbsl7125r84stopu8ut9 [info] Notification received: {"notifications":[{"payload":"NA==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:46.674 request_id=eqt2lpihir95lbsl7125r84stopu8ut9 [info] Sent 200 in 563µs
+06:02:53.016 request_id=2d0os43k6f1vd1nb0i7ndqutvig1ogu0 [info] PUT /callback/y2lzgjul3afs00000
+06:02:53.016 request_id=raraivc3s142q28csfqinqqr12vcb952 [info] PUT /callback/v14wuxj78tdfg0000
+06:02:53.016 request_id=raraivc3s142q28csfqinqqr12vcb952 [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:02:53.016 request_id=2d0os43k6f1vd1nb0i7ndqutvig1ogu0 [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:02:53.016 request_id=2d0os43k6f1vd1nb0i7ndqutvig1ogu0 [info] Sent 200 in 715µs
+06:02:53.016 request_id=raraivc3s142q28csfqinqqr12vcb952 [info] Sent 200 in 719µs
+06:02:55.165 request_id=b7dnk81gte8vklv16j36957mlbtqi9gj [info] PUT /callback/y2lzgjul3afs00000
+06:02:55.166 request_id=b7dnk81gte8vklv16j36957mlbtqi9gj [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:55.166 request_id=b7dnk81gte8vklv16j36957mlbtqi9gj [info] Sent 200 in 734µs
+06:02:55.231 request_id=9pqqeekk5rhbqfc37tg9bvierivmpd5f [info] PUT /callback/v14wuxj78tdfg0000
+06:02:55.231 request_id=9pqqeekk5rhbqfc37tg9bvierivmpd5f [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:02:55.231 request_id=9pqqeekk5rhbqfc37tg9bvierivmpd5f [info] Sent 200 in 636µs
+06:02:57.660 request_id=90ubjh4lfvqli870u7j2d420gpvh4nbo [info] PUT /callback/v14wuxj78tdfg0000
+06:02:57.660 request_id=90ubjh4lfvqli870u7j2d420gpvh4nbo [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:57.660 request_id=qg7oru6mu70mv44rrf2dmao5aj6r0ogj [info] PUT /callback/y2lzgjul3afs00000
+06:02:57.660 request_id=qg7oru6mu70mv44rrf2dmao5aj6r0ogj [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:02:57.660 request_id=90ubjh4lfvqli870u7j2d420gpvh4nbo [info] Sent 200 in 954µs
+06:02:57.661 request_id=qg7oru6mu70mv44rrf2dmao5aj6r0ogj [info] Sent 200 in 774µs
+06:03:08.672 request_id=44i6mn9fl8isvv0gv8723anj8cj6rtfg [info] PUT /callback/v14wuxj78tdfg0000
+06:03:08.672 request_id=3ailph2oi24dd0ehr0vba5qsihr5mhpb [info] PUT /callback/y2lzgjul3afs00000
+06:03:08.672 request_id=44i6mn9fl8isvv0gv8723anj8cj6rtfg [info] Notification received: {"notifications":[{"payload":"Ng==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:08.672 request_id=3ailph2oi24dd0ehr0vba5qsihr5mhpb [info] Notification received: {"notifications":[{"payload":"Ng==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:08.673 request_id=44i6mn9fl8isvv0gv8723anj8cj6rtfg [info] Sent 200 in 1ms
+06:03:08.673 request_id=3ailph2oi24dd0ehr0vba5qsihr5mhpb [info] Sent 200 in 1ms
+06:03:09.018 request_id=hqfldom84h88ngvsq6gv25clamrq3kd2 [info] PUT /callback/h36vc8icztro00000
+06:03:09.018 request_id=hqfldom84h88ngvsq6gv25clamrq3kd2 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}],"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:03:09.018 request_id=hqfldom84h88ngvsq6gv25clamrq3kd2 [info] Sent 401 in 694µs
+06:03:19.684 request_id=rlfmoka7v7fltlhhqsc2ftvcucm3e0t1 [info] PUT /callback/y2lzgjul3afs00000
+06:03:19.685 request_id=t883vfdc6sv8v61nse9lakoeequjn1c6 [info] PUT /callback/v14wuxj78tdfg0000
+06:03:19.685 request_id=rlfmoka7v7fltlhhqsc2ftvcucm3e0t1 [info] Notification received: {"notifications":[{"payload":"Nw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:19.685 request_id=t883vfdc6sv8v61nse9lakoeequjn1c6 [info] Notification received: {"notifications":[{"payload":"Nw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:19.685 request_id=t883vfdc6sv8v61nse9lakoeequjn1c6 [info] Sent 200 in 944µs
+06:03:19.686 request_id=rlfmoka7v7fltlhhqsc2ftvcucm3e0t1 [info] Sent 200 in 1ms
+06:03:21.514 request_id=751ajtt497h5205tehkoil46pld3bgis [info] PUT /callback/i2glba4i197280000
+06:03:21.514 request_id=751ajtt497h5205tehkoil46pld3bgis [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:03:21.515 request_id=751ajtt497h5205tehkoil46pld3bgis [info] Sent 200 in 821µs
+06:03:21.565 request_id=hlbtqrgpnph99qdpo0ggtk9erruefk4k [info] PUT /callback/v14wuxj78tdfg0000
+06:03:21.566 request_id=09eqcrgl135ug44pfavp99q421ndqhq7 [info] PUT /callback/y2lzgjul3afs00000
+06:03:21.566 request_id=hlbtqrgpnph99qdpo0ggtk9erruefk4k [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:03:21.566 request_id=09eqcrgl135ug44pfavp99q421ndqhq7 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:03:21.566 request_id=hlbtqrgpnph99qdpo0ggtk9erruefk4k [info] Sent 200 in 799µs
+06:03:21.567 request_id=09eqcrgl135ug44pfavp99q421ndqhq7 [info] Sent 200 in 804µs
+06:03:26.479 request_id=nloe1oe3071bastefb8afm3hqsupbgte [info] PUT /callback/i2glba4i197280000
+06:03:26.480 request_id=nloe1oe3071bastefb8afm3hqsupbgte [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:03:26.480 request_id=nloe1oe3071bastefb8afm3hqsupbgte [info] Sent 200 in 755µs
+06:03:26.484 request_id=302ogu2jm19d6pjr4msmaj5i5q8nofpc [info] PUT /callback/v14wuxj78tdfg0000
+06:03:26.484 request_id=302ogu2jm19d6pjr4msmaj5i5q8nofpc [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:03:26.484 request_id=302ogu2jm19d6pjr4msmaj5i5q8nofpc [info] Sent 200 in 765µs
+06:03:26.485 request_id=sj81h38dla0ihsuvr8aklpkul9ig7drh [info] PUT /callback/y2lzgjul3afs00000
+06:03:26.485 request_id=sj81h38dla0ihsuvr8aklpkul9ig7drh [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:03:26.485 request_id=sj81h38dla0ihsuvr8aklpkul9ig7drh [info] Sent 200 in 547µs
+06:03:31.754 request_id=ejq1mfmjl5aankj4fdcqhe90coddpmrr [info] PUT /callback/i2glba4i197280000
+06:03:31.754 request_id=0i6b826877hbspuednhvhr9464piebsu [info] PUT /callback/y2lzgjul3afs00000
+06:03:31.754 request_id=ejq1mfmjl5aankj4fdcqhe90coddpmrr [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:31.754 request_id=0i6b826877hbspuednhvhr9464piebsu [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:31.755 request_id=ejq1mfmjl5aankj4fdcqhe90coddpmrr [info] Sent 200 in 972µs
+06:03:31.755 request_id=0i6b826877hbspuednhvhr9464piebsu [info] Sent 200 in 734µs
+06:03:31.757 request_id=18mn50ugmt2pchh6p7d6on9ss9rbvsjv [info] PUT /callback/v14wuxj78tdfg0000
+06:03:31.757 request_id=18mn50ugmt2pchh6p7d6on9ss9rbvsjv [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:03:31.757 request_id=18mn50ugmt2pchh6p7d6on9ss9rbvsjv [info] Sent 200 in 532µs
+06:03:42.648 request_id=c419gs88mliif36ilre0375ufotgs50g [info] PUT /callback/v14wuxj78tdfg0000
+06:03:42.648 request_id=aa7vl1280dj252lrjjb773iei4kaoo6a [info] PUT /callback/y2lzgjul3afs00000
+06:03:42.648 request_id=c419gs88mliif36ilre0375ufotgs50g [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:03:42.648 request_id=aa7vl1280dj252lrjjb773iei4kaoo6a [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:03:42.649 request_id=c419gs88mliif36ilre0375ufotgs50g [info] Sent 200 in 893µs
+06:03:42.649 request_id=aa7vl1280dj252lrjjb773iei4kaoo6a [info] Sent 200 in 900µs
+06:03:45.326 request_id=23mela9b3386hj35igh4s6kganue24jd [info] PUT /callback/y2lzgjul3afs00000
+06:03:45.326 request_id=23mela9b3386hj35igh4s6kganue24jd [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:03:45.326 request_id=23mela9b3386hj35igh4s6kganue24jd [info] Sent 200 in 733µs
+06:03:45.329 request_id=4e3vp0qgv3qap7k7n8ura7eotin0sj4i [info] PUT /callback/v14wuxj78tdfg0000
+06:03:45.330 request_id=4e3vp0qgv3qap7k7n8ura7eotin0sj4i [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:03:45.330 request_id=4e3vp0qgv3qap7k7n8ura7eotin0sj4i [info] Sent 200 in 574µs
+06:04:04.414 request_id=l84lbchmpq90pobr7vn532hm20155npi [info] PUT /callback/i2glba4i197280000
+06:04:04.415 request_id=l84lbchmpq90pobr7vn532hm20155npi [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}],"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"},{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}],"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"Mg==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"Mw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"NA==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"Ng==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"Nw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:04:04.415 request_id=l84lbchmpq90pobr7vn532hm20155npi [info] Sent 200 in 1ms
+06:04:13.172 request_id=4vn301kokgt6i0qun69l25obogc5kqih [info] PUT /callback/h36vc8icztro00000
+06:04:13.172 request_id=4vn301kokgt6i0qun69l25obogc5kqih [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}],"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"},{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:04:13.173 request_id=4vn301kokgt6i0qun69l25obogc5kqih [info] Sent 401 in 849µs
+06:04:15.945 request_id=0dqho0rhbjhjavah8anp3crt6pif1gc3 [info] PUT /callback/i2glba4i197280000
+06:04:15.946 request_id=0dqho0rhbjhjavah8anp3crt6pif1gc3 [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:04:15.946 request_id=0dqho0rhbjhjavah8anp3crt6pif1gc3 [info] Sent 200 in 840µs
+06:04:15.950 request_id=3jl9auvcqrpnspe41utj85el09jguapc [info] PUT /callback/i2glba4i197280000
+06:04:15.950 request_id=3jl9auvcqrpnspe41utj85el09jguapc [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:04:15.950 request_id=3jl9auvcqrpnspe41utj85el09jguapc [info] Sent 200 in 498µs
+06:04:15.978 request_id=b6u94817b0m35tdr1gt47r6npkrjqead [info] PUT /callback/y2lzgjul3afs00000
+06:04:15.978 request_id=b6u94817b0m35tdr1gt47r6npkrjqead [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:04:15.979 request_id=b6u94817b0m35tdr1gt47r6npkrjqead [info] Sent 200 in 551µs
+06:04:15.984 request_id=qate9vsldri5a4si2jndme64snkij6km [info] PUT /callback/v14wuxj78tdfg0000
+06:04:15.984 request_id=qate9vsldri5a4si2jndme64snkij6km [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:04:15.985 request_id=qate9vsldri5a4si2jndme64snkij6km [info] Sent 200 in 437µs
+06:04:18.190 request_id=u5ajap8u7i0tqgfv1ukmomg8l0ed7mm9 [info] PUT /callback/i2glba4i197280000
+06:04:18.190 request_id=u5ajap8u7i0tqgfv1ukmomg8l0ed7mm9 [info] Notification received: {"de-registrations":["85d74763-f27b-481f-b201-b50c53352cba"]}
+06:04:18.190 request_id=u5ajap8u7i0tqgfv1ukmomg8l0ed7mm9 [info] Sent 200 in 589µs
+06:04:18.341 request_id=r0jtgb4kj5pvrsvan9hverk7gbdki0i3 [info] PUT /callback/i2glba4i197280000
+06:04:18.341 request_id=r0jtgb4kj5pvrsvan9hverk7gbdki0i3 [info] Notification received: {"de-registrations":["305adf26-7a96-449e-aa6f-ef17914aea4f"]}
+06:04:18.341 request_id=r0jtgb4kj5pvrsvan9hverk7gbdki0i3 [info] Sent 200 in 531µs
+06:04:20.502 request_id=v69ads623qmfe7c7rfe5vkfkm6k5kb4o [info] PUT /callback/i2glba4i197280000
+06:04:20.502 request_id=v69ads623qmfe7c7rfe5vkfkm6k5kb4o [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:04:20.502 request_id=v69ads623qmfe7c7rfe5vkfkm6k5kb4o [info] Sent 200 in 821µs
+06:04:20.503 request_id=a15l08n9g4ieqgg70um8ap3juu3icf4e [info] PUT /callback/y2lzgjul3afs00000
+06:04:20.503 request_id=a52dmj5ik7d26q0ov5d92prgjd22eogm [info] PUT /callback/v14wuxj78tdfg0000
+06:04:20.503 request_id=a15l08n9g4ieqgg70um8ap3juu3icf4e [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:04:20.504 request_id=a52dmj5ik7d26q0ov5d92prgjd22eogm [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:04:20.504 request_id=a15l08n9g4ieqgg70um8ap3juu3icf4e [info] Sent 200 in 922µs
+06:04:20.504 request_id=a52dmj5ik7d26q0ov5d92prgjd22eogm [info] Sent 200 in 889µs
+06:04:20.882 request_id=m8fu1545cjbdddsaj1ft3a8jl28jdm4a [info] PUT /callback/v14wuxj78tdfg0000
+06:04:20.882 request_id=m8fu1545cjbdddsaj1ft3a8jl28jdm4a [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:04:20.882 request_id=m8fu1545cjbdddsaj1ft3a8jl28jdm4a [info] Sent 200 in 654µs
+06:04:20.994 request_id=mqfpj06al19jtvbtvfju2vu59cma1ohn [info] PUT /callback/y2lzgjul3afs00000
+06:04:20.994 request_id=mqfpj06al19jtvbtvfju2vu59cma1ohn [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:04:20.994 request_id=mqfpj06al19jtvbtvfju2vu59cma1ohn [info] Sent 200 in 676µs
+06:05:17.964 request_id=9smp83ohj9191k4k81c6a1idlvg4rs2b [info] PUT /callback/y2lzgjul3afs00000
+06:05:17.964 request_id=9smp83ohj9191k4k81c6a1idlvg4rs2b [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:05:17.965 request_id=9smp83ohj9191k4k81c6a1idlvg4rs2b [info] Sent 200 in 1ms
+06:05:17.967 request_id=n1mmn34arb0miprgfjjnd92fd82s2rp7 [info] PUT /callback/v14wuxj78tdfg0000
+06:05:17.967 request_id=n1mmn34arb0miprgfjjnd92fd82s2rp7 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:05:17.968 request_id=n1mmn34arb0miprgfjjnd92fd82s2rp7 [info] Sent 200 in 571µs
+06:05:20.305 request_id=qbrcc5ecnsk4f5ie1pbapkq0h6msglad [info] PUT /callback/i2glba4i197280000
+06:05:20.305 request_id=qbrcc5ecnsk4f5ie1pbapkq0h6msglad [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:05:20.306 request_id=qbrcc5ecnsk4f5ie1pbapkq0h6msglad [info] Sent 200 in 680µs
+06:05:20.314 request_id=2vmv6cl1e1aa575gjtr2t0a8678hudui [info] PUT /callback/y2lzgjul3afs00000
+06:05:20.314 request_id=2vmv6cl1e1aa575gjtr2t0a8678hudui [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:05:20.314 request_id=2vmv6cl1e1aa575gjtr2t0a8678hudui [info] Sent 200 in 573µs
+06:05:20.316 request_id=cito8u850noun044gccn32ss975rfitm [info] PUT /callback/v14wuxj78tdfg0000
+06:05:20.316 request_id=cito8u850noun044gccn32ss975rfitm [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:05:20.317 request_id=cito8u850noun044gccn32ss975rfitm [info] Sent 200 in 524µs
+06:05:23.007 request_id=csgup6rqkpjjtflqsjkeqr0l5d7nfqen [info] PUT /callback/y2lzgjul3afs00000
+06:05:23.007 request_id=csgup6rqkpjjtflqsjkeqr0l5d7nfqen [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:23.007 request_id=cbqs8u2rdlcc9ur5a5o7mdmendd16379 [info] PUT /callback/v14wuxj78tdfg0000
+06:05:23.007 request_id=cbqs8u2rdlcc9ur5a5o7mdmendd16379 [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:23.008 request_id=csgup6rqkpjjtflqsjkeqr0l5d7nfqen [info] Sent 200 in 972µs
+06:05:23.008 request_id=cbqs8u2rdlcc9ur5a5o7mdmendd16379 [info] Sent 200 in 494µs
+06:05:34.009 request_id=ij9hpn4cu7n981adt63di5h9p90gear6 [info] PUT /callback/y2lzgjul3afs00000
+06:05:34.009 request_id=ij9hpn4cu7n981adt63di5h9p90gear6 [info] Notification received: {"notifications":[{"payload":"Mg==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:34.009 request_id=2vdk347q1me232atr1msne4ssehpn82s [info] PUT /callback/v14wuxj78tdfg0000
+06:05:34.009 request_id=2vdk347q1me232atr1msne4ssehpn82s [info] Notification received: {"notifications":[{"payload":"Mg==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:34.010 request_id=ij9hpn4cu7n981adt63di5h9p90gear6 [info] Sent 200 in 1ms
+06:05:34.010 request_id=2vdk347q1me232atr1msne4ssehpn82s [info] Sent 200 in 879µs
+06:05:45.026 request_id=q7hmq0fqtkb66cat5h676b3h19oo9l04 [info] PUT /callback/y2lzgjul3afs00000
+06:05:45.026 request_id=q7hmq0fqtkb66cat5h676b3h19oo9l04 [info] Notification received: {"notifications":[{"payload":"Mw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:45.027 request_id=1nmrk7hjujrl1lrq92paiai56q4ua7bv [info] PUT /callback/v14wuxj78tdfg0000
+06:05:45.027 request_id=1nmrk7hjujrl1lrq92paiai56q4ua7bv [info] Notification received: {"notifications":[{"payload":"Mw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:45.027 request_id=q7hmq0fqtkb66cat5h676b3h19oo9l04 [info] Sent 200 in 1ms
+06:05:45.027 request_id=1nmrk7hjujrl1lrq92paiai56q4ua7bv [info] Sent 200 in 603µs
+06:05:56.027 request_id=ui6h15lt2jvo90e8durounq375kleep6 [info] PUT /callback/y2lzgjul3afs00000
+06:05:56.027 request_id=ui6h15lt2jvo90e8durounq375kleep6 [info] Notification received: {"notifications":[{"payload":"NA==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:56.027 request_id=8qk0pvh5gdl1p8thl9l7a1c5tsvkes1k [info] PUT /callback/v14wuxj78tdfg0000
+06:05:56.028 request_id=8qk0pvh5gdl1p8thl9l7a1c5tsvkes1k [info] Notification received: {"notifications":[{"payload":"NA==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:05:56.028 request_id=ui6h15lt2jvo90e8durounq375kleep6 [info] Sent 200 in 1ms
+06:05:56.028 request_id=8qk0pvh5gdl1p8thl9l7a1c5tsvkes1k [info] Sent 200 in 786µs
+06:06:02.008 request_id=satd1hao8d5mdo2jgbljr9uagaqgh377 [info] PUT /callback/v14wuxj78tdfg0000
+06:06:02.008 request_id=f701c5q1o983idppif41pu02vr7fk4l9 [info] PUT /callback/y2lzgjul3afs00000
+06:06:02.008 request_id=f701c5q1o983idppif41pu02vr7fk4l9 [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:06:02.008 request_id=satd1hao8d5mdo2jgbljr9uagaqgh377 [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:06:02.009 request_id=f701c5q1o983idppif41pu02vr7fk4l9 [info] Sent 200 in 961µs
+06:06:02.009 request_id=satd1hao8d5mdo2jgbljr9uagaqgh377 [info] Sent 200 in 1ms
+06:06:04.591 request_id=c116c588lo86i8vtkd010aas35d1t25r [info] PUT /callback/y2lzgjul3afs00000
+06:06:04.591 request_id=c116c588lo86i8vtkd010aas35d1t25r [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:06:04.591 request_id=c116c588lo86i8vtkd010aas35d1t25r [info] Sent 200 in 647µs
+06:06:04.604 request_id=nd306nr2vflgiahlt3jhuihjgnsq2r5v [info] PUT /callback/i2glba4i197280000
+06:06:04.604 request_id=nd306nr2vflgiahlt3jhuihjgnsq2r5v [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:06:04.605 request_id=nd306nr2vflgiahlt3jhuihjgnsq2r5v [info] Sent 200 in 568µs
+06:06:04.607 request_id=hsujmlj0kddv8e3dvr6hcg3h7hrolmqb [info] PUT /callback/v14wuxj78tdfg0000
+06:06:04.607 request_id=hsujmlj0kddv8e3dvr6hcg3h7hrolmqb [info] Notification received: {"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:06:04.607 request_id=hsujmlj0kddv8e3dvr6hcg3h7hrolmqb [info] Sent 200 in 516µs
+06:06:07.033 request_id=pns31jssej1khl5est1qngo48n1dckjk [info] PUT /callback/y2lzgjul3afs00000
+06:06:07.033 request_id=pns31jssej1khl5est1qngo48n1dckjk [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:07.033 request_id=di1g7u0ml52qha4htq33ik7v25bikqam [info] PUT /callback/v14wuxj78tdfg0000
+06:06:07.034 request_id=di1g7u0ml52qha4htq33ik7v25bikqam [info] Notification received: {"notifications":[{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:07.034 request_id=pns31jssej1khl5est1qngo48n1dckjk [info] Sent 200 in 1ms
+06:06:07.034 request_id=di1g7u0ml52qha4htq33ik7v25bikqam [info] Sent 200 in 754µs
+06:06:13.453 request_id=taaee7g2lit8djfsl2mb4bn779gipl8f [info] PUT /callback/i2glba4i197280000
+06:06:13.454 request_id=taaee7g2lit8djfsl2mb4bn779gipl8f [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"},{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}],"reg-updates":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"},{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"},{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}],"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"Mg==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"Mw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"NA==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"},{"payload":"NQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:13.455 request_id=taaee7g2lit8djfsl2mb4bn779gipl8f [info] Sent 200 in 1ms
+:not_found
+06:06:13.455 [info] Failed to fetch cik for id: 85d74763-f27b-481f-b201-b50c53352cba, pid: i2glba4i197280000, reason: not_found
+:not_found
+06:06:13.455 [info] Failed to fetch cik for id: 85d74763-f27b-481f-b201-b50c53352cba, pid: i2glba4i197280000, reason: not_found
+:not_found
+06:06:13.456 [info] Failed to fetch cik for id: 85d74763-f27b-481f-b201-b50c53352cba, pid: i2glba4i197280000, reason: not_found
+:not_found
+06:06:13.456 [info] Failed to fetch cik for id: 85d74763-f27b-481f-b201-b50c53352cba, pid: i2glba4i197280000, reason: not_found
+:not_found
+06:06:13.457 [info] Failed to fetch cik for id: 85d74763-f27b-481f-b201-b50c53352cba, pid: i2glba4i197280000, reason: not_found
+06:06:14.638 request_id=ra779ojqfaea7gav7mqp67l5g70ndt7l [info] GET /api/v1/health
+06:06:14.638 request_id=ra779ojqfaea7gav7mqp67l5g70ndt7l [info] Sent 200 in 49µs
+06:06:18.035 request_id=s1mb5t4rkpp3j17lh8lobhpam5dn10es [info] PUT /callback/y2lzgjul3afs00000
+06:06:18.035 request_id=s1mb5t4rkpp3j17lh8lobhpam5dn10es [info] Notification received: {"notifications":[{"payload":"Ng==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:18.036 request_id=nhbgduenva0jobimp4q8pmlth2563o87 [info] PUT /callback/i2glba4i197280000
+06:06:18.036 request_id=nhbgduenva0jobimp4q8pmlth2563o87 [info] Notification received: {"notifications":[{"payload":"Ng==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:18.036 request_id=s1mb5t4rkpp3j17lh8lobhpam5dn10es [info] Sent 200 in 1ms
+06:06:18.036 request_id=nhbgduenva0jobimp4q8pmlth2563o87 [info] Sent 200 in 594µs
+06:06:18.146 request_id=g405redu7h0lps7mq3n76a8s26e4q1h7 [info] PUT /callback/v14wuxj78tdfg0000
+06:06:18.146 request_id=g405redu7h0lps7mq3n76a8s26e4q1h7 [info] Notification received: {"notifications":[{"payload":"Ng==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:18.147 request_id=g405redu7h0lps7mq3n76a8s26e4q1h7 [info] Sent 200 in 490µs
+06:06:29.075 request_id=k6o5easfutvr5e8ok258h78gqhj9ju37 [info] PUT /callback/i2glba4i197280000
+06:06:29.076 request_id=k6o5easfutvr5e8ok258h78gqhj9ju37 [info] Notification received: {"notifications":[{"payload":"Nw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:29.076 request_id=49ihehsidvc6319rfvjh2drjpgc3ols9 [info] PUT /callback/y2lzgjul3afs00000
+06:06:29.076 request_id=49ihehsidvc6319rfvjh2drjpgc3ols9 [info] Notification received: {"notifications":[{"payload":"Nw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:29.077 request_id=k6o5easfutvr5e8ok258h78gqhj9ju37 [info] Sent 200 in 1ms
+06:06:29.077 request_id=49ihehsidvc6319rfvjh2drjpgc3ols9 [info] Sent 200 in 855µs
+06:06:29.077 request_id=4sgdih0u9suc1v9ruf90etsa9h7vmo02 [info] PUT /callback/v14wuxj78tdfg0000
+06:06:29.077 request_id=4sgdih0u9suc1v9ruf90etsa9h7vmo02 [info] Notification received: {"notifications":[{"payload":"Nw==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:06:29.078 request_id=4sgdih0u9suc1v9ruf90etsa9h7vmo02 [info] Sent 200 in 748µs
+06:06:34.292 request_id=3ijjomgc25jus5gcrci83lr9lt8ol6gk [info] PUT /callback/i2glba4i197280000
+06:06:34.292 request_id=3ijjomgc25jus5gcrci83lr9lt8ol6gk [info] Notification received: {"de-registrations":["85d74763-f27b-481f-b201-b50c53352cba"]}
+06:06:34.293 request_id=3ijjomgc25jus5gcrci83lr9lt8ol6gk [info] Sent 200 in 609µs
+06:06:34.465 request_id=in00esto0nnqs45soaue06qd2jdeupu1 [info] PUT /callback/i2glba4i197280000
+06:06:34.465 request_id=in00esto0nnqs45soaue06qd2jdeupu1 [info] Notification received: {"de-registrations":["305adf26-7a96-449e-aa6f-ef17914aea4f"]}
+06:06:34.466 request_id=in00esto0nnqs45soaue06qd2jdeupu1 [info] Sent 200 in 583µs
+06:07:33.857 request_id=h158u7g378sudm8ppsv4mj6frcnunocc [info] PUT /callback/i2glba4i197280000
+06:07:33.858 request_id=h158u7g378sudm8ppsv4mj6frcnunocc [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:07:33.859 request_id=h158u7g378sudm8ppsv4mj6frcnunocc [info] Sent 200 in 1ms
+06:07:33.897 request_id=3a8ktoehcs4bcnbuv7h542u0thbfvvd0 [info] PUT /callback/y2lzgjul3afs00000
+06:07:33.897 request_id=3a8ktoehcs4bcnbuv7h542u0thbfvvd0 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:07:33.898 request_id=3a8ktoehcs4bcnbuv7h542u0thbfvvd0 [info] Sent 200 in 586µs
+06:07:33.901 request_id=mjvrvcijvup6f0m80o7bk6f9b3ri9dh2 [info] PUT /callback/v14wuxj78tdfg0000
+06:07:33.901 request_id=mjvrvcijvup6f0m80o7bk6f9b3ri9dh2 [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test","ep":"85d74763-f27b-481f-b201-b50c53352cba"}]}
+06:07:33.901 request_id=mjvrvcijvup6f0m80o7bk6f9b3ri9dh2 [info] Sent 200 in 582µs
+06:07:36.634 request_id=cnkbklak5rgqdmvs298runb1pg7241hb [info] PUT /callback/y2lzgjul3afs00000
+06:07:36.634 request_id=cnkbklak5rgqdmvs298runb1pg7241hb [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:07:36.634 request_id=nctgsjf91s0ph842oiguj1qgb52ej93n [info] PUT /callback/i2glba4i197280000
+06:07:36.634 request_id=nctgsjf91s0ph842oiguj1qgb52ej93n [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:07:36.634 request_id=bf4qurkgf4hns06o6poh6ucpknbs3prk [info] PUT /callback/v14wuxj78tdfg0000
+06:07:36.635 request_id=bf4qurkgf4hns06o6poh6ucpknbs3prk [info] Notification received: {"registrations":[{"resources":[{"path":"/Test/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"},{"rt":"ResourceTest","path":"/Test/0/D","obs":true,"ct":""},{"path":"/3/0","obs":false,"ct":"application/vnd.oma.lwm2m+tlv"}],"ept":"test2","ep":"305adf26-7a96-449e-aa6f-ef17914aea4f"}]}
+06:07:36.635 request_id=cnkbklak5rgqdmvs298runb1pg7241hb [info] Sent 200 in 1ms
+06:07:36.635 request_id=nctgsjf91s0ph842oiguj1qgb52ej93n [info] Sent 200 in 1ms
+06:07:36.636 request_id=bf4qurkgf4hns06o6poh6ucpknbs3prk [info] Sent 200 in 1ms
+06:07:43.928 request_id=3i9ofupf7pb22hj6srifrv71f7m0us5u [info] PUT /callback/i2glba4i197280000
+06:07:43.928 request_id=3i9ofupf7pb22hj6srifrv71f7m0us5u [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:07:43.928 request_id=26smckan0acf17dlpkqa4ik2h4nje0eq [info] PUT /callback/v14wuxj78tdfg0000
+06:07:43.929 request_id=okj5l3105i3lnglthof4disr4j3c2mgl [info] PUT /callback/y2lzgjul3afs00000
+06:07:43.929 request_id=26smckan0acf17dlpkqa4ik2h4nje0eq [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:07:43.929 request_id=okj5l3105i3lnglthof4disr4j3c2mgl [info] Notification received: {"notifications":[{"payload":"MQ==","path":"/Test/0/D","max-age":0,"ep":"85d74763-f27b-481f-b201-b50c53352cba","ct":"text/plain"}]}
+06:07:43.929 request_id=3i9ofupf7pb22hj6srifrv71f7m0us5u [info] Sent 200 in 1ms
+06:07:43.929 request_id=26smckan0acf17dlpkqa4ik2h4nje0eq [info] Sent 200 in 803µs
+06:07:43.930 request_id=okj5l3105i3lnglthof4disr4j3c2mgl [info] Sent 200 in 720µs
+06:07:47.368 request_id=4ac7suk1u6rj4fhondpftvkhbe95idaf [info] PUT /callback/i2glba4i197280000
+06:07:47.368 request_id=4ac7suk1u6rj4fhondpftvkhbe95idaf [info] Notification received: {"de-registrations":["85d74763-f27b-481f-b201-b50c53352cba"]}
+06:07:47.368 request_id=4ac7suk1u6rj4fhondpftvkhbe95idaf [info] Sent 200 in 579µs
+06:07:47.526 request_id=5e0dttrne672vej6mt74kpd82ralbqti [info] PUT /callback/i2glba4i197280000
+06:07:47.526 request_id=5e0dttrne672vej6mt74kpd82ralbqti [info] Notification received: {"de-registrations":["305adf26-7a96-449e-aa6f-ef17914aea4f"]}
+06:07:47.527 request_id=5e0dttrne672vej6mt74kpd82ralbqti [info] Sent 200 in 549µs
+06:07:53.549 request_id=ncrsks0kuqb27qc5vft1hhecal9habgo [info] DELETE /api/v1/solution/j28phf01ei1a80000
+06:07:53.550 request_id=ncrsks0kuqb27qc5vft1hhecal9habgo [info] CUR_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "i2glba4i197280000"}
+06:07:53.550 request_id=ncrsks0kuqb27qc5vft1hhecal9habgo [info] NEW_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "i2glba4i197280000"}
+06:07:53.550 request_id=ncrsks0kuqb27qc5vft1hhecal9habgo [info] Sent 200 in 1ms
+06:07:53.550 [info] Disable service for solution: j28phf01ei1a80000
+06:07:53.550 [info] Stop mbed connection, product_id: i2glba4i197280000
+06:07:53.657 [info] Deregister callback successfully
+06:09:42.523 request_id=ifvo3bh9cv0hpmqc2v73825a8k1tam5s [info] PUT /callback/y2lzgjul3afs00000
+06:09:42.524 request_id=ifvo3bh9cv0hpmqc2v73825a8k1tam5s [info] Notification received: {"registrations-expired":["305adf26-7a96-449e-aa6f-ef17914aea4f"]}
+06:09:42.524 request_id=ifvo3bh9cv0hpmqc2v73825a8k1tam5s [info] Sent 200 in 881µs
+06:09:42.529 request_id=enomh91qidsdh9egg8vm8q7g9qsnb59h [info] PUT /callback/y2lzgjul3afs00000
+06:09:42.529 request_id=enomh91qidsdh9egg8vm8q7g9qsnb59h [info] Notification received: {"registrations-expired":["85d74763-f27b-481f-b201-b50c53352cba"]}
+06:09:42.529 request_id=enomh91qidsdh9egg8vm8q7g9qsnb59h [info] Sent 200 in 567µs
+06:09:42.532 request_id=cf5embbvp1o9uiits7m9dkndhg7o4icm [info] PUT /callback/v14wuxj78tdfg0000
+06:09:42.532 request_id=cf5embbvp1o9uiits7m9dkndhg7o4icm [info] Notification received: {"registrations-expired":["305adf26-7a96-449e-aa6f-ef17914aea4f"]}
+06:09:42.532 request_id=cf5embbvp1o9uiits7m9dkndhg7o4icm [info] Sent 200 in 499µs
+06:09:42.538 request_id=o50orcuise8rf5l98742ftman4lmp3r8 [info] PUT /callback/v14wuxj78tdfg0000
+06:09:42.538 request_id=o50orcuise8rf5l98742ftman4lmp3r8 [info] Notification received: {"registrations-expired":["85d74763-f27b-481f-b201-b50c53352cba"]}
+06:09:42.538 request_id=o50orcuise8rf5l98742ftman4lmp3r8 [info] Sent 200 in 549µs
+06:10:02.347 request_id=6r4uri4t7esqds38sceq0krb4c4pql6s [info] POST /api/v1/solution/q284tpfcst1jw0000
+06:10:02.349 request_id=6r4uri4t7esqds38sceq0krb4c4pql6s [info] CUR_CONFIG: nil
+06:10:02.349 request_id=6r4uri4t7esqds38sceq0krb4c4pql6s [info] NEW_CONFIG: %{api_key: "LM3NAULhO0VLikCtTUS4sMxJTPhJzzYT4xtAF1Z8IJirpsAHr9O1nHUdGK5RK2DcZgMR3anvqUeyRFRwHCT7DQ0n99oLNLYMopEq", endpoint_type: "test", product_id: "eh3l2wxv2a740000"}
+06:10:02.349 request_id=6r4uri4t7esqds38sceq0krb4c4pql6s [info] Sent 200 in 1ms
+06:10:02.931 request_id=thmf8ho67tid35ealtrfncu6mvv592im [info] PUT /callback/eh3l2wxv2a740000
+06:10:02.932 request_id=thmf8ho67tid35ealtrfncu6mvv592im [info] Notification received: {}
+06:10:02.932 request_id=thmf8ho67tid35ealtrfncu6mvv592im [info] Sent 200 in 524µs
+06:10:02.941 [info] Solution init, register callback: :ok; product_id = "eh3l2wxv2a740000"
+06:10:02.951 [info] Solution init, subscribe resource: :ok; product_id = "eh3l2wxv2a740000", endpoint_type = "test"
+06:10:02.955 [info] Solution init, list endpoints: {:ok, []}; product_id = "eh3l2wxv2a740000"

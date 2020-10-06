@@ -1,0 +1,400 @@
+/portals/token
+endpoint
+	return Portals.getUserToken(request.body)
+body
+	{"email":"testing@exosite.com","password":"1234eszxcv++"}
+result
+	uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY
+
+/portals/getUserInfo
+endpoint
+	return Portals.getUserInfo(request.body)
+body
+	{"token":"uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"}
+result
+{
+  "activated": true,
+  "email": "testing@exosite.com",
+  "fullName": "Testing User",
+  "groups": [
+    "1991877764"
+  ],
+  "id": "1561807313",
+  "permissions": [
+    {
+      "access": "___admin",
+      "oid": {
+        "id": "1991877764",
+        "type": "Group"
+      }
+    },
+    {
+      "access": "___admin",
+      "oid": {
+        "id": "1157081901",
+        "type": "Portal"
+      }
+    }
+  ],
+  "phoneNumber": "",
+  "rid": "fadd42f83f7a61e58e85927ee98c6e55d1ef9a04",
+  "userName": "Testing User"
+}
+
+
+/portals/getDataFromMultipleDataSources
+endpoint
+return Portals.getDataFromMultipleDataSources(request.body)
+body
+
+{
+  "dataSourceRids": "[8ba6d746055463155befd8d2cf87a7fec0273035]",
+  "limit": "2",
+  "token": "uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"
+}
+result
+{
+  "8ba6d746055463155befd8d2cf87a7fec0273035": []
+}
+
+/portals/getMultipleDataSources
+endpoint
+return Portals.getMultipleDataSources(request.body)
+body
+{
+  "dataSourceRids": "[8ba6d746055463155befd8d2cf87a7fec0273035]",
+  "token": "uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"
+}
+return
+[
+  {
+    "data": [],
+    "info": {
+      "basic": {
+        "modified": 1516007162,
+        "subscribers": 0,
+        "type": "dataport"
+      },
+      "description": {
+        "format": "integer",
+        "meta": "{\"datasource\":{\"description\":\"\",\"unit\":\"bits\"}}",
+        "name": "A0 Analog Input",
+        "preprocess": [],
+        "public": false,
+        "retention": {
+          "count": "infinity",
+          "duration": "infinity"
+        }
+      },
+      "shares": [],
+      "storage": {
+        "count": 0,
+        "first": 0,
+        "last": 0,
+        "size": 0
+      },
+      "subscribers": [],
+      "tags": []
+    },
+    "rid": "8ba6d746055463155befd8d2cf87a7fec0273035",
+    "unit": "bits"
+  }
+]
+
+
+
+/portals/getMultipleDevices
+endpoint
+return Portals.getMultipleDevices(request.body)
+body
+{
+  "deviceRids": "[5885006e6bf8f3e47ef55e2a571facb4b2e2b1c4]",
+  "token": "uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"
+}
+return
+[
+  {
+    "dataSources": [
+      "29f85fbface25fc831c22de8e0eac513cb972ff3",
+      "8ba6d746055463155befd8d2cf87a7fec0273035",
+      "a19c0598d54af195fc773c40a9c4d96dc5941277",
+      "b010750985554256c9d9cbb2ce8826f05c8e51cf",
+      "ee0107f27bb4e46f4fc8d578089fed374bb87848",
+      "fd21cd99d5e56f426b8f45131d242803c15b3d10"
+    ],
+    "info": {
+      "aliases": {
+        "29f85fbface25fc831c22de8e0eac513cb972ff3": [
+          "d2"
+        ],
+        "8ba6d746055463155befd8d2cf87a7fec0273035": [
+          "a0"
+        ],
+        "a19c0598d54af195fc773c40a9c4d96dc5941277": [
+          "uptime"
+        ],
+        "b010750985554256c9d9cbb2ce8826f05c8e51cf": [
+          "msg"
+        ],
+        "ee0107f27bb4e46f4fc8d578089fed374bb87848": [
+          "d4"
+        ],
+        "fd21cd99d5e56f426b8f45131d242803c15b3d10": [
+          "ipaddr"
+        ]
+      },
+      "basic": {
+        "modified": 1516007162,
+        "status": "notactivated",
+        "subscribers": 0,
+        "type": "client"
+      },
+      "description": {
+        "limits": {
+          "client": 0,
+          "dataport": "inherit",
+          "datarule": "inherit",
+          "disk": "inherit",
+          "dispatch": "inherit",
+          "email": "inherit",
+          "email_bucket": "inherit",
+          "http": "inherit",
+          "http_bucket": "inherit",
+          "share": "inherit",
+          "sms": "inherit",
+          "sms_bucket": "inherit",
+          "xmpp": "inherit",
+          "xmpp_bucket": "inherit"
+        },
+        "locked": false,
+        "meta": "{\"DeviceType\":\"generic\",\"DeviceTypeID\":\"0000000002\",\"Timezone\":\"America\\/Chicago\",\"Location\":\"\",\"activetime\":\"\",\"DeviceTypeName\":\"generic\",\"timezone\":\"Asia\\/Taipei\",\"location\":\"\",\"device\":{\"type\":\"vendor\",\"model\":\"ard-generic\",\"vendor\":\"exosite\",\"sn\":\"00251C74DA\"}}",
+        "name": "Arduino 00251C74DA",
+        "public": false
+      },
+      "shares": [],
+      "subscribers": [],
+      "tags": []
+    },
+    "members": [],
+    "model": "ard-generic",
+    "rid": "5885006e6bf8f3e47ef55e2a571facb4b2e2b1c4",
+    "sn": "00251C74DA",
+    "type": "vendor",
+    "vendor": "exosite"
+  }
+]
+'
+
+
+/portals/getMultipleGroups
+endpoint
+return Portals.getMultipleGroups(request.body)
+body
+{
+  "groupIds": "[1991877764]",
+  "token": "uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"
+}
+return
+[
+  {
+    "id": "1991877764",
+    "members": [
+      {
+        "access": "___admin",
+        "oid": {
+          "id": "1561807313",
+          "type": "User"
+        }
+      }
+    ],
+    "name": "testingqa",
+    "permissions": [],
+    "userId": "1561807313"
+  }
+]
+
+
+/portals/getUserPermissions
+endpoint
+return Portals.getUserPermissions(request.body)
+body
+{
+  "token": "uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"
+}
+return 
+[
+  {
+    "access": "___admin",
+    "oid": {
+      "id": "1991877764",
+      "type": "Group"
+    }
+  },
+  {
+    "access": "___admin",
+    "oid": {
+      "id": "1157081901",
+      "type": "Portal"
+    }
+  }
+]
+
+/portals/listPortalDevices
+endpoint
+return Portals.listPortalDevices(request.body)
+body
+{
+  "portalId":"1157081901",
+  "token":"uIeDGrYCZY7zcmFQ5-FAmsNB3yp6Og3DqQP0svwpy1990ahMWm25SmN020oUgY1htB-33-dxYfs1w7aorMXcTExa80gY"
+}
+result
+[
+  {
+    "dataSources": [
+      "29f85fbface25fc831c22de8e0eac513cb972ff3",
+      "8ba6d746055463155befd8d2cf87a7fec0273035",
+      "a19c0598d54af195fc773c40a9c4d96dc5941277",
+      "b010750985554256c9d9cbb2ce8826f05c8e51cf",
+      "ee0107f27bb4e46f4fc8d578089fed374bb87848",
+      "fd21cd99d5e56f426b8f45131d242803c15b3d10"
+    ],
+    "info": {
+      "aliases": {
+        "29f85fbface25fc831c22de8e0eac513cb972ff3": [
+          "d2"
+        ],
+        "8ba6d746055463155befd8d2cf87a7fec0273035": [
+          "a0"
+        ],
+        "a19c0598d54af195fc773c40a9c4d96dc5941277": [
+          "uptime"
+        ],
+        "b010750985554256c9d9cbb2ce8826f05c8e51cf": [
+          "msg"
+        ],
+        "ee0107f27bb4e46f4fc8d578089fed374bb87848": [
+          "d4"
+        ],
+        "fd21cd99d5e56f426b8f45131d242803c15b3d10": [
+          "ipaddr"
+        ]
+      },
+      "basic": {
+        "modified": 1516007162,
+        "status": "activated",
+        "subscribers": 0,
+        "type": "client"
+      },
+      "description": {
+        "limits": {
+          "client": 0,
+          "dataport": "inherit",
+          "datarule": "inherit",
+          "disk": "inherit",
+          "dispatch": "inherit",
+          "email": "inherit",
+          "email_bucket": "inherit",
+          "http": "inherit",
+          "http_bucket": "inherit",
+          "share": "inherit",
+          "sms": "inherit",
+          "sms_bucket": "inherit",
+          "xmpp": "inherit",
+          "xmpp_bucket": "inherit"
+        },
+        "locked": false,
+        "meta": "{\"DeviceType\":\"generic\",\"DeviceTypeID\":\"0000000002\",\"Timezone\":\"America\\/Chicago\",\"Location\":\"\",\"activetime\":\"\",\"DeviceTypeName\":\"generic\",\"timezone\":\"Asia\\/Taipei\",\"location\":\"\",\"device\":{\"type\":\"vendor\",\"model\":\"ard-generic\",\"vendor\":\"exosite\",\"sn\":\"00251C74DA\"}}",
+        "name": "Arduino 00251C74DA",
+        "public": false
+      },
+      "key": "7f4300891965452fd923540b3151df6ee1ea706a",
+      "shares": [],
+      "subscribers": [],
+      "tags": []
+    },
+    "members": [
+      {
+        "access": "d_update",
+        "oid": {
+          "id": "1991877764",
+          "type": "Group"
+        }
+      }
+    ],
+    "model": "ard-generic",
+    "rid": "5885006e6bf8f3e47ef55e2a571facb4b2e2b1c4",
+    "sn": "00251C74DA",
+    "type": "vendor",
+    "vendor": "exosite"
+  },
+  {
+    "dataSources": [],
+    "info": {
+      "aliases": [],
+      "basic": {
+        "modified": 1516082343,
+        "status": "activated",
+        "subscribers": 0,
+        "type": "client"
+      },
+      "description": {
+        "limits": {
+          "client": 0,
+          "dataport": "inherit",
+          "datarule": "inherit",
+          "disk": "inherit",
+          "dispatch": "inherit",
+          "email": "inherit",
+          "email_bucket": "inherit",
+          "http": "inherit",
+          "http_bucket": "inherit",
+          "share": "inherit",
+          "sms": "inherit",
+          "sms_bucket": "inherit",
+          "xmpp": "inherit",
+          "xmpp_bucket": "inherit"
+        },
+        "locked": false,
+        "meta": "{\"timezone\":\"Pacific\\/Midway\",\"location\":\"testqa\",\"device\":{\"type\":\"generic\"}}",
+        "name": "testqa",
+        "public": false
+      },
+      "key": "d5c6849e754668dbd1cc8cf52d84b1318b557ed0",
+      "shares": [],
+      "subscribers": [],
+      "tags": []
+    },
+    "members": [],
+    "rid": "bb8a2bf26ba2d431efbaf9adcfd684dd6849ef60",
+    "type": "generic"
+  }
+]
+
+
+/portals/foilio
+endpoint
+local portal = require "testportals" 
+
+return {portal.getDataSources(request.body.token,request.body.device),
+  portal.getDevices(request.body.token),
+  portal.getDevices(request.body.noDeviceToken)
+}
+
+body
+{"token":"xp8deL5e3r5_YCXVBlsqoP5e8zgZo-NTbrbs5OQr1PRdQDEAP1De5kzJVdsFAt67Ro9RPTCzxkPlbvUy_rCK4bNL6q2R","device":[],"noDeviceToken":"7uolnMXpgadkgb9Q7gqgX87q9RvS0hzaLhEEtrnb-7HybCP9O3Gkdih7AFTVLfW4LDSj1-8V5af5VyXa7e_iIAAzm2ai"}
+
+return 
+[
+  {},
+  {},
+  {}
+]
+
+POST /portals/Hitachi
+endpoint
+local portals = require "testportals"
+portals.setService(Hitachi)
+
+return portals.getUserToken(request.body)
+body
+{"email":"testing+pennyfeng@exosite.com","password":"Hitach123"}

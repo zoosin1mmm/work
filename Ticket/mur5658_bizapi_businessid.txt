@@ -1,0 +1,27 @@
+QA: To test
+
+the /api:1/business/<bizid>/tier endpoint will now return additional fields of 'limits', 'features', 'discounts', 'bundle'. Additionally the fields 'id', 'price', 'name' are valid fields. The rest of the fields are deprecated and will be removed in a later release.
+
+the /api:1/business/<bizid>/tierset endpoint will now only return compatible tiers, in other words for "portals" businesses, it will only return portals tiers. For "murano" businesses it will only return murano tiers.
+
+the /api:1/business/<bizid>/overview endpoint is now deprecated and will be removed in a later release.
+
+
+
+Additionally the following changes have been made:
+
+the /api:1/business/<bizid>/member/ endpoint now returns 'role' and 'solutions' field in the top level array object, and the 'membership' subfield is deprecated and will be removed in a later release.
+
+the /api:1/business/<bizid>/creditcard now returns 204 instead of 404 if the creditcard has not yet been added.
+
+the /api:1/business/<bizid>/lineitems now returns 204 instead of 404 if no paid tier subscription has been set
+
+the /api:1/business/<bizid>/owner now returns 204 instead of 404 if the business is not a child business
+
+the /api:1/business/<bizid>/network and sub routes now returns 403 is the tier.features.network = false
+
+the /api:1/business/<bizid>/network and sub routes now returns 204 instead of 404 if the network is not yet configured
+
+the /api:1/business/<bizid>/network/business/ to create a child business using POST now returns 409 if the network is not yet configured
+
+These have all been tested to validate they are compatible with the existing UI and CLI. However, please validate all UI functionality against this.

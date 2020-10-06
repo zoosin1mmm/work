@@ -1,0 +1,11 @@
+service-{solutionId}-device2-identity - get - filter device when status is true
+error : 
+
+{"message":"Validation errors","errors":[{"code":"INVALID_REQUEST_PARAMETER","errors":[{"code":"ENUM_MISMATCH","params":["hash"],"message":"No enum match for: hash","path":["auth","type"],"description":"The type of credential used to authenticate the identity.\n"}],"in":"body","message":"Invalid parameter (device): Value failed JSON Schema validation","name":"device","path":["paths","/{context_id}/identity/","post","parameters","0"]}]}
+
+{"message":"Validation errors","errors":[{"code":"INVALID_REQUEST_PARAMETER","errors":[{"code":"ENUM_MISMATCH","params":["signature"],"message":"No enum match for: signature","path":["auth","type"],"description":"The type of credential used to authenticate the identity.\n"}],"in":"body","message":"Invalid parameter (device): Value failed JSON Schema validation","name":"device","path":["paths","/{context_id}/identity/","post","parameters","0"]}]}
+
+
+
+
+

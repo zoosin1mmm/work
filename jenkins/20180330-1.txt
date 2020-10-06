@@ -1,0 +1,9 @@
+adc-staging-application
+------------------------
+file:adcWeb/test_add_application.robot / adcWeb/test_delete_application.robot
+error: UI default page is changed after choosing business
+
+
+file:/adcWeb/test_verify_application_content_link_in_new_window.robot / adcWeb/test_update_modules.robot
+ 
+error: switch business check logo but logo is changed

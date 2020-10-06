@@ -1,0 +1,15 @@
+//get user ID
+curl 'https://portals.exosite.com/api/portals/v1/accounts/stacychen@exosite.com' \
+     -X GET \
+     -u 'stacychen@exosite.com:1234eszxcv++' \
+     -i
+
+//get user token
+curl 'https://portals.exosite.com/api/portals/v1/users/2703620025/token' \
+     -u 'stacychen@exosite.com:1234eszxcv++' \
+     -i
+
+//get user content
+curl -X GET 'https://portals.exosite.com/api/portals/v1/users/_this' \
+     -H 'Authorization: Token WpbFD7-ExQSO23Z39duSZrQU2Yo67OZ6BtQ0eCEoNRGMTmuLYM-iAZEO_Ne1AYSai6NzPPvwKnUu5eFb-qyPgIOd_2bn' \
+     -i

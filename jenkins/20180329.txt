@@ -1,0 +1,21 @@
+murano-staging-service-migration
+-------------------------------------
+file:auth0
+error: content-type revert
+
+
+file:test_lua_library.robot
+test case:Lua library CPU run time more than 10 second will return 504 timeout
+ticket:MUR-6335
+
+file:test_user_oauth.robot
+test case: Oauth can not use expired refresh token to get new token
+Oauth can not use expired token to get current user
+Oauth can use refresh token to get new token
+error: refresh_token access_token revert
+
+
+file:test_Keystore
+test case:Keystore can be setted key and value to update config usage
+ Keystore can update short value to decrease key size
+error: usage can not update

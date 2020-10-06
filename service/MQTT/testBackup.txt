@@ -1,0 +1,36 @@
+BIZEMAIL=testing@exosite.com
+BIZPASS=1234eszxcv++
+BIZNAME=test-stacy-adc
+-----------------------------------
+token
+PROJNAME=stacychentest
+PROJID=g18limor8ty3k0000
+DeviceID=testttt
+Resource=temp
+Token=dT3kDxHN9og5yZFq2B3RC8oNaNIvLQUtWmzTGgvJ
+-----------------------------------
+password
+PROJNAME=test
+PROJID=q13tqslpduof4g8k8
+
+
+
+
+username_pw_set()
+=> set Authentication value
+---------------
+Authentication Method
+---------------Token
+username_pw_set("",Device Token)
+---------------Password
+username_pw_set(username,password)
+username=deviceID
+password=>設定Authentication為password時設定的value
+
+---------------------------------------
+server send value to client then client can receive (receive.py)
+---------------------------------------
+curl -i -XPATCH \
+https://okami-api-staging.hosted.exosite.io/api/v1/g18limor8ty3k0000/identity/testttt/state \
+-H "Content-Type: application/json" \
+-d '{"temp":1234}'
